@@ -1,0 +1,21 @@
+# Environment variables — never commit credentials
+.env
+.env.*
+info.txt
+
+# Dependencies / build (none today, but future-proofing)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+*.swp

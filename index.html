@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sk. Roushan Khalid — AI/ML Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a0a0f'/><text x='50%25' y='54%25' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='700' fill='%236366f1' text-anchor='middle' dominant-baseline='middle'>RK</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">RoushanKhalid</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#growth">Growth</a></li>
+        <li><a href="#contribute">Contribute</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="particleCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span id="heroBadge">Available for opportunities</span>
+      </div>
+      <h1 class="hero-name" id="heroName">Sk. Roushan Khalid</h1>
+      <div class="hero-role">
+        <span class="role-static" id="roleStatic">AI/ML Engineer &amp; </span>
+        <span class="role-typed" id="typedText"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-philosophy" id="heroPhilosophy">
+        "Building practical AI systems while continuously learning real-world software engineering."
+      </p>
+      <div class="hero-location" id="heroLocation">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Dhaka, Bangladesh
+      </div>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I am</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead" id="aboutLead"></p>
+          <div id="aboutParagraphs"></div>
+          <div class="about-highlights" id="aboutHighlights"></div>
+        </div>
+        <div class="about-card">
+          <div class="card-inner">
+            <div class="card-label">Currently focused on</div>
+            <ul class="card-list" id="focusList"></ul>
+            <div class="card-divider"></div>
+            <div class="card-label">Looking for</div>
+            <ul class="card-list" id="lookingForList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">What I Work With</h2>
+        <p class="section-sub">Not a checklist — these are the domains I actively work in and continue to deepen.</p>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Growth Section -->
+  <section class="section" id="growth">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Current State</span>
+        <h2 class="section-title">Learning &amp; Growth</h2>
+        <p class="section-sub">Where I am right now — actively building experience, not claiming mastery.</p>
+      </div>
+      <div class="growth-layout">
+        <div class="timeline" id="timelineList"></div>
+        <div class="growth-sidebar">
+          <div class="growth-card">
+            <h4>What I'm actively exploring</h4>
+            <div class="explore-list" id="exploreList"></div>
+            <p class="growth-note">These reflect active learning, not claimed expertise.</p>
+          </div>
+          <div class="growth-card growth-card-alt">
+            <h4>Recognition along the way</h4>
+            <div class="recognition-list" id="recognitionList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contribute Section -->
+  <section class="section section-alt" id="contribute">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I bring</span>
+        <h2 class="section-title">What I Can Contribute</h2>
+        <p class="section-sub">Practical value I can add to a team right now — with honesty about where I'm still growing.</p>
+      </div>
+      <div class="contribute-grid" id="contributeGrid"></div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="section philosophy-section" id="philosophy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How I think</span>
+        <h2 class="section-title">Philosophy</h2>
+      </div>
+      <div class="philosophy-grid" id="philosophyGrid"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-sub">Open to opportunities, collaborations, and conversations about applied AI and engineering.</p>
+      </div>
+      <div class="contact-layout" id="contactLayout"></div>
+      <div class="contact-footer">
+        <p id="contactFooterNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">RoushanKhalid</span>
+        <span class="footer-copy" id="footerCopy">© 2026 Sk. Roushan Khalid · Built with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Admin login trigger — bottom-right corner -->
+  <a href="admin.html" class="admin-trigger" title="Admin Login" aria-label="Admin login">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

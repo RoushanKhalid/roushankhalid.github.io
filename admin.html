@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — RoushanKhalid</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a0a0f'/><text x='50%25' y='54%25' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='700' fill='%236366f1' text-anchor='middle' dominant-baseline='middle'>RK</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-box">
+      <div class="login-logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <h1>Admin Panel</h1>
+      <p class="login-sub">RoushanKhalid Portfolio</p>
+      <form id="loginForm" autocomplete="off">
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter username" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="password" placeholder="Enter password" autocomplete="off" />
+            <button type="button" class="toggle-pw" id="togglePw" tabindex="-1" aria-label="Toggle password">
+              <svg class="eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            </button>
+          </div>
+        </div>
+        <p class="login-error" id="loginError"></p>
+        <button type="submit" class="btn-login" id="loginBtn">Sign In</button>
+      </form>
+      <a href="index.html" class="back-link">← Back to portfolio</a>
+    </div>
+  </div>
+
+  <!-- ADMIN PANEL (hidden until logged in) -->
+  <div class="admin-panel" id="adminPanel" style="display:none">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">RoushanKhalid</div>
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-tab="hero">Hero</button>
+        <button class="nav-item" data-tab="about">About</button>
+        <button class="nav-item" data-tab="skills">Skills</button>
+        <button class="nav-item" data-tab="timeline">Timeline</button>
+        <button class="nav-item" data-tab="contribute">Contribute</button>
+        <button class="nav-item" data-tab="philosophy">Philosophy</button>
+        <button class="nav-item" data-tab="contact">Contact</button>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="index.html" target="_blank" class="preview-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View Portfolio
+        </a>
+        <button class="logout-btn" id="logoutBtn">Sign Out</button>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="admin-main">
+
+      <div class="admin-topbar">
+        <div class="topbar-title" id="topbarTitle">Hero</div>
+        <div class="save-area">
+          <span class="save-status" id="saveStatus"></span>
+          <button class="btn-save" id="saveBtn">Save Changes</button>
+        </div>
+      </div>
+
+      <div class="admin-content" id="adminContent">
+        <!-- dynamically rendered -->
+      </div>
+
+    </main>
+  </div>
+
+  <script src="admin-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

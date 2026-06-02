@@ -1,0 +1,264 @@
+{
+  "hero": {
+    "name": "Sk. Roushan Khalid",
+    "badge": "Available for opportunities",
+    "roleStatic": "AI/ML Engineer &",
+    "typingPhrases": [
+      "Applied AI Builder",
+      "Backend Engineer",
+      "LLM Integrations",
+      "AI Researcher",
+      "API Developer",
+      "Cross Functional Expert"
+    ],
+    "philosophy": "“Learning to engineer practical AI systems through real-world software development and continuous hands-on growth.”",
+    "location": "Dhaka, Bangladesh"
+  },
+  "about": {
+    "lead": "I'm a recent Software Engineering graduate (B.Sc., Daffodil International University) currently working as an <strong>AI Engineer at Kamal-Paterson Ltd</strong>, where I get to build and ship real AI-powered systems.",
+    "paragraphs": [
+      "My work sits at the intersection of applied machine learning, backend engineering, and LLM-based applications. I'm actively building experience in production-grade software — learning how AI systems actually behave at scale, not just in notebooks.",
+      "I'm honest about where I am: early career, still growing. But I'm doing that growing inside real industry problems — from RAG pipelines to full-stack agritech platforms — and I take every challenge seriously.",
+      "I value environments where I can learn fast, contribute meaningfully, and work alongside people who care about building things well. Mentorship and engineering culture matter a lot to me."
+    ],
+    "highlights": [
+      {
+        "icon": "🎓",
+        "title": "B.Sc. Software Engineering",
+        "sub": "Major in Data Science · CGPA 3.62/4.00"
+      },
+      {
+        "icon": "💼",
+        "title": "AI Engineer · Kamal-Paterson Ltd",
+        "sub": "Full-time · Dec 2025 – Present"
+      },
+      {
+        "icon": "🔬",
+        "title": "Research Intern · Learnix Research Lab",
+        "sub": "Part-time · June 2026 – Present"
+      }
+    ],
+    "focusItems": [
+      "Building AI-powered backend systems",
+      "RAG pipelines & LLM integration",
+      "Applied computer vision workflows",
+      "System design for scalable AI apps",
+      "Multi-agent orchestration concepts"
+    ],
+    "lookingFor": [
+      "Strong engineering culture",
+      "Mentorship & learning environment",
+      "Real-world AI problem spaces"
+    ]
+  },
+  "skills": [
+    {
+      "title": "Applied AI & Machine Learning",
+      "description": "Building practical ML systems that solve real problems — from data pipelines to model deployment. Focused on what works in production, not just benchmarks.",
+      "tags": [
+        "Scikit-learn",
+        "PyTorch",
+        "TensorFlow",
+        "MLflow"
+      ]
+    },
+    {
+      "title": "Backend Systems & APIs",
+      "description": "Designing and building backend infrastructure for AI products — RESTful APIs, database integrations, auth, and containerized deployments.",
+      "tags": [
+        "FastAPI",
+        "Flask",
+        "PostgreSQL",
+        "Docker"
+      ]
+    },
+    {
+      "title": "LLM Applications & RAG",
+      "description": "Integrating large language models into real applications — retrieval-augmented generation, intelligent assistants, and bilingual AI interfaces.",
+      "tags": [
+        "LangChain",
+        "LangGraph",
+        "OpenAI API",
+        "FAISS"
+      ]
+    },
+    {
+      "title": "Multi-Agent & AI Orchestration",
+      "description": "Exploring and building multi-agent systems for task automation and structured AI workflows. Learning how agent coordination works at a systems level.",
+      "tags": [
+        "CrewAI",
+        "LangGraph",
+        "Haystack",
+        "Agents"
+      ]
+    },
+    {
+      "title": "Computer Vision",
+      "description": "Applied CV work — gesture recognition, image-based classification, and vision workflows for domain-specific use cases like agritech and health monitoring.",
+      "tags": [
+        "OpenCV",
+        "MediaPipe",
+        "HuggingFace",
+        "Roboflow"
+      ]
+    },
+    {
+      "title": "Data-Driven Applications",
+      "description": "From analysis and visualization to intelligent automation systems that use data to drive decisions and actions.",
+      "tags": [
+        "Pandas",
+        "NumPy",
+        "Plotly",
+        "Statsmodels"
+      ]
+    },
+    {
+      "title": "AI-Assisted Development",
+      "description": "Proficient in working with AI coding tools to accelerate development, improve code quality, and explore solutions faster. Comfortable integrating these tools into real daily workflows.",
+      "tags": [
+        "Kiro",
+        "Claude",
+        "Cursor",
+        "GitHub Copilot",
+        "ChatGPT"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "date": "Dec 2025 – Present",
+      "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
+      "description": "Working on agritech AI systems — full-stack development, backend APIs, computer vision features, and applied AI components. Getting real exposure to how production systems are designed and maintained.",
+      "tags": [
+        "FastAPI",
+        "Flutter",
+        "React.js",
+        "PostgreSQL",
+        "RAG"
+      ],
+      "active": true
+    },
+    {
+      "date": "June 2026 – Present",
+      "title": "Research Intern · Learnix Research Lab",
+      "description": "Part-time research internship exploring applied ML research. Working on bridging academic research with practical implementations and deepening understanding of ML foundations.",
+      "tags": [
+        "Research",
+        "Applied ML",
+        "Part-time"
+      ],
+      "active": true
+    },
+    {
+      "date": "Jan 2022 – Apr 2026",
+      "title": "B.Sc. Software Engineering · Daffodil International University",
+      "description": "Major in Data Science. Graduated with 3.62/4.00 CGPA. Built strong foundations in software engineering, data science, and practical AI systems alongside academic coursework.",
+      "tags": [
+        "Data Science",
+        "Software Engineering",
+        "CGPA 3.62"
+      ],
+      "active": false
+    }
+  ],
+  "exploringBars": [
+    {
+      "label": "System Design for AI",
+      "value": 80
+    },
+    {
+      "label": "Scalable LLM Pipelines",
+      "value": 75
+    },
+    {
+      "label": "MLOps & Deployment",
+      "value": 50
+    },
+    {
+      "label": "Agent Orchestration",
+      "value": 75
+    },
+    {
+      "label": "Backend Architecture",
+      "value": 80
+    }
+  ],
+  "recognition": [
+    {
+      "icon": "🚀",
+      "title": "Top 50 – NASA Space Apps Challenge 2024",
+      "sub": "Led ExoQuest — exoplanet discovery platform"
+    },
+    {
+      "icon": "🏆",
+      "title": "Finalist – Take-off Programming Contest",
+      "sub": "Competitive algorithm design under pressure"
+    },
+    {
+      "icon": "📄",
+      "title": "ML Research Publication",
+      "sub": "ECG + LLM framework · ROC AUC ~0.987"
+    }
+  ],
+  "contributions": [
+    {
+      "number": "01",
+      "title": "Backend systems for AI products",
+      "description": "I can design and build the API and backend layer that AI features run on — from database schemas to FastAPI endpoints to containerized service setups."
+    },
+    {
+      "number": "02",
+      "title": "LLM integration & RAG pipelines",
+      "description": "I've built RAG systems from scratch — document ingestion, vector retrieval, prompt engineering, and connecting it all to production APIs with real user-facing interfaces."
+    },
+    {
+      "number": "03",
+      "title": "Data handling & AI workflows",
+      "description": "Structuring data flows, building intelligent automation pipelines, and integrating external data sources (weather APIs, geospatial data, time-series) into AI systems."
+    },
+    {
+      "number": "04",
+      "title": "AI feature development support",
+      "description": "I can contribute to AI feature R&D — prototyping, evaluating models, iterating on system behavior, and helping translate research ideas into working implementations."
+    },
+    {
+      "number": "05",
+      "title": "Cross-functional thinking",
+      "description": "I've contributed across agritech, health data, and smart farming domains. I can think about the product context around AI features, not just the model itself."
+    },
+    {
+      "number": "06",
+      "title": "Fast learning & adaptation",
+      "description": "I pick up new tools, frameworks, and problem domains quickly. I've shipped across Python, Dart, React, PHP, and SQL in real products — adaptability is a real strength."
+    }
+  ],
+  "philosophy": [
+    {
+      "number": "01",
+      "title": "Learn by building real systems",
+      "description": "The best way to understand something is to ship it, break it, and fix it. I don't wait for perfection before building."
+    },
+    {
+      "number": "02",
+      "title": "Simplicity over complexity",
+      "description": "If a simpler solution works, it's the better solution. I try not to reach for complexity before I've exhausted simpler approaches."
+    },
+    {
+      "number": "03",
+      "title": "Consistency over intensity",
+      "description": "Steady, daily progress compounds faster than burst energy. I care more about showing up consistently than occasional heroics."
+    },
+    {
+      "number": "04",
+      "title": "Real-world impact over hype",
+      "description": "AI is only valuable when it solves real problems for real people. I'm not chasing trends — I'm interested in what actually works."
+    }
+  ],
+  "contact": {
+    "email": "skroushankhalid.17@gmail.com",
+    "linkedin": "sk-roushan-khalid",
+    "github": "RoushanKhalid",
+    "footerNote": "Based in Dhaka, Bangladesh · Open to remote & onsite roles",
+    "footerCopy": "© 2026 Sk. Roushan Khalid · Built with Kiro"
+  }
+}
