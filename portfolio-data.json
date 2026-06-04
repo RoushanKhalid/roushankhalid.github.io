@@ -6,10 +6,11 @@
     "typingPhrases": [
       "Applied AI Builder",
       "Backend Engineer",
-      "LLM Integrations",
-      "AI Researcher",
-      "API Developer",
-      "Cross Functional Expert"
+      "AI Native Engineer",
+      "LLM/NLP Expert",
+      "Vibe Coding Expert",
+      "Database Architect",
+      "Business Analyst"
     ],
     "philosophy": "“Learning to engineer practical AI systems through real-world software development and continuous hands-on growth.”",
     "location": "Dhaka, Bangladesh"
@@ -43,7 +44,7 @@
       "RAG pipelines & LLM integration",
       "Applied computer vision workflows",
       "System design for scalable AI apps",
-      "Multi-agent orchestration concepts"
+      "Implemented multi-agent orchestrations"
     ],
     "lookingFor": [
       "Strong engineering culture",
@@ -109,7 +110,8 @@
         "Pandas",
         "NumPy",
         "Plotly",
-        "Statsmodels"
+        "Statsmodels",
+        "Matplotlib"
       ]
     },
     {
@@ -120,7 +122,6 @@
         "Claude",
         "Cursor",
         "GitHub Copilot",
-        "ChatGPT"
       ]
     }
   ],
@@ -134,7 +135,8 @@
         "Flutter",
         "React.js",
         "PostgreSQL",
-        "RAG"
+        "RAG",
+        "GIS"
       ],
       "active": true
     },
@@ -154,8 +156,9 @@
       "title": "B.Sc. Software Engineering · Daffodil International University",
       "description": "Major in Data Science. Graduated with 3.62/4.00 CGPA. Built strong foundations in software engineering, data science, and practical AI systems alongside academic coursework.",
       "tags": [
-        "Data Science",
+        "Data Science and AI",
         "Software Engineering",
+        "Project Management",
         "CGPA 3.62"
       ],
       "active": false
@@ -196,8 +199,8 @@
     },
     {
       "icon": "📄",
-      "title": "ML Research Publication",
-      "sub": "ECG + LLM framework · ROC AUC ~0.987"
+      "title": "AI/ML Research Publication",
+      "sub": "Healthcare + LLM framework · ROC AUC ~0.987"
     }
   ],
   "contributions": [
