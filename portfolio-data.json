@@ -18,30 +18,10 @@
       "I have hands-on experience across the full AI development lifecycle: from designing RAG pipelines and multi-agent orchestration systems to building full-stack platforms with Flutter, React, and FastAPI backends deployed on PostgreSQL/PostGIS infrastructure.",
       "I thrive in environments that value engineering rigour, continuous learning, and meaningful collaboration. I bring both technical depth and cross-functional awareness — understanding the product and business context around the AI features I build."
     ],
-    "highlights": [
-      {
-        "icon": "🎓",
-        "title": "B.Sc. Software Engineering",
-        "sub": "Major in Data Science · CGPA 3.62 / 4.00"
-      },
-      {
-        "icon": "💼",
-        "title": "AI Engineer · Kamal-Paterson Ltd",
-        "sub": "Full-time · Dec 2025 – Present"
-      },
-      {
-        "icon": "🔬",
-        "title": "Research Intern · Learnix Research Lab",
-        "sub": "Part-time · June 2026 – Present"
-      }
-    ],
     "focusItems": [
-      "Production AI backend systems",
-      "RAG pipelines & LLM integration",
-      "Applied computer vision workflows",
-      "Scalable system design for AI applications",
-      "Multi-agent orchestration architectures",
-      "AWS & basic cloud hosting"
+      "Applied AI & ML workflows",
+      "LLM applications & RAG pipelines",
+      "Backend APIs & basic AWS hosting"
     ],
     "lookingFor": [
       "Strong engineering culture",
@@ -52,85 +32,36 @@
   "skills": [
     {
       "title": "Applied AI & Machine Learning",
-      "description": "Designing and deploying practical ML systems end-to-end — from data pipelines and feature engineering to model training, evaluation, and production deployment.",
+      "description": "Designing and deploying machine learning models and computer vision pipelines — from data preprocessing and engineering to model evaluation, testing, and system integration.",
       "tags": [
-        "Scikit-learn",
         "PyTorch",
-        "TensorFlow",
-        "MLflow"
+        "Scikit-learn",
+        "OpenCV",
+        "Pandas"
       ]
     },
     {
-      "title": "LLM Applications & RAG",
-      "description": "Integrating large language models into production applications — retrieval-augmented generation pipelines, intelligent assistants, and multilingual AI interfaces.",
+      "title": "LLM & Generative AI Applications",
+      "description": "Building semantic search and retrieval-augmented generation (RAG) pipelines — integrating large language models and prompt engineering into user-facing backend interfaces.",
       "tags": [
         "LangChain",
         "LangGraph",
-        "OpenAI API",
-        "FAISS"
+        "FAISS",
+        "OpenAI API"
       ]
     },
     {
-      "title": "Multi-Agent & AI Orchestration",
-      "description": "Architecting multi-agent systems for task automation and structured AI workflows — coordinating specialised agents across planning, execution, and quality-assurance stages.",
-      "tags": [
-        "CrewAI",
-        "LangGraph",
-        "Haystack",
-        "AutoGen"
-      ]
-    },
-    {
-      "title": "Computer Vision",
-      "description": "Building applied CV solutions — real-time gesture recognition, image classification pipelines, and domain-specific vision workflows for agritech and health monitoring.",
-      "tags": [
-        "OpenCV",
-        "MediaPipe",
-        "HuggingFace",
-        "Roboflow"
-      ]
-    },
-    {
-      "title": "Data Engineering & Analytics",
-      "description": "Structuring data pipelines, building analytical dashboards, and developing intelligent automation systems that surface actionable insights from complex datasets.",
-      "tags": [
-        "Pandas",
-        "NumPy",
-        "Plotly",
-        "Statsmodels",
-        "Matplotlib"
-      ]
-    },
-    {
-      "title": "Backend Systems & APIs",
-      "description": "Building robust backend infrastructure for AI products — RESTful API design, relational database integration, authentication, and containerised service deployments.",
+      "title": "Backend Systems & Basic AWS Hosting",
+      "description": "Developing backend APIs and learning cloud deployment basics — implementing FastAPI services, PostgreSQL database integrations, and configuring basic AWS EC2 hosting.",
       "tags": [
         "FastAPI",
-        "Flask",
         "PostgreSQL",
-        "Docker"
-      ]
-    },
-    {
-      "title": "AWS & Server Hosting",
-      "description": "Exploring AWS cloud services and basic server hosting — learning to configure EC2, S3 buckets, RDS databases, and understanding web/app server fundamentals.",
-      "tags": [
+        "Docker",
         "AWS",
         "EC2",
         "S3",
-        "RDS",
         "Web Server",
         "App Server"
-      ]
-    },
-    {
-      "title": "AI-Augmented Development",
-      "description": "Proficient in leveraging AI coding tools to accelerate delivery, improve code quality, and prototype solutions faster — deeply integrated into daily engineering workflows.",
-      "tags": [
-        "Kiro",
-        "Claude",
-        "Cursor",
-        "GitHub Copilot"
       ]
     }
   ],
@@ -138,7 +69,7 @@
     {
       "date": "Dec 2025 – Present",
       "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
-      "description": "Developing AI-powered agritech systems spanning full-stack web and mobile applications, backend API infrastructure, computer vision features, and applied AI components. Recently began exploring AWS cloud basics and server hosting to help deploy company products.",
+      "description": "Building AI-powered agritech systems, including crop health mobile apps and FastAPI backends. Recently began exploring basic AWS server hosting to help deploy company products.",
       "tags": [
         "FastAPI",
         "Flutter",
@@ -181,24 +112,16 @@
       "value": 80
     },
     {
-      "label": "Scalable LLM Pipelines",
+      "label": "LLMs & RAG Pipelines",
       "value": 75
     },
     {
-      "label": "MLOps & Deployment",
-      "value": 60
+      "label": "Backend Systems",
+      "value": 75
     },
     {
       "label": "AWS & Cloud Basics",
       "value": 30
-    },
-    {
-      "label": "Agent Orchestration",
-      "value": 75
-    },
-    {
-      "label": "Backend Architecture",
-      "value": 80
     }
   ],
   "recognition": [
@@ -218,58 +141,21 @@
       "sub": "ECG + LLM framework · ROC AUC ~0.987"
     }
   ],
-  "contributions": [
+  "approach": [
     {
       "number": "01",
-      "title": "Backend Infrastructure for AI Products",
-      "description": "Designing and implementing the API and data layer that AI features depend on — covering database schema design, FastAPI service architecture, authentication, and containerised deployments."
+      "title": "Practical AI over Innovation Theatre",
+      "description": "I focus on building practical AI systems that solve real problems. I prioritize clear simplicity and reliable backend APIs over complex, over-engineered setups."
     },
     {
       "number": "02",
-      "title": "LLM Integration & RAG Pipelines",
-      "description": "Building production RAG systems from the ground up — document ingestion, vector indexing, retrieval optimisation, prompt engineering, and end-to-end integration with user-facing APIs."
+      "title": "Build to Learn & Iterate",
+      "description": "The best way to understand systems is to ship them, stress-test them, and refine. Theory without production-ready deployment has limited value."
     },
     {
       "number": "03",
-      "title": "Data Engineering & AI Workflow Design",
-      "description": "Structuring robust data pipelines, building intelligent automation workflows, and integrating external data sources — including weather APIs, geospatial datasets, and time-series feeds — into AI systems."
-    },
-    {
-      "number": "04",
-      "title": "AI Feature Research & Development",
-      "description": "Contributing to AI feature R&D cycles — rapid prototyping, model evaluation, iterative refinement, and translating research outcomes into working, production-ready implementations."
-    },
-    {
-      "number": "05",
-      "title": "Cross-Domain Technical Thinking",
-      "description": "Delivering across agritech, healthcare data, and smart farming domains. Capable of reasoning about the broader product and business context surrounding AI features, not only the model layer."
-    },
-    {
-      "number": "06",
-      "title": "Rapid Skill Acquisition & Adaptability",
-      "description": "Demonstrated ability to ramp up on new tools, frameworks, and problem domains quickly. Shipped production code across Python, Dart, React, PHP, and SQL — adaptability is a core professional asset."
-    }
-  ],
-  "philosophy": [
-    {
-      "number": "01",
-      "title": "Build to Learn",
-      "description": "The most effective path to understanding a system is to ship it, stress-test it, and iterate. Theory without practice has limited value in engineering."
-    },
-    {
-      "number": "02",
-      "title": "Simplicity as a Design Principle",
-      "description": "Complexity should be introduced only when simpler approaches have been exhausted. A clean, maintainable solution always outperforms an over-engineered one."
-    },
-    {
-      "number": "03",
-      "title": "Consistency Compounds",
-      "description": "Sustained, deliberate progress over time outperforms sporadic bursts of effort. Reliability and discipline are the foundation of lasting technical growth."
-    },
-    {
-      "number": "04",
-      "title": "Impact Over Innovation Theatre",
-      "description": "AI has value only when it solves real problems for real users. I focus on systems that work in practice — not on technology for its own sake."
+      "title": "Adaptability & Engineering Rigour",
+      "description": "I combine software engineering foundations (FastAPI, Flutter, PostgreSQL) with applied ML, focusing on consistent, disciplined growth."
     }
   ],
   "contact": {
@@ -277,6 +163,6 @@
     "linkedin": "sk-roushan-khalid",
     "github": "RoushanKhalid",
     "footerNote": "Based in Dhaka, Bangladesh · Open to remote and onsite opportunities",
-    "footerCopy": "© 2026 Sk. Roushan Khalid · Built with Kiro"
+    "footerCopy": "© 2026 Sk. Roushan Khalid"
   }
 }

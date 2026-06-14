@@ -196,8 +196,7 @@ function renderTab(tab) {
     case 'about':      el.innerHTML = renderAboutForm(d); break;
     case 'skills':     el.innerHTML = renderSkillsForm(d); break;
     case 'timeline':   el.innerHTML = renderTimelineForm(d); break;
-    case 'contribute': el.innerHTML = renderContributeForm(d); break;
-    case 'philosophy': el.innerHTML = renderPhilosophyForm(d); break;
+    case 'approach':   el.innerHTML = renderApproachForm(d); break;
     case 'contact':    el.innerHTML = renderContactForm(d); break;
   }
   bindTagInputs();
@@ -213,8 +212,7 @@ function harvestCurrentTab() {
     case 'about':      harvestAbout(); break;
     case 'skills':     harvestSkills(); break;
     case 'timeline':   harvestTimeline(); break;
-    case 'contribute': harvestContribute(); break;
-    case 'philosophy': harvestPhilosophy(); break;
+    case 'approach':   harvestApproach(); break;
     case 'contact':    harvestContact(); break;
   }
 }
@@ -295,29 +293,6 @@ function renderAboutForm(d) {
     <button class="btn-add" data-list="about_paras" data-type="textarea">+ Add paragraph</button>
   </div>
   <div class="form-section">
-    <div class="form-section-title">Highlights (cards)</div>
-    <div class="card-group" id="about_highlights">
-      ${a.highlights.map((h,i) => `
-        <div class="editor-card" data-idx="${i}">
-          <div class="editor-card-header">
-            <span class="editor-card-title">Highlight ${i+1}</span>
-            <button class="btn-remove" data-remove="about_highlights" data-idx="${i}">×</button>
-          </div>
-          <div class="form-row">
-            <div class="form-field"><label>Icon (emoji)</label>
-              <input class="hl_icon" value="${esc(h.icon)}" /></div>
-            <div class="form-field"><label>Title</label>
-              <input class="hl_title" value="${esc(h.title)}" /></div>
-          </div>
-          <div class="form-row full">
-            <div class="form-field"><label>Sub text</label>
-              <input class="hl_sub" value="${esc(h.sub)}" /></div>
-          </div>
-        </div>`).join('')}
-    </div>
-    <button class="btn-add" data-list="about_highlights" data-type="highlight">+ Add highlight</button>
-  </div>
-  <div class="form-section">
     <div class="form-section-title">Currently Focused On</div>
     <div class="list-editor" id="about_focus">
       ${a.focusItems.map((f,i) => listInputRow(f, i)).join('')}
@@ -339,11 +314,6 @@ function harvestAbout() {
   d.about.paragraphs = listValues('about_paras', 'textarea');
   d.about.focusItems = listValues('about_focus', 'input');
   d.about.lookingFor = listValues('about_looking', 'input');
-  d.about.highlights = [...document.querySelectorAll('#about_highlights .editor-card')].map(card => ({
-    icon: card.querySelector('.hl_icon').value,
-    title: card.querySelector('.hl_title').value,
-    sub: card.querySelector('.hl_sub').value
-  }));
 }
 
 /* ===========================
@@ -496,78 +466,40 @@ function harvestTimeline() {
 }
 
 /* ===========================
-   CONTRIBUTE TAB
+   APPROACH TAB
 =========================== */
-function renderContributeForm(d) {
+function renderApproachForm(d) {
   return `
   <div class="form-section">
-    <div class="form-section-title">Contribution Cards</div>
-    <div class="card-group" id="contrib_list">
-      ${d.contributions.map((c,i) => `
+    <div class="form-section-title">Approach Cards</div>
+    <div class="card-group" id="approach_list">
+      ${d.approach.map((a,i) => `
         <div class="editor-card" data-idx="${i}">
           <div class="editor-card-header">
             <span class="editor-card-title">Card ${i+1}</span>
-            <button class="btn-remove" data-remove="contrib_list" data-idx="${i}">×</button>
+            <button class="btn-remove" data-remove="approach_list" data-idx="${i}">×</button>
           </div>
           <div class="form-row">
             <div class="form-field"><label>Number label</label>
-              <input class="ct_num" value="${esc(c.number)}" /></div>
+              <input class="ap_num" value="${esc(a.number)}" /></div>
             <div class="form-field"><label>Title</label>
-              <input class="ct_title" value="${esc(c.title)}" /></div>
+              <input class="ap_title" value="${esc(a.title)}" /></div>
           </div>
           <div class="form-row full">
             <div class="form-field"><label>Description</label>
-              <textarea class="ct_desc" rows="2">${esc(c.description)}</textarea></div>
+              <textarea class="ap_desc" rows="2">${esc(a.description)}</textarea></div>
           </div>
         </div>`).join('')}
     </div>
-    <button class="btn-add" data-list="contrib_list" data-type="contribution">+ Add card</button>
+    <button class="btn-add" data-list="approach_list" data-type="approach">+ Add card</button>
   </div>`;
 }
 
-function harvestContribute() {
-  window._portfolioData.contributions = [...document.querySelectorAll('#contrib_list .editor-card')].map(card => ({
-    number: card.querySelector('.ct_num').value,
-    title: card.querySelector('.ct_title').value,
-    description: card.querySelector('.ct_desc').value
-  }));
-}
-
-/* ===========================
-   PHILOSOPHY TAB
-=========================== */
-function renderPhilosophyForm(d) {
-  return `
-  <div class="form-section">
-    <div class="form-section-title">Philosophy Cards</div>
-    <div class="card-group" id="phil_list">
-      ${d.philosophy.map((p,i) => `
-        <div class="editor-card" data-idx="${i}">
-          <div class="editor-card-header">
-            <span class="editor-card-title">Card ${i+1}</span>
-            <button class="btn-remove" data-remove="phil_list" data-idx="${i}">×</button>
-          </div>
-          <div class="form-row">
-            <div class="form-field"><label>Number glyph</label>
-              <input class="ph_num" value="${esc(p.number)}" /></div>
-            <div class="form-field"><label>Title</label>
-              <input class="ph_title" value="${esc(p.title)}" /></div>
-          </div>
-          <div class="form-row full">
-            <div class="form-field"><label>Description</label>
-              <textarea class="ph_desc" rows="2">${esc(p.description)}</textarea></div>
-          </div>
-        </div>`).join('')}
-    </div>
-    <button class="btn-add" data-list="phil_list" data-type="philosophy">+ Add card</button>
-  </div>`;
-}
-
-function harvestPhilosophy() {
-  window._portfolioData.philosophy = [...document.querySelectorAll('#phil_list .editor-card')].map(card => ({
-    number: card.querySelector('.ph_num').value,
-    title: card.querySelector('.ph_title').value,
-    description: card.querySelector('.ph_desc').value
+function harvestApproach() {
+  window._portfolioData.approach = [...document.querySelectorAll('#approach_list .editor-card')].map(card => ({
+    number: card.querySelector('.ap_num').value,
+    title: card.querySelector('.ap_title').value,
+    description: card.querySelector('.ap_desc').value
   }));
 }
 
@@ -691,19 +623,17 @@ function bindAddRemove() {
       switch (type) {
         case 'textarea': html = listTextareaRow('', idx); break;
         case 'input':    html = listInputRow('', idx); break;
-        case 'highlight':
+        case 'approach':
           html = `<div class="editor-card" data-idx="${idx}">
             <div class="editor-card-header">
-              <span class="editor-card-title">Highlight ${idx+1}</span>
+              <span class="editor-card-title">Card ${idx+1}</span>
               <button class="btn-remove" data-remove="${listId}" data-idx="${idx}">×</button>
             </div>
             <div class="form-row">
-              <div class="form-field"><label>Icon</label><input class="hl_icon" value="📌" /></div>
-              <div class="form-field"><label>Title</label><input class="hl_title" value="" /></div>
+              <div class="form-field"><label>Number</label><input class="ap_num" value="0${idx+1}" /></div>
+              <div class="form-field"><label>Title</label><input class="ap_title" value="" /></div>
             </div>
-            <div class="form-row full">
-              <div class="form-field"><label>Sub text</label><input class="hl_sub" value="" /></div>
-            </div>
+            <div class="form-row full"><div class="form-field"><label>Description</label><textarea class="ap_desc" rows="2"></textarea></div></div>
           </div>`; break;
         case 'skill':
           html = `<div class="editor-card" data-idx="${idx}">
@@ -751,30 +681,6 @@ function bindAddRemove() {
               <div class="form-field"><label>Title</label><input class="rec_title" value="" /></div>
             </div>
             <div class="form-row full"><div class="form-field"><label>Sub text</label><input class="rec_sub" value="" /></div></div>
-          </div>`; break;
-        case 'contribution':
-          html = `<div class="editor-card" data-idx="${idx}">
-            <div class="editor-card-header">
-              <span class="editor-card-title">Card ${idx+1}</span>
-              <button class="btn-remove" data-remove="${listId}" data-idx="${idx}">×</button>
-            </div>
-            <div class="form-row">
-              <div class="form-field"><label>Number</label><input class="ct_num" value="0${idx+1}" /></div>
-              <div class="form-field"><label>Title</label><input class="ct_title" value="" /></div>
-            </div>
-            <div class="form-row full"><div class="form-field"><label>Description</label><textarea class="ct_desc" rows="2"></textarea></div></div>
-          </div>`; break;
-        case 'philosophy':
-          html = `<div class="editor-card" data-idx="${idx}">
-            <div class="editor-card-header">
-              <span class="editor-card-title">Card ${idx+1}</span>
-              <button class="btn-remove" data-remove="${listId}" data-idx="${idx}">×</button>
-            </div>
-            <div class="form-row">
-              <div class="form-field"><label>Number</label><input class="ph_num" value="0${idx+1}" /></div>
-              <div class="form-field"><label>Title</label><input class="ph_title" value="" /></div>
-            </div>
-            <div class="form-row full"><div class="form-field"><label>Description</label><textarea class="ph_desc" rows="2"></textarea></div></div>
           </div>`; break;
       }
 

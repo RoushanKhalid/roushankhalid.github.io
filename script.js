@@ -9,12 +9,7 @@
 const SKILL_ICONS = [
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>`,
-  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>`,
-  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
-  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
-  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>`,
-  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>`
 ];
 
 const CONTACT_ICONS = {
@@ -52,16 +47,6 @@ function renderAbout(d) {
 
   const parasEl = document.getElementById('aboutParagraphs');
   parasEl.innerHTML = a.paragraphs.map(p => `<p>${p}</p>`).join('');
-
-  const hlEl = document.getElementById('aboutHighlights');
-  hlEl.innerHTML = a.highlights.map(h => `
-    <div class="highlight">
-      <span class="highlight-icon">${h.icon}</span>
-      <div>
-        <strong>${h.title}</strong>
-        <span>${h.sub}</span>
-      </div>
-    </div>`).join('');
 
   const focusEl = document.getElementById('focusList');
   focusEl.innerHTML = a.focusItems.map(item => `
@@ -116,23 +101,14 @@ function renderGrowth(d) {
     </div>`).join('');
 }
 
-function renderContribute(d) {
-  const grid = document.getElementById('contributeGrid');
-  grid.innerHTML = d.contributions.map(c => `
-    <div class="contribute-card">
-      <div class="contribute-number">${c.number}</div>
-      <h3>${c.title}</h3>
-      <p>${c.description}</p>
-    </div>`).join('');
-}
-
-function renderPhilosophy(d) {
-  const grid = document.getElementById('philosophyGrid');
-  grid.innerHTML = d.philosophy.map(p => `
-    <div class="philosophy-card">
-      <div class="philosophy-glyph">${p.number}</div>
-      <h3>${p.title}</h3>
-      <p>${p.description}</p>
+function renderApproach(d) {
+  const grid = document.getElementById('approachGrid');
+  if (!grid) return;
+  grid.innerHTML = d.approach.map(a => `
+    <div class="approach-card">
+      <div class="approach-number">${a.number}</div>
+      <h3>${a.title}</h3>
+      <p>${a.description}</p>
     </div>`).join('');
 }
 
@@ -189,8 +165,7 @@ async function loadPortfolio() {
     renderAbout(data);
     renderSkills(data);
     renderGrowth(data);
-    renderContribute(data);
-    renderPhilosophy(data);
+    renderApproach(data);
     renderContact(data);
 
     // Start typing after data loaded
@@ -412,7 +387,7 @@ function attachReveal() {
   );
 
   document.querySelectorAll(
-    '.skill-card, .contribute-card, .philosophy-card, .timeline-item, .highlight, .growth-card, .contact-card'
+    '.skill-card, .approach-card, .timeline-item, .growth-card, .contact-card'
   ).forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = `${(i % 4) * 0.07}s`;

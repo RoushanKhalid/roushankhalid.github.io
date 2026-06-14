@@ -480,50 +480,6 @@ ul {
   font-weight: 500;
 }
 
-.about-highlights {
-  margin-top: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.highlight {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.875rem;
-  padding: 0.875rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.015);
-}
-
-.highlight:hover {
-  border-color: rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
-}
-
-.highlight-icon {
-  font-size: 1.1rem;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-}
-
-.highlight strong {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.highlight span {
-  font-size: 0.775rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-}
-
 .about-card {
   position: sticky;
   top: 80px;
@@ -883,15 +839,15 @@ ul {
 }
 
 /* ===========================
-   CONTRIBUTE
+   APPROACH
 =========================== */
-.contribute-grid {
+.approach-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
 
-.contribute-card {
+.approach-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -901,13 +857,13 @@ ul {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
 }
 
-.contribute-card:hover {
+.approach-card:hover {
   border-color: var(--border-hover);
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.045);
 }
 
-.contribute-number {
+.approach-number {
   font-family: var(--font-mono);
   font-size: 1.6rem;
   font-weight: 700;
@@ -917,7 +873,7 @@ ul {
   letter-spacing: -0.05em;
 }
 
-.contribute-card h3 {
+.approach-card h3 {
   font-size: 0.925rem;
   font-weight: 600;
   color: var(--text);
@@ -925,52 +881,7 @@ ul {
   line-height: 1.4;
 }
 
-.contribute-card p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-/* ===========================
-   PHILOSOPHY
-=========================== */
-.philosophy-section {
-  background: var(--bg);
-}
-
-.philosophy-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-}
-
-.philosophy-card {
-  padding: 1.5rem 1.25rem;
-  border-top: 1px solid var(--border);
-  transition: border-color var(--transition);
-}
-
-.philosophy-card:hover {
-  border-color: rgba(0, 0, 0, 0.22);
-}
-
-.philosophy-glyph {
-  font-family: var(--font-mono);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.08);
-  margin-bottom: 0.875rem;
-}
-
-.philosophy-card h3 {
-  font-size: 0.925rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 0.6rem;
-  line-height: 1.4;
-}
-
-.philosophy-card p {
+.approach-card p {
   font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.7;
@@ -1183,11 +1094,7 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .contribute-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .philosophy-grid {
+  .approach-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1227,11 +1134,7 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .contribute-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .philosophy-grid {
+  .approach-grid {
     grid-template-columns: 1fr;
   }
 
