@@ -5,23 +5,23 @@
     "roleStatic": "AI/ML Engineer &",
     "typingPhrases": [
       "AWS Practitioner",
-      "MLOps Explorer",
-      "Full-Stack Developer"
+      "Backend Developer",
+      "Generative AI Developer"
     ],
-    "philosophy": "\"AI/ML Engineer focused on applied machine learning, backend engineering, and AWS cloud deployment.\"",
+    "philosophy": "\"AI/ML Engineer building applied machine learning models, robust APIs, and AWS cloud solutions.\"",
     "location": "Dhaka, Bangladesh"
   },
   "about": {
-    "lead": "I'm a Software Engineering graduate (B.Sc., Daffodil International University) working as an <strong>AI Engineer at Kamal-Paterson Ltd</strong>, where I design and ship production AI systems for real-world agritech applications.",
+    "lead": "I am a Software Engineering graduate and an <strong>AI Engineer at Kamal-Paterson Ltd</strong>, designing applied ML systems and backend APIs hosted on AWS.",
     "paragraphs": [
-      "My work spans applied machine learning, backend engineering, and LLM-based application development. I build production-grade AI software — focusing on how intelligent systems perform at scale, not just in research environments.",
-      "I have hands-on experience across the full AI development lifecycle: from designing RAG pipelines and multi-agent orchestration systems to building full-stack platforms with Flutter, React, and FastAPI backends deployed on PostgreSQL/PostGIS infrastructure.",
-      "I thrive in environments that value engineering rigour, continuous learning, and meaningful collaboration. I bring both technical depth and cross-functional awareness — understanding the product and business context around the AI features I build."
+      "I build practical AI and software solutions in the agritech domain, bridging the gap between machine learning models and production applications.",
+      "My hands-on experience includes developing RAG pipelines, FastAPI backends, full-stack client apps (Flutter, React), and configuring Docker containers on AWS.",
+      "I focus on engineering rigour, continuous learning, and shipping clean, reliable code."
     ],
     "focusItems": [
       "Applied AI & ML workflows",
-      "LLM applications & RAG pipelines",
-      "Backend APIs & AWS deployment"
+      "FastAPI APIs & AWS hosting",
+      "Generative AI & RAG pipelines"
     ],
     "lookingFor": [
       "Strong engineering culture",
@@ -32,7 +32,7 @@
   "skills": [
     {
       "title": "Applied AI & Machine Learning",
-      "description": "Designing and deploying machine learning models and computer vision pipelines — from data preprocessing and engineering to model evaluation, testing, and system integration.",
+      "description": "Building machine learning and computer vision systems — from data preprocessing and training to production integration.",
       "tags": [
         "PyTorch",
         "Scikit-learn",
@@ -42,7 +42,7 @@
     },
     {
       "title": "LLM & Generative AI Applications",
-      "description": "Building semantic search and retrieval-augmented generation (RAG) pipelines — integrating large language models and prompt engineering into user-facing backend interfaces.",
+      "description": "Developing retrieval-augmented generation (RAG) systems, multi-agent workflows, vector databases, and API integrations.",
       "tags": [
         "LangChain",
         "LangGraph",
@@ -51,17 +51,15 @@
       ]
     },
     {
-      "title": "Backend Systems & AWS Deployment",
-      "description": "Developing robust backend APIs and managing cloud deployments — implementing FastAPI services, PostgreSQL database integrations, and configuring AWS EC2 and S3 hosting.",
+      "title": "Backend APIs & AWS Hosting",
+      "description": "Developing backend APIs and managing cloud deployment. Implementing FastAPI, PostgreSQL, Docker containers, and AWS EC2/S3 hosting.",
       "tags": [
         "FastAPI",
         "PostgreSQL",
         "Docker",
         "AWS",
         "EC2",
-        "S3",
-        "Web Server",
-        "App Server"
+        "S3"
       ]
     }
   ],
@@ -69,7 +67,7 @@
     {
       "date": "Dec 2025 – Present",
       "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
-      "description": "Building AI-powered agritech systems, including crop health mobile apps and FastAPI backends. Deployed and configured AWS hosting environments to run production workloads.",
+      "description": "Developing backend APIs and full-stack agritech solutions. Built FastAPI services, offline-first Flutter mobile apps, and React dashboards, deployed via Docker on AWS.",
       "tags": [
         "FastAPI",
         "Flutter",
@@ -116,12 +114,12 @@
       "value": 75
     },
     {
-      "label": "Backend Systems",
+      "label": "Backend APIs",
       "value": 75
     },
     {
-      "label": "AWS & Cloud Services",
-      "value": 50
+      "label": "AWS & Cloud Hosting",
+      "value": 45
     }
   ],
   "recognition": [
