@@ -720,20 +720,7 @@ ul {
   color: var(--text-muted);
 }
 
-/* AI & AWS Specialized Tags */
-.skill-tags span.tag-ai,
-.timeline-tags span.tag-ai {
-  background: rgba(79, 70, 229, 0.07);
-  border-color: rgba(79, 70, 229, 0.16);
-  color: #4f46e5;
-}
 
-.skill-tags span.tag-aws,
-.timeline-tags span.tag-aws {
-  background: rgba(236, 114, 17, 0.07);
-  border-color: rgba(236, 114, 17, 0.16);
-  color: #ec7211;
-}
 
 .growth-sidebar {
   display: flex;

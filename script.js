@@ -22,11 +22,6 @@ const CONTACT_ICONS = {
    RENDER FUNCTIONS
 =========================== */
 function getTagClass(tag) {
-  const aiTags = ['pytorch', 'tensorflow', 'scikit-learn', 'mlflow', 'langchain', 'langgraph', 'openai api', 'faiss', 'crewai', 'haystack', 'autogen', 'opencv', 'mediapipe', 'huggingface', 'roboflow', 'rag', 'ai practitioner', 'ai engineer', 'ai systems', 'applied ai'];
-  const awsTags = ['aws', 'cloud', 'docker', 'kpcloud', 'postgresql', 'postgis', 'gis', 'mlops', 'deployment', 'serverless', 'fastapi', 'flask', 'ec2', 'lambda', 'ecs', 'fargate', 's3', 'rds', 'iam', 'server'];
-  const t = tag.toLowerCase();
-  if (aiTags.some(val => t.includes(val))) return 'tag-ai';
-  if (awsTags.some(val => t.includes(val))) return 'tag-aws';
   return 'tag-default';
 }
 
