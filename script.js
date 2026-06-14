@@ -55,11 +55,11 @@ function renderAbout(d) {
 
   const focusEl = document.getElementById('focusList');
   focusEl.innerHTML = a.focusItems.map(item => `
-    <li><span class="list-icon">→</span>${item}</li>`).join('');
+    <li><span class="list-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>${item}</li>`).join('');
 
   const lookEl = document.getElementById('lookingForList');
   lookEl.innerHTML = a.lookingFor.map(item => `
-    <li><span class="list-icon">✓</span>${item}</li>`).join('');
+    <li><span class="list-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>${item}</li>`).join('');
 }
 
 function renderSkills(d) {
@@ -137,7 +137,7 @@ function renderContact(d) {
           <div class="contact-label">Email</div>
           <div class="contact-value">${c.email}</div>
         </div>
-        <div class="contact-arrow">→</div>
+        <div class="contact-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
       </a>
     </div>
     <div class="contact-card">
@@ -147,7 +147,7 @@ function renderContact(d) {
           <div class="contact-label">LinkedIn</div>
           <div class="contact-value">${c.linkedin}</div>
         </div>
-        <div class="contact-arrow">→</div>
+        <div class="contact-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
       </a>
     </div>
     <div class="contact-card">
@@ -157,7 +157,7 @@ function renderContact(d) {
           <div class="contact-label">GitHub</div>
           <div class="contact-value">${c.github}</div>
         </div>
-        <div class="contact-arrow">→</div>
+        <div class="contact-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
       </a>
     </div>`;
 

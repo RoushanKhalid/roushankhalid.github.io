@@ -498,9 +498,10 @@ ul {
 }
 
 .list-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--accent);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
   flex-shrink: 0;
 }
 
@@ -940,9 +941,10 @@ ul {
 }
 
 .contact-arrow {
+  display: inline-flex;
+  align-items: center;
   margin-left: auto;
   color: var(--text-dim);
-  font-size: 1.1rem;
   transition: color var(--transition), transform var(--transition);
 }
 
