@@ -8,7 +8,7 @@
       "MLOps Explorer",
       "Full-Stack Developer"
     ],
-    "philosophy": "\"AI/ML Engineer focused on applied machine learning and backend APIs, while exploring AWS cloud hosting.\"",
+    "philosophy": "\"AI/ML Engineer focused on applied machine learning, backend engineering, and AWS cloud deployment.\"",
     "location": "Dhaka, Bangladesh"
   },
   "about": {
@@ -21,7 +21,7 @@
     "focusItems": [
       "Applied AI & ML workflows",
       "LLM applications & RAG pipelines",
-      "Backend APIs & basic AWS hosting"
+      "Backend APIs & AWS deployment"
     ],
     "lookingFor": [
       "Strong engineering culture",
@@ -51,8 +51,8 @@
       ]
     },
     {
-      "title": "Backend Systems & Basic AWS Hosting",
-      "description": "Developing backend APIs and learning cloud deployment basics — implementing FastAPI services, PostgreSQL database integrations, and configuring basic AWS EC2 hosting.",
+      "title": "Backend Systems & AWS Deployment",
+      "description": "Developing robust backend APIs and managing cloud deployments — implementing FastAPI services, PostgreSQL database integrations, and configuring AWS EC2 and S3 hosting.",
       "tags": [
         "FastAPI",
         "PostgreSQL",
@@ -69,7 +69,7 @@
     {
       "date": "Dec 2025 – Present",
       "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
-      "description": "Building AI-powered agritech systems, including crop health mobile apps and FastAPI backends. Recently began exploring basic AWS server hosting to help deploy company products.",
+      "description": "Building AI-powered agritech systems, including crop health mobile apps and FastAPI backends. Deployed and configured AWS hosting environments to run production workloads.",
       "tags": [
         "FastAPI",
         "Flutter",
@@ -120,8 +120,8 @@
       "value": 75
     },
     {
-      "label": "AWS & Cloud Basics",
-      "value": 30
+      "label": "AWS & Cloud Services",
+      "value": 50
     }
   ],
   "recognition": [
