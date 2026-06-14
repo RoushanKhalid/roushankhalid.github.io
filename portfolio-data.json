@@ -4,15 +4,11 @@
     "badge": "Open to Opportunities",
     "roleStatic": "AI/ML Engineer &",
     "typingPhrases": [
-      "Applied AI Engineer",
-      "Backend Engineer",
-      "LLM/RAG Specialist",
-      "AI Systems Builder",
-      "NLP Engineer",
-      "MLOps Practitioner",
-      "Full-Stack AI Developer"
+      "AWS Practitioner",
+      "MLOps Explorer",
+      "Full-Stack Developer"
     ],
-    "philosophy": "\"Engineering practical AI systems at the intersection of applied research and production software.\"",
+    "philosophy": "\"AI/ML Engineer focused on applied machine learning and backend APIs, while exploring AWS cloud hosting.\"",
     "location": "Dhaka, Bangladesh"
   },
   "about": {
@@ -64,16 +60,6 @@
       ]
     },
     {
-      "title": "Backend Systems & APIs",
-      "description": "Building robust backend infrastructure for AI products — RESTful API design, relational database integration, authentication, and containerised service deployments.",
-      "tags": [
-        "FastAPI",
-        "Flask",
-        "PostgreSQL",
-        "Docker"
-      ]
-    },
-    {
       "title": "LLM Applications & RAG",
       "description": "Integrating large language models into production applications — retrieval-augmented generation pipelines, intelligent assistants, and multilingual AI interfaces.",
       "tags": [
@@ -115,6 +101,28 @@
       ]
     },
     {
+      "title": "Backend Systems & APIs",
+      "description": "Building robust backend infrastructure for AI products — RESTful API design, relational database integration, authentication, and containerised service deployments.",
+      "tags": [
+        "FastAPI",
+        "Flask",
+        "PostgreSQL",
+        "Docker"
+      ]
+    },
+    {
+      "title": "AWS & Server Hosting",
+      "description": "Exploring AWS cloud services and basic server hosting — learning to configure EC2, S3 buckets, RDS databases, and understanding web/app server fundamentals.",
+      "tags": [
+        "AWS",
+        "EC2",
+        "S3",
+        "RDS",
+        "Web Server",
+        "App Server"
+      ]
+    },
+    {
       "title": "AI-Augmented Development",
       "description": "Proficient in leveraging AI coding tools to accelerate delivery, improve code quality, and prototype solutions faster — deeply integrated into daily engineering workflows.",
       "tags": [
@@ -129,14 +137,16 @@
     {
       "date": "Dec 2025 – Present",
       "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
-      "description": "Developing AI-powered agritech systems spanning full-stack web and mobile applications, backend API infrastructure, computer vision features, and applied AI components. Responsible for system architecture decisions, feature implementation, and R&D across multiple product modules.",
+      "description": "Developing AI-powered agritech systems spanning full-stack web and mobile applications, backend API infrastructure, computer vision features, and applied AI components. Recently began exploring AWS cloud basics and server hosting to help deploy company products.",
       "tags": [
         "FastAPI",
         "Flutter",
         "React.js",
         "PostgreSQL",
         "RAG",
-        "GIS"
+        "GIS",
+        "AWS",
+        "Cloud Architecture"
       ],
       "active": true
     },
@@ -175,7 +185,11 @@
     },
     {
       "label": "MLOps & Deployment",
-      "value": 50
+      "value": 60
+    },
+    {
+      "label": "AWS & Cloud Basics",
+      "value": 30
     },
     {
       "label": "Agent Orchestration",

@@ -8,11 +8,12 @@
 =========================== */
 const SKILL_ICONS = [
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
-  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>`,
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>`,
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>`,
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`
 ];
 
@@ -25,6 +26,15 @@ const CONTACT_ICONS = {
 /* ===========================
    RENDER FUNCTIONS
 =========================== */
+function getTagClass(tag) {
+  const aiTags = ['pytorch', 'tensorflow', 'scikit-learn', 'mlflow', 'langchain', 'langgraph', 'openai api', 'faiss', 'crewai', 'haystack', 'autogen', 'opencv', 'mediapipe', 'huggingface', 'roboflow', 'rag', 'ai practitioner', 'ai engineer', 'ai systems', 'applied ai'];
+  const awsTags = ['aws', 'cloud', 'docker', 'kpcloud', 'postgresql', 'postgis', 'gis', 'mlops', 'deployment', 'serverless', 'fastapi', 'flask', 'ec2', 'lambda', 'ecs', 'fargate', 's3', 'rds', 'iam', 'server'];
+  const t = tag.toLowerCase();
+  if (aiTags.some(val => t.includes(val))) return 'tag-ai';
+  if (awsTags.some(val => t.includes(val))) return 'tag-aws';
+  return 'tag-default';
+}
+
 function renderHero(d) {
   const hero = d.hero;
   document.getElementById('heroBadge').textContent = hero.badge;
@@ -69,7 +79,7 @@ function renderSkills(d) {
       <div class="skill-icon">${SKILL_ICONS[i % SKILL_ICONS.length]}</div>
       <h3>${s.title}</h3>
       <p>${s.description}</p>
-      <div class="skill-tags">${s.tags.map(t => `<span>${t}</span>`).join('')}</div>
+      <div class="skill-tags">${s.tags.map(t => `<span class="${getTagClass(t)}">${t}</span>`).join('')}</div>
     </div>`).join('');
 }
 
@@ -82,7 +92,7 @@ function renderGrowth(d) {
         <div class="timeline-date">${item.date}</div>
         <h3>${item.title}</h3>
         <p>${item.description}</p>
-        <div class="timeline-tags">${item.tags.map(t => `<span>${t}</span>`).join('')}</div>
+        <div class="timeline-tags">${item.tags.map(t => `<span class="${getTagClass(t)}">${t}</span>`).join('')}</div>
       </div>
     </div>`).join('');
 
@@ -305,7 +315,7 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
+    ctx.fillStyle = `rgba(0, 0, 0, ${this.opacity * 0.25})`;
     ctx.fill();
   }
 }
@@ -326,7 +336,7 @@ function drawConnections() {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(99, 102, 241, ${alpha})`;
+        ctx.strokeStyle = `rgba(0, 0, 0, ${alpha * 0.25})`;
         ctx.lineWidth = 0.6;
         ctx.stroke();
       }
