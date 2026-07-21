@@ -2,126 +2,140 @@
   "hero": {
     "name": "Sk. Roushan Khalid",
     "badge": "Open to Opportunities",
-    "roleStatic": "AI/ML Engineer &",
+    "roleStatic": "AI/ML Engineer •",
     "typingPhrases": [
-      "AWS Practitioner",
-      "Backend Developer",
-      "Generative AI Developer"
-    ],
-    "philosophy": "\"AI/ML Engineer building applied machine learning models, robust APIs, and AWS cloud solutions.\"",
+        "AI-First Software Engineer",
+        "Backend Engineer",
+        "Generative AI Developer",
+        "Production AI Builder"
+      ],
+    "philosophy": "\"Building intelligent systems that combine machine learning research with scalable software engineering.\"",
     "location": "Dhaka, Bangladesh"
   },
+
   "about": {
-    "lead": "I am a Software Engineering graduate and an <strong>AI Engineer at Kamal-Paterson Ltd</strong>, designing applied ML systems and backend APIs hosted on AWS.",
+    "lead": "I am an AI/ML Engineer building intelligent systems that combine machine learning research with scalable software engineering.",
     "paragraphs": [
-      "I build practical AI and software solutions in the agritech domain, bridging the gap between machine learning models and production applications.",
-      "My hands-on experience includes developing RAG pipelines, FastAPI backends, full-stack client apps (Flutter, React), and configuring Docker containers on AWS.",
-      "I focus on engineering rigour, continuous learning, and shipping clean, reliable code."
+      "I enjoy building AI systems that solve real-world problems—from classical machine learning and deep learning to modern LLM-powered applications.",
+      "My work focuses on designing reliable AI pipelines, developing scalable backend services, and transforming research ideas into production-ready software.",
+      "I enjoy working across the complete AI lifecycle—from experimentation and model development to backend architecture, deployment, and production systems—while continuously learning by building."
     ],
     "focusItems": [
-      "Applied AI & ML workflows",
-      "FastAPI APIs & AWS hosting",
-      "Generative AI & RAG pipelines"
+      "Machine Learning & Deep Learning",
+      "LLMs, AI Agents & RAG",
+      "Backend Systems & AI Infrastructure"
     ],
     "lookingFor": [
-      "Strong engineering culture",
-      "Mentorship & collaborative growth",
-      "Impactful AI problem spaces"
+      "Production AI Engineering",
+      "Scalable Distributed Systems",
+      "Strong Engineering Culture"
     ]
   },
+
   "skills": [
     {
-      "title": "Applied AI & Machine Learning",
-      "description": "Building machine learning and computer vision systems — from data preprocessing and training to production integration.",
+      "title": "Artificial Intelligence",
+      "description": "Building machine learning, deep learning, computer vision, and generative AI systems—from experimentation and model training to deployment and production integration.",
       "tags": [
         "PyTorch",
+        "TensorFlow",
+        "Transformers",
         "Scikit-learn",
         "OpenCV",
-        "Pandas"
+        "Pandas",
+        "Hugging Face"
       ]
     },
     {
-      "title": "LLM & Generative AI Applications",
-      "description": "Developing retrieval-augmented generation (RAG) systems, multi-agent workflows, vector databases, and API integrations.",
+      "title": "LLM & Generative AI",
+      "description": "Developing production-ready LLM applications including Retrieval-Augmented Generation (RAG), AI agents, orchestration workflows, and vector search systems.",
       "tags": [
         "LangChain",
         "LangGraph",
+        "CrewAI",
         "FAISS",
         "OpenAI API"
       ]
     },
     {
-      "title": "Backend APIs & AWS Hosting",
-      "description": "Developing backend APIs and managing cloud deployment. Implementing FastAPI, PostgreSQL, Docker containers, and AWS EC2/S3 hosting.",
+      "title": "Backend Engineering & Infrastructure",
+      "description": "Designing scalable backend services, REST APIs, cloud-native deployments, databases, and containerized applications for AI systems.",
       "tags": [
         "FastAPI",
+        "Flask",
         "PostgreSQL",
+        "MySQL",
         "Docker",
         "AWS",
-        "EC2",
-        "S3"
+        "Git",
+        "MLflow"
       ]
     }
   ],
+
   "timeline": [
     {
       "date": "Dec 2025 – Present",
       "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
-      "description": "Developing backend APIs and full-stack agritech solutions. Built FastAPI services, offline-first Flutter mobile apps, and React dashboards, deployed via Docker on AWS.",
+      "description": "Building AI-powered applications and production backend systems for agritech. Designing FastAPI services, LLM-powered workflows, offline-first Flutter applications, React dashboards, PostgreSQL databases, and cloud-native deployments using Docker on AWS.",
       "tags": [
+        "AI Engineering",
         "FastAPI",
         "Flutter",
-        "React.js",
+        "React",
         "PostgreSQL",
-        "RAG",
-        "GIS",
+        "Docker",
         "AWS",
-        "Cloud Architecture"
+        "RAG",
+        "GIS"
       ],
       "active": true
     },
     {
-      "date": "June 2026 – Present",
+      "date": "Jun 2026 – Present",
       "title": "Research Intern · Learnix Research Lab",
-      "description": "Part-time applied ML research internship focused on bridging academic methodologies with practical implementations. Contributing to research on ML foundations and their translation into production-viable systems.",
+      "description": "Conducting applied machine learning research focused on bridging academic methodologies with production-ready AI systems. Exploring practical ML foundations, scalable implementations, and engineering best practices.",
       "tags": [
         "Applied ML",
         "Research",
-        "Part-time"
+        "LLMs",
+        "Production AI"
       ],
       "active": true
     },
     {
       "date": "Jan 2022 – Apr 2026",
       "title": "B.Sc. Software Engineering · Daffodil International University",
-      "description": "Major in Data Science. Graduated with a CGPA of 3.62 / 4.00. Developed strong foundations in software engineering principles, data science, and applied AI systems. Active member of the Data Science Club, Software Engineering Club, and BASIS Students' Forum DIU Chapter.",
+      "description": "Graduated with a CGPA of 3.65/4.00 with a major in Data Science. Built strong foundations in software engineering, artificial intelligence, machine learning, algorithms, databases, and distributed systems while actively participating in technical communities and research initiatives.",
       "tags": [
-        "Data Science & AI",
         "Software Engineering",
-        "Project Management",
-        "CGPA 3.62"
+        "Data Science",
+        "Artificial Intelligence",
+        "CGPA 3.65"
       ],
       "active": false
     }
   ],
+
   "exploringBars": [
     {
-      "label": "System Design for AI",
+      "label": "Machine Learning & AI",
+      "value": 90
+    },
+    {
+      "label": "LLMs & AI Agents",
+      "value": 85
+    },
+    {
+      "label": "Backend Engineering",
       "value": 80
     },
     {
-      "label": "LLMs & RAG Pipelines",
-      "value": 75
-    },
-    {
-      "label": "Backend APIs",
-      "value": 75
-    },
-    {
-      "label": "AWS & Cloud Hosting",
-      "value": 45
+      "label": "Distributed Systems",
+      "value": 60
     }
   ],
+
   "recognition": [
     {
       "icon": "🚀",
@@ -131,36 +145,85 @@
     {
       "icon": "🏆",
       "title": "Finalist – Take-off Programming Contest",
-      "sub": "Competitive algorithm design under pressure"
+      "sub": "Competitive programming and algorithmic problem solving"
     },
     {
       "icon": "📄",
       "title": "AI/ML Research Publication",
-      "sub": "ECG + LLM framework · ROC AUC ~0.987"
+      "sub": "ECG + LLM framework achieving ROC AUC ≈ 0.987"
     }
   ],
+
   "approach": [
     {
       "number": "01",
-      "title": "Practical AI over Innovation Theatre",
-      "description": "I focus on building practical AI systems that solve real problems. I prioritize clear simplicity and reliable backend APIs over complex, over-engineered setups."
+      "title": "Engineering Beyond Models",
+      "description": "Good AI products require more than accurate models. They require thoughtful engineering, reliable systems, and a deep understanding of the problems they're solving."
     },
     {
       "number": "02",
-      "title": "Build to Learn & Iterate",
-      "description": "The best way to understand systems is to ship them, stress-test them, and refine. Theory without production-ready deployment has limited value."
+      "title": "Production-First Mindset",
+      "description": "I enjoy taking ideas from experimentation to production by building scalable backend services, maintainable APIs, and robust AI pipelines that can be deployed with confidence."
     },
     {
       "number": "03",
-      "title": "Adaptability & Engineering Rigour",
-      "description": "I combine software engineering foundations (FastAPI, Flutter, PostgreSQL) with applied ML, focusing on consistent, disciplined growth."
+      "title": "Build, Learn & Iterate",
+      "description": "The fastest way to grow is by designing, shipping, and continuously improving real systems. Every project is an opportunity to deepen both engineering and AI expertise."
     }
   ],
+
+  "researchInterests": [
+    "Generative AI",
+    "Large Language Models",
+    "AI Agents",
+    "Retrieval-Augmented Generation",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Healthcare AI",
+    "AI for Agriculture",
+    "Explainable AI",
+    "Scalable ML Systems"
+  ],
+
+  "technology": {
+    "languages": [
+      "Python",
+      "Go",
+      "C/C++",
+      "SQL"
+    ],
+    "ai": [
+      "PyTorch",
+      "TensorFlow",
+      "Transformers",
+      "Scikit-learn",
+      "Hugging Face"
+    ],
+    "llm": [
+      "LangChain",
+      "LangGraph",
+      "CrewAI",
+      "FAISS"
+    ],
+    "backend": [
+      "FastAPI",
+      "Flask",
+      "PostgreSQL",
+      "MySQL"
+    ],
+    "infrastructure": [
+      "Docker",
+      "AWS",
+      "Git",
+      "MLflow"
+    ]
+  },
+
   "contact": {
     "email": "skroushankhalid.17@gmail.com",
     "linkedin": "sk-roushan-khalid",
     "github": "RoushanKhalid",
-    "footerNote": "Based in Dhaka, Bangladesh · Open to remote and onsite opportunities",
+    "footerNote": "Building intelligent systems with AI and software engineering • Open to remote and onsite opportunities",
     "footerCopy": "© 2026 Sk. Roushan Khalid"
   }
 }
