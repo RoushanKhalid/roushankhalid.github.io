@@ -4,13 +4,13 @@
     "badge": "AI Engineer &bull; Full-Lifecycle Systems Builder",
     "roleStatic": "Mindset: ",
     "typingPhrases": [
-      "Full-Lifecycle Systems Builder",
-      "Autonomous Multi-Agent Systems",
-      "Production AI Architecture",
-      "From Research to Scalable Software",
-      "End-to-End Engineering Execution"
+      "Applied AI Engineer",
+      "Agritech & Earth Systems",
+      "Clinical Diagnostic AI",
+      "Document Intelligence & Agents",
+      "Enterprise Decision Systems"
     ],
-    "philosophy": "AI Engineer and end-to-end builder — transforming complex domain challenges, research breakthroughs, and unstructured data into resilient, production-ready intelligent software.",
+    "philosophy": "AI Engineer and full-lifecycle builder — transforming complex domain challenges, research breakthroughs, and unstructured data into resilient, production-ready intelligent software.",
     "location": "Dhaka, Bangladesh"
   },
   "about": {
@@ -87,13 +87,10 @@
       "title": "AI Engineer (R&D) • Kamal-Paterson Ltd | KPCloud",
       "description": "Developing backend APIs and full-stack features across web and mobile applications for agritech and consumer AI. Conducting R&D on RAG pipelines, computer vision, and LLM-based features. Integrating weather, geospatial (GIS), and third-party APIs into production microservices with offline-first mobile sync.",
       "tags": [
-        "FastAPI",
-        "RAG",
-        "Computer Vision",
-        "PostgreSQL",
-        "Docker",
-        "Geospatial APIs",
-        "Offline-First Sync"
+        "Agritech AI Systems",
+        "Geospatial GIS Telemetry",
+        "Offline-First Mobility",
+        "Production Engineering"
       ],
       "active": true
     },
@@ -102,11 +99,10 @@
       "title": "Research Assistant (RA) • Data Science Lab, DIU",
       "description": "Collaborated with senior researchers at the University of Porto on multilingual and multimodal AI/ML research. Developed and evaluated AI/ML models focusing on cross-lingual transfer between Bangla and Portuguese, conducting comparative statistical analyses and tokenization audits.",
       "tags": [
-        "PyTorch",
-        "Multimodal AI",
-        "Transformers",
-        "Cross-Lingual NLP",
-        "Statistical Evaluation"
+        "Multilingual AI Research",
+        "Multimodal Signal Analysis",
+        "Statistical Benchmarking",
+        "International Lab Collaboration"
       ],
       "active": false
     },
@@ -117,9 +113,8 @@
       "tags": [
         "Software Engineering",
         "Data Science Major",
-        "CGPA 3.65",
-        "Algorithms",
-        "Distributed Systems"
+        "Algorithms & Internals",
+        "Systems Architecture"
       ],
       "active": false
     }
