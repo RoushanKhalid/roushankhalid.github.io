@@ -33,62 +33,51 @@
   },
   "skills": [
     {
-      "title": "Applied AI & Machine Learning",
+      "title": "Precision Agriculture & GIS",
       "num": "01",
-      "tagline": "ML & Computer Vision",
-      "description": "Building classical machine learning, deep learning, computer vision, and experimental diagnostic models—from preprocessing and validation to production integration.",
+      "tagline": "Agritech & Earth Systems",
+      "description": "Developing crop intelligence models, satellite and sensor integrations, and offline-first mobile tools for agricultural operations.",
       "tags": [
-        "PyTorch",
-        "TensorFlow",
-        "Transformers",
-        "Scikit-learn",
-        "OpenCV",
-        "PaddleOCR",
-        "Hugging Face"
+        "Field Crop Diagnostics",
+        "Micro-Climate Telemetry",
+        "Spatial Mapping & GIS",
+        "Offline-First Sync"
       ]
     },
     {
-      "title": "LLMs & Multi-Agent Systems",
+      "title": "Clinical AI & Biosignal Analysis",
       "num": "02",
-      "tagline": "GenAI & Multi-Agent",
-      "description": "Developing production-grade LLM applications including Retrieval-Augmented Generation (RAG), autonomous multi-agent orchestration, and real-time inference pipelines.",
+      "tagline": "Healthcare Diagnostics",
+      "description": "Conducting peer-reviewed medical research and building interpretable diagnostic frameworks for cardiovascular disease prediction.",
       "tags": [
-        "LangChain",
-        "LangGraph",
-        "CrewAI",
-        "FAISS",
-        "RAG Pipelines",
-        "Groq API",
-        "OpenAI API"
+        "ECG Pathology Prediction",
+        "Interpretable Insights",
+        "Peer-Reviewed Research",
+        "High-Precision ROC-AUC"
       ]
     },
     {
-      "title": "Backend Engineering & Cloud",
+      "title": "Advisory Platforms & Document AI",
       "num": "03",
-      "tagline": "Distributed Systems",
-      "description": "Architecting high-concurrency microservices, REST APIs, asynchronous task workers, database schemas, and containerized cloud deployments on AWS.",
+      "tagline": "Higher Education & Vision",
+      "description": "Building autonomous student advisory platforms that extract dense academic records and evaluate prerequisites with zero hallucinations.",
       "tags": [
-        "FastAPI",
-        "Flask",
-        "PostgreSQL",
-        "MySQL",
-        "Redis",
-        "Celery",
-        "Docker",
-        "AWS"
+        "Transcript Data Extraction",
+        "Conversational Guidance",
+        "Deterministic Rule Validation",
+        "Fast Eligibility Verification"
       ]
     },
     {
-      "title": "Business & Product Strategy",
+      "title": "Customer Intelligence & Growth",
       "num": "04",
-      "tagline": "Product & Strategy",
-      "description": "Bridging technology with commercial viability: customer retention intelligence, churn risk prediction, usage telemetry metering, and go-to-market execution.",
+      "tagline": "Enterprise & Retention",
+      "description": "Engineering predictive churn engines, lifetime value models, and automated engagement workflows that protect commercial revenue.",
       "tags": [
-        "Product Strategy",
-        "Customer Intelligence",
-        "Churn Prediction",
-        "Technopreneurship",
-        "Technical Advisory"
+        "Predictive Churn Scoring",
+        "LTV Modeling",
+        "Automated Retention Loops",
+        "Scalable Event Processing"
       ]
     }
   ],
