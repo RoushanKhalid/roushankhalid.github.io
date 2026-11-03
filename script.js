@@ -758,6 +758,41 @@
       if (ctx) ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
+        function getParticlePalette() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'monochrome';
+      switch (currentTheme) {
+        case 'noir':
+          return {
+            colors: ['222, 79, 61', '245, 243, 239', '117, 32, 32'],
+            line: '222, 79, 61'
+          };
+        case 'indigo':
+          return {
+            colors: ['99, 102, 241', '129, 140, 248', '56, 189, 248'],
+            line: '99, 102, 241'
+          };
+        case 'cobalt':
+          return {
+            colors: ['29, 78, 216', '16, 185, 129', '96, 165, 250'],
+            line: '29, 78, 216'
+          };
+        case 'monochrome':
+        default:
+          return {
+            colors: ['20, 20, 20', '80, 80, 80', '27, 94, 32'],
+            line: '45, 45, 45'
+          };
+      }
+    }
+
+    window.addEventListener('themeChanged', () => {
+      if (!particles || !particles.length) return;
+      const pal = getParticlePalette();
+      particles.forEach(p => {
+        p.color = pal.colors[Math.floor(Math.random() * pal.colors.length)];
+      });
+    });
+
     class Particle {
       constructor() { this.reset(); }
       reset() {
@@ -770,7 +805,8 @@
         this.speedX = (Math.random() - 0.5) * (0.35 + this.depth * 0.3);
         this.speedY = (Math.random() - 0.5) * (0.35 + this.depth * 0.3);
         this.opacity = this.depth * 0.45 + 0.25;
-        this.color = Math.random() > 0.4 ? '29, 78, 216' : (Math.random() > 0.5 ? '16, 185, 129' : '96, 165, 250');
+        const pal = getParticlePalette();
+        this.color = pal.colors[Math.floor(Math.random() * pal.colors.length)];
       }
       update() {
         const w = canvas.offsetWidth || 1;
@@ -823,7 +859,8 @@
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(29, 78, 216, ${alpha})`;
+            const pal = getParticlePalette();
+            ctx.strokeStyle = `rgba(${pal.line}, ${alpha})`;
             ctx.lineWidth = 0.75;
             ctx.stroke();
           }
@@ -838,7 +875,7 @@
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(29, 78, 216, ${mAlpha})`;
+            ctx.strokeStyle = `rgba(${pal.line}, ${mAlpha})`;
             ctx.lineWidth = 0.85;
             ctx.stroke();
           }
@@ -1098,7 +1135,113 @@
   /* ===========================
      BOOTSTRAP ON DOM READY
   =========================== */
+
+  /* ===========================
+     THEME / PALETTE MANAGER
+  =========================== */
+  function initThemeManager() {
+    const switcher = document.getElementById('paletteSwitcher');
+    const trigger = document.getElementById('paletteTrigger');
+    const menu = document.getElementById('paletteMenu');
+    const currentLabel = document.getElementById('paletteCurrentLabel');
+    const metaThemeColor = document.getElementById('metaThemeColor');
+    const items = menu ? menu.querySelectorAll('.palette-item') : [];
+
+    const THEME_NAMES = {
+      monochrome: 'Mono',
+      noir: 'Noir',
+      indigo: 'Indigo',
+      cobalt: 'Cobalt'
+    };
+
+    const THEME_META_COLORS = {
+      monochrome: '#FFFFFF',
+      noir: '#0A0708',
+      indigo: '#0A0A0F',
+      cobalt: '#F8FAFC'
+    };
+
+    function applyTheme(theme, persist) {
+      if (persist === undefined) persist = true;
+      if (!THEME_NAMES[theme]) theme = 'monochrome';
+      document.documentElement.setAttribute('data-theme', theme);
+      if (persist) {
+        try {
+          localStorage.setItem('roushan_portfolio_theme', theme);
+        } catch(e) {}
+      }
+
+      if (currentLabel) {
+        currentLabel.textContent = THEME_NAMES[theme];
+      }
+
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', THEME_META_COLORS[theme] || '#FFFFFF');
+      }
+
+      items.forEach(item => {
+        const itemTheme = item.getAttribute('data-theme');
+        if (itemTheme === theme) {
+          item.classList.add('active');
+          item.setAttribute('aria-selected', 'true');
+        } else {
+          item.classList.remove('active');
+          item.setAttribute('aria-selected', 'false');
+        }
+      });
+
+      // Dispatch event to sync canvas particles
+      window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme } }));
+    }
+
+    // Initialize from attribute or localStorage
+    const saved = (function() {
+      try { return localStorage.getItem('roushan_portfolio_theme'); } catch(e) { return null; }
+    })();
+    const initialTheme = saved || document.documentElement.getAttribute('data-theme') || 'monochrome';
+    applyTheme(initialTheme, false);
+
+    if (!trigger || !switcher) return;
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = switcher.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    items.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const theme = item.getAttribute('data-theme');
+        if (theme) {
+          applyTheme(theme, true);
+        }
+        switcher.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.focus();
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!switcher.contains(e.target)) {
+        switcher.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && switcher.classList.contains('open')) {
+        switcher.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.focus();
+      }
+    });
+  }
+
   function init() {
+    initThemeManager();
     startTyping();
     initNavigation();
     initGlobalCursorGlow();
