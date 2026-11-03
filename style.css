@@ -773,54 +773,70 @@ ul {
   font-weight: 500;
 }
 
-/* Hero Portrait Card (Refined Minimalist Circle Frame) */
-.hero-portrait-card {
+/* ===========================
+   FREESTANDING CIRCULAR PROFILE (DIRECTLY ON SCREEN)
+=========================== */
+.hero-portrait-stage {
   position: relative;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-card);
-  border-radius: var(--radius-xl);
-  padding: 1.75rem 1.5rem 1.4rem;
-  max-width: 320px;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
   animation: heroScaleIn 0.85s var(--ease) 0.24s both,
-             heroCardFloat 6s ease-in-out 1.1s infinite;
+             heroPhotoFloat 6s ease-in-out 1.1s infinite;
   will-change: transform;
-  transition: border-color var(--transition),
-              box-shadow var(--transition);
 }
 
-.hero-portrait-card:hover {
-  animation-play-state: running, paused;
-  border-color: var(--border-hover);
-  box-shadow: 0 20px 40px -8px rgba(15, 23, 42, 0.12), 0 6px 12px -2px rgba(15, 23, 42, 0.04);
-}
-
-@keyframes heroCardFloat {
+@keyframes heroPhotoFloat {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-9px);
+    transform: translateY(-8px);
   }
 }
 
-.hero-photo-frame {
+/* Ambient soft aura behind the circular picture */
+.hero-portrait-stage::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(29, 78, 216, 0.16) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 72%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(28px);
+}
+
+.hero-photo-circle {
   position: relative;
-  width: 220px;
-  height: 220px;
+  z-index: 1;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
   overflow: hidden;
-  background: var(--bg-alt);
+  background: var(--surface);
   border: 4px solid var(--surface);
-  box-shadow: 0 0 0 2px var(--cobalt-border), 0 16px 36px -8px rgba(29, 78, 216, 0.2);
-  margin: 0 auto 1.15rem;
-  flex-shrink: 0;
+  box-shadow: 0 0 0 2px var(--cobalt-border),
+              0 24px 50px -12px rgba(29, 78, 216, 0.22),
+              0 12px 24px -6px rgba(15, 23, 42, 0.08);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-portrait-stage:hover .hero-photo-circle {
+  transform: scale(1.035);
+  box-shadow: 0 0 0 3px var(--cobalt),
+              0 30px 60px -12px rgba(29, 78, 216, 0.32),
+              0 14px 28px -6px rgba(15, 23, 42, 0.12);
 }
 
 .hero-photo {
@@ -832,65 +848,54 @@ ul {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-portrait-card:hover .hero-photo {
-  transform: scale(1.05);
+.hero-portrait-stage:hover .hero-photo {
+  transform: scale(1.04);
 }
 
 .hero-photo-status {
   position: absolute;
-  bottom: 12px;
-  right: 16px;
+  bottom: 16px;
+  right: 22px;
   width: 22px;
   height: 22px;
   border-radius: 50%;
   background: var(--surface);
   border: 2px solid var(--surface);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 3;
 }
 
-.hero-card-meta {
-  margin-top: 0.15rem;
+.hero-portrait-meta {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   gap: 0.25rem;
-  width: 100%;
 }
 
-.hero-card-name {
-  font-size: 1.25rem;
+.hero-portrait-name {
+  font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.015em;
   color: var(--text-primary);
 }
 
-.hero-card-title {
+.hero-portrait-title {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.825rem;
   font-weight: 600;
   color: var(--cobalt);
 }
 
-.hero-card-location {
-  font-size: 0.775rem;
+.hero-portrait-location {
+  font-size: 0.8rem;
   color: var(--text-tertiary);
-  margin-top: 0.15rem;
-}
-
-.hero-card-creds {
-  font-family: var(--font-mono);
-  font-size: 0.725rem;
-  color: var(--cobalt);
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  flex-wrap: wrap;
 }
 
 /* ===========================
@@ -2205,7 +2210,7 @@ ul {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .hero-portrait-card {
+  .hero-portrait-stage {
     max-width: 420px;
     margin: 0 auto;
   }
@@ -2337,7 +2342,7 @@ ul {
   .hero-actions .btn {
     width: 100%;
   }
-  .hero-portrait-card {
+  .hero-portrait-stage {
     max-width: 100%;
     padding: 1rem;
   }
@@ -2376,7 +2381,6 @@ ul {
 .stack-card,
 .research-card,
 .timeline-body,
-.hero-portrait-card,
 .contact-card {
   position: relative;
   overflow: hidden;
@@ -2400,7 +2404,6 @@ ul {
 .stack-card:hover .card-shine,
 .research-card:hover .card-shine,
 .timeline-body:hover .card-shine,
-.hero-portrait-card:hover .card-shine,
 .contact-card:hover .card-shine {
   opacity: 1;
 }
@@ -2729,7 +2732,7 @@ html, body {
     display: none !important;
   }
 
-  .hero-portrait-card,
+  .hero-portrait-stage,
   .hero-status-pill,
   .system-card,
   .stack-card,
