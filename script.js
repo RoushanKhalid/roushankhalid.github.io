@@ -508,7 +508,6 @@
       '.case-study',
       '.system-card',
       '.stack-card',
-      '.arch-visualizer-wrap',
       '.timeline-item',
       '.distinction-row',
       '.research-card',
