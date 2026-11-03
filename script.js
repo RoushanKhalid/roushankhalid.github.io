@@ -64,11 +64,10 @@
      TYPING EFFECT
   =========================== */
   const DEFAULT_TYPING_PHRASES = [
-    'Full-Lifecycle Systems Builder',
-    'Autonomous Multi-Agent Systems',
-    'Production AI Architecture',
-    'From Research to Scalable Software',
-    'End-to-End Engineering Execution'
+    'Backend Systems Architecture',
+    'Cloud Infrastructure & Resilience',
+    'Applied AI Systems',
+    'End-to-End Product Engineering'
   ];
 
   let activePhrases = [...DEFAULT_TYPING_PHRASES];

@@ -1,16 +1,15 @@
 {
   "hero": {
     "name": "Sk. Roushan Khalid",
-    "badge": "AI Engineer &bull; Full-Lifecycle Systems Builder",
-    "roleStatic": "Mindset: ",
+    "badge": "Backend &bull; Cloud &bull; AI &bull; Product",
+    "roleStatic": "Focus:",
     "typingPhrases": [
-      "Applied AI Engineer",
-      "Agritech & Earth Systems",
-      "Clinical Diagnostic AI",
-      "Document Intelligence & Agents",
-      "Enterprise Decision Systems"
+      "Backend Systems Architecture",
+      "Cloud Infrastructure & Resilience",
+      "Applied AI Systems",
+      "End-to-End Product Engineering"
     ],
-    "philosophy": "AI engineer and systems builder. I design and ship production software across agriculture, healthcare diagnostics, document intelligence, and enterprise platforms.",
+    "philosophy": "AI engineer and systems builder focused on scalable backend architecture, cloud infrastructure, applied AI systems, and end-to-end product delivery.",
     "location": "Dhaka, Bangladesh",
     "title": "Sk. Roushan Khalid | AI Engineer & Systems Builder"
   },
