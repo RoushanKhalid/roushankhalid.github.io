@@ -1,35 +1,34 @@
 {
   "hero": {
     "name": "Sk. Roushan Khalid",
-    "badge": "AI/ML & Product Engineer",
-    "roleStatic": "Engineering Focus: ",
+    "badge": "AI Engineer &bull; Full-Lifecycle Systems Builder",
+    "roleStatic": "Mindset: ",
     "typingPhrases": [
-      "Applied AI & GenAI Systems",
-      "Scalable Backend Architecture",
-      "Autonomous Multi-Agent Workflows",
-      "Cloud & Distributed Systems",
-      "Commercial Product Engineering"
+      "Full-Lifecycle Systems Builder",
+      "Autonomous Multi-Agent Systems",
+      "Production AI Architecture",
+      "From Research to Scalable Software",
+      "End-to-End Engineering Execution"
     ],
-    "philosophy": "Software engineer operating at the convergence of applied AI, resilient backend infrastructure, and commercial product strategy—turning complex technical capabilities into reliable, production-grade software.",
+    "philosophy": "AI Engineer and end-to-end builder — transforming complex domain challenges, research breakthroughs, and unstructured data into resilient, production-ready intelligent software.",
     "location": "Dhaka, Bangladesh"
   },
   "about": {
-    "lead": "I am a software engineer and product builder operating at the intersection of applied AI/ML, backend engineering, cloud infrastructure, and commercial product strategy.",
+    "lead": "I am an AI Engineer and end-to-end builder who takes intelligent software from concept to production.",
     "paragraphs": [
-      "I believe great products require more than accurate models. They require resilient backend architectures, cloud-native scalability, intuitive user workflows, and a sharp understanding of the business problems they solve.",
-      "My work spans the complete product lifecycle: from discovering customer friction and modeling unit economics to architecting distributed FastAPI services, orchestrating multi-agent LLM pipelines, and deploying containerized cloud infrastructure on AWS.",
-      "Whether building enterprise customer intelligence platforms like CampaignFlow or deploying clinical diagnostic frameworks with ROC-AUC 0.987, I build software that bridges engineering depth with measurable commercial impact."
+      "I believe impactful AI requires end-to-end mastery: from foundational machine learning and agentic reasoning to robust backend microservices, asynchronous architectures, and cloud deployments.",
+      "Rather than treating modeling and engineering as separate disciplines, I build complete systems: designing custom intelligence workflows, structuring scalable data pipelines, and deploying production services that operate reliably in the real world."
     ],
     "focusItems": [
-      "Applied GenAI, RAG & Multi-Agent Systems",
-      "Scalable Backend APIs (FastAPI, Redis, Celery)",
-      "Cloud Infrastructure, Docker & AWS",
-      "Product Strategy, Unit Economics & GTM"
+      "Autonomous Agentic Workflows & RAG",
+      "Production Backend Infrastructure",
+      "Multimodal Computer Vision & Signal Processing",
+      "End-to-End System Deployment"
     ],
     "lookingFor": [
-      "AI-First Product Engineering",
-      "High-Scale Backend & Cloud Systems",
-      "Product-Driven Tech Companies"
+      "High-Impact AI Engineering",
+      "Complex Systems Architecture",
+      "Autonomous Intelligence Products"
     ]
   },
   "skills": [
@@ -190,8 +189,8 @@
     "email": "skroushankhalid.17@gmail.com",
     "linkedin": "sk-roushan-khalid",
     "github": "RoushanKhalid",
-    "footerNote": "Building intelligent systems at the intersection of AI, backend & product engineering.",
-    "footerCopy": "© 2026 Sk. Roushan Khalid • Engineered with purpose.",
+    "footerNote": "Building end-to-end intelligent systems &bull; Open to high-impact engineering opportunities",
+    "footerCopy": "© 2026 Sk. Roushan Khalid • Built with purpose.",
     "phone": "+8801760535087",
     "phoneDisplay": "+880 1760 535087",
     "whatsapp": "8801760535087"

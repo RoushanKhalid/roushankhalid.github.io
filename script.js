@@ -64,11 +64,11 @@
      TYPING EFFECT
   =========================== */
   const DEFAULT_TYPING_PHRASES = [
-    'Applied AI & GenAI Systems',
-    'Scalable Backend Architecture',
-    'Autonomous Multi-Agent Workflows',
-    'Cloud & Distributed Systems',
-    'Commercial Product Strategy'
+    'Full-Lifecycle Systems Builder',
+    'Autonomous Multi-Agent Systems',
+    'Production AI Architecture',
+    'From Research to Scalable Software',
+    'End-to-End Engineering Execution'
   ];
 
   let activePhrases = [...DEFAULT_TYPING_PHRASES];
@@ -471,7 +471,7 @@
       // Update Hero Philosophy & Ticker Phrases
       if (data.hero) {
         if (data.hero.name) {
-          document.title = `${data.hero.name} — AI/ML & Product Engineer`;
+          document.title = `${data.hero.name} — AI Engineer & Systems Builder`;
         }
         const philEl = document.getElementById('heroPhilosophy');
         if (philEl && data.hero.philosophy) philEl.textContent = data.hero.philosophy;
