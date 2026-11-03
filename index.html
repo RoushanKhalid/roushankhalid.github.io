@@ -36,6 +36,14 @@
   <!-- Scroll Progress Indicator -->
   <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
 
+  <!-- Continuous Fluid Ambient Background & Parallax Mesh -->
+  <div class="global-ambient-bg" aria-hidden="true">
+    <div class="ambient-fluid-shape shape-1" id="ambientShape1"></div>
+    <div class="ambient-fluid-shape shape-2" id="ambientShape2"></div>
+    <div class="ambient-fluid-shape shape-3" id="ambientShape3"></div>
+    <div class="ambient-fluid-shape shape-4" id="ambientShape4"></div>
+  </div>
+
   <!-- Skip to content for accessibility -->
   <a href="#hero" class="skip-link">Skip to main content</a>
 
@@ -171,8 +179,10 @@
           <p class="section-sub">Production systems, asynchronous pipelines, and applied computer vision engineered for performance, resilience, and business impact.</p>
         </div>
 
-        <!-- Flagship 01: CampaignFlow -->
-        <article class="case-study">
+        <!-- Flagship Deployments Stack (Stacked Cards Scroll Animation) -->
+        <div class="case-studies-stack" id="caseStudiesStack">
+          <!-- Flagship 01: CampaignFlow -->
+          <article class="case-study" id="caseStudy0">
           <div class="case-study-grid">
             <div class="case-info">
               <div class="case-badge-row">
@@ -240,7 +250,7 @@
         </article>
 
         <!-- Flagship 02: Code4Campus -->
-        <article class="case-study">
+        <article class="case-study" id="caseStudy1">
           <div class="case-study-grid">
             <div class="case-info">
               <div class="case-badge-row">
@@ -307,6 +317,7 @@
 
           </div>
         </article>
+      </div>
 
         <!-- Specialized Tools Section -->
         <div class="specialized-section">

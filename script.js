@@ -585,7 +585,103 @@
   }
 
   /* ===========================
-     CARD 3D TILT & SPECULAR SHINE
+     CONTINUOUS AMBIENT PARALLAX (Jinni Labs Inspired)
+  =========================== */
+  function initAmbientParallax() {
+    const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (REDUCED_MOTION) return;
+
+    const s1 = document.getElementById('ambientShape1');
+    const s2 = document.getElementById('ambientShape2');
+    const s3 = document.getElementById('ambientShape3');
+    const s4 = document.getElementById('ambientShape4');
+    if (!s1 || !s2 || !s3 || !s4) return;
+
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY || window.pageYOffset;
+          s1.style.marginTop = `${(scrollY * -0.05).toFixed(1)}px`;
+          s2.style.marginTop = `${(scrollY * 0.04).toFixed(1)}px`;
+          s3.style.marginTop = `${(scrollY * -0.04).toFixed(1)}px`;
+          s4.style.marginTop = `${(scrollY * 0.03).toFixed(1)}px`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  /* ===========================
+     STACKED-CARD SCROLL MOTION (Jinni Labs Inspired)
+  =========================== */
+  function initStackedCards() {
+    const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (REDUCED_MOTION) return;
+
+    if (!window.matchMedia('(min-width: 769px)').matches) return;
+
+    const stackContainer = document.getElementById('caseStudiesStack');
+    if (!stackContainer) return;
+
+    const cards = stackContainer.querySelectorAll('.case-study');
+    if (cards.length < 2) return;
+
+    let ticking = false;
+
+    function updateStack() {
+      const navOffset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 70;
+      const stickyTop = navOffset + 24;
+
+      for (let i = 0; i < cards.length - 1; i++) {
+        const currentCard = cards[i];
+        const nextCard = cards[i + 1];
+
+        const nextRect = nextCard.getBoundingClientRect();
+        const currentRect = currentCard.getBoundingClientRect();
+
+        const distance = nextRect.top - stickyTop;
+        const triggerDistance = currentRect.height;
+
+        if (distance < triggerDistance && distance > 0) {
+          const progress = 1 - (distance / triggerDistance);
+          const scale = 1 - (progress * 0.05);
+          const translateY = progress * -14;
+          const brightness = 1 - (progress * 0.04);
+          const opacity = 1 - (progress * 0.12);
+
+          currentCard.style.transform = `scale(${scale.toFixed(3)}) translateY(${translateY.toFixed(1)}px)`;
+          currentCard.style.filter = `brightness(${brightness.toFixed(3)})`;
+          currentCard.style.opacity = `${opacity.toFixed(3)}`;
+        } else if (distance <= 0) {
+          currentCard.style.transform = 'scale(0.95) translateY(-14px)';
+          currentCard.style.filter = 'brightness(0.96)';
+          currentCard.style.opacity = '0.88';
+        } else {
+          currentCard.style.transform = '';
+          currentCard.style.filter = '';
+          currentCard.style.opacity = '';
+        }
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateStack();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateStack();
+  }
+
+  /* ===========================
+     CARD 3D TILT & MOUSE-RESPONSIVE LIGHTING
   =========================== */
   function initCardTiltAndShine() {
     const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -605,6 +701,13 @@
         card.appendChild(shine);
       }
 
+      if (!card.querySelector('.card-spotlight-beam')) {
+        const beam = document.createElement('div');
+        beam.className = 'card-spotlight-beam';
+        beam.setAttribute('aria-hidden', 'true');
+        card.appendChild(beam);
+      }
+
       if (!hasFinePointer) return;
 
       card.addEventListener('mousemove', (e) => {
@@ -614,6 +717,10 @@
 
         card.style.setProperty('--card-x', `${x}px`);
         card.style.setProperty('--card-y', `${y}px`);
+        card.style.setProperty('--beam-x', `${x}px`);
+        card.style.setProperty('--beam-y', `${y}px`);
+
+        if (card.style.opacity && parseFloat(card.style.opacity) < 0.95) return;
 
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
@@ -624,6 +731,7 @@
       });
 
       card.addEventListener('mouseleave', () => {
+        if (card.closest('.case-studies-stack') && card.style.filter) return;
         card.style.transform = '';
       });
     });
@@ -639,8 +747,10 @@
     initCopyButtons();
     initBackToTop();
     initParticles();
+    initAmbientParallax();
     initScrollProgress();
     initMagneticButtons();
+    initStackedCards();
     initCardTiltAndShine();
     initScrollAnimations();
     loadPortfolioData();
