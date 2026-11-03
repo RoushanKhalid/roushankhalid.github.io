@@ -282,7 +282,7 @@
   }
 
   /* ===========================
-     REFINED CONSTELLATION PARTICLES
+     REFINED CONSTELLATION PARTICLES (With Cursor Reactivity)
   =========================== */
   function initParticles() {
     const canvas = document.getElementById('particleCanvas');
@@ -295,7 +295,22 @@
     let particles = [];
     let rafId = null;
     let heroVisible = true;
-    const PARTICLE_COUNT = 36;
+    const PARTICLE_COUNT = 38;
+
+    const mouse = { x: -9999, y: -9999, radius: 135 };
+    const heroEl = document.getElementById('hero');
+    if (heroEl) {
+      heroEl.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      }, { passive: true });
+
+      heroEl.addEventListener('mouseleave', () => {
+        mouse.x = -9999;
+        mouse.y = -9999;
+      }, { passive: true });
+    }
 
     function resizeCanvas() {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -313,16 +328,28 @@
         const h = canvas.offsetHeight || window.innerHeight || 1;
         this.x = Math.random() * w;
         this.y = Math.random() * h;
-        this.size = Math.random() * 1.2 + 0.4;
-        this.speedX = (Math.random() - 0.5) * 0.22;
-        this.speedY = (Math.random() - 0.5) * 0.22;
-        this.opacity = Math.random() * 0.4 + 0.1;
+        this.size = Math.random() * 1.5 + 1.1;
+        this.speedX = (Math.random() - 0.5) * 0.45;
+        this.speedY = (Math.random() - 0.5) * 0.45;
+        this.opacity = Math.random() * 0.4 + 0.3;
       }
       update() {
         const w = canvas.offsetWidth || 1;
         const h = canvas.offsetHeight || 1;
         this.x += this.speedX;
         this.y += this.speedY;
+
+        if (mouse.x > 0 && mouse.y > 0) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.radius && dist > 5) {
+            const force = (1 - dist / mouse.radius) * 0.35;
+            this.x += (dx / dist) * force;
+            this.y += (dy / dist) * force;
+          }
+        }
+
         if (this.x < 0 || this.x > w) this.speedX *= -1;
         if (this.y < 0 || this.y > h) this.speedY *= -1;
       }
@@ -330,7 +357,7 @@
         if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(29, 78, 216, ${this.opacity * 0.35})`;
+        ctx.fillStyle = `rgba(29, 78, 216, ${this.opacity * 0.5})`;
         ctx.fill();
       }
     }
@@ -349,13 +376,27 @@
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 110) {
-            const alpha = (1 - dist / 110) * 0.12;
+          if (dist < 120) {
+            const alpha = (1 - dist / 120) * 0.22;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(29, 78, 216, ${alpha * 0.18})`;
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = `rgba(29, 78, 216, ${alpha})`;
+            ctx.lineWidth = 0.65;
+            ctx.stroke();
+          }
+        }
+        if (mouse.x > 0 && mouse.y > 0) {
+          const mdx = mouse.x - particles[i].x;
+          const mdy = mouse.y - particles[i].y;
+          const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+          if (mDist < 135) {
+            const mAlpha = (1 - mDist / 135) * 0.35;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = `rgba(29, 78, 216, ${mAlpha})`;
+            ctx.lineWidth = 0.75;
             ctx.stroke();
           }
         }
@@ -387,7 +428,6 @@
     startAnimation();
 
     // IntersectionObserver to pause when hero is off-screen
-    const heroEl = document.getElementById('hero');
     if (heroEl && 'IntersectionObserver' in window) {
       const heroObs = new IntersectionObserver(entries => {
         entries.forEach(e => {
@@ -456,6 +496,47 @@
   }
 
   /* ===========================
+     SCROLL REVEAL MOTION
+  =========================== */
+  function initScrollAnimations() {
+    const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const cards = document.querySelectorAll(
+      '.stat-card, .case-study, .system-card, .stack-card, .research-card, .timeline-body, .distinction-row, .contact-card'
+    );
+
+    if (REDUCED_MOTION) {
+      cards.forEach(el => el.classList.add('is-revealed'));
+      return;
+    }
+
+    cards.forEach(el => {
+      el.classList.add('reveal-card');
+      if (el.parentElement) {
+        const siblings = Array.from(el.parentElement.children);
+        const index = siblings.indexOf(el);
+        if (index >= 0) {
+          el.style.setProperty('--stagger', Math.min(index, 6));
+        }
+      }
+    });
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    cards.forEach(el => observer.observe(el));
+  }
+
+  /* ===========================
      BOOTSTRAP ON DOM READY
   =========================== */
   function init() {
@@ -465,6 +546,7 @@
     initCopyButtons();
     initBackToTop();
     initParticles();
+    initScrollAnimations();
     loadPortfolioData();
   }
 
