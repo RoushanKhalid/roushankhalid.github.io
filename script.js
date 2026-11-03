@@ -304,6 +304,8 @@
         const rect = canvas.getBoundingClientRect();
         mouse.x = e.clientX - rect.left;
         mouse.y = e.clientY - rect.top;
+        heroEl.style.setProperty('--mouse-x', `${mouse.x}px`);
+        heroEl.style.setProperty('--mouse-y', `${mouse.y}px`);
       }, { passive: true });
 
       heroEl.addEventListener('mouseleave', () => {
@@ -537,6 +539,97 @@
   }
 
   /* ===========================
+     SCROLL PROGRESS INDICATOR
+  =========================== */
+  function initScrollProgress() {
+    const bar = document.getElementById('scrollProgressBar');
+    if (!bar) return;
+
+    function updateProgress() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        const progress = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+        bar.style.width = `${progress}%`;
+      }
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  }
+
+  /* ===========================
+     MAGNETIC BUTTON MICRO-INTERACTION
+  =========================== */
+  function initMagneticButtons() {
+    const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (REDUCED_MOTION) return;
+
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    const magneticTargets = document.querySelectorAll('.btn-primary, .btn-secondary, .nav-cta-btn');
+    magneticTargets.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const moveX = (x * 0.16).toFixed(2);
+        const moveY = (y * 0.16).toFixed(2);
+        btn.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  }
+
+  /* ===========================
+     CARD 3D TILT & SPECULAR SHINE
+  =========================== */
+  function initCardTiltAndShine() {
+    const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (REDUCED_MOTION) return;
+
+    const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    const cards = document.querySelectorAll(
+      '.stat-card, .case-study, .system-card, .stack-card, .research-card, .timeline-body, .hero-portrait-card, .contact-card'
+    );
+
+    cards.forEach(card => {
+      if (!card.querySelector('.card-shine')) {
+        const shine = document.createElement('div');
+        shine.className = 'card-shine';
+        shine.setAttribute('aria-hidden', 'true');
+        card.appendChild(shine);
+      }
+
+      if (!hasFinePointer) return;
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty('--card-x', `${x}px`);
+        card.style.setProperty('--card-y', `${y}px`);
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotX = (((y - centerY) / centerY) * -3.2).toFixed(2);
+        const rotY = (((x - centerX) / centerX) * 3.2).toFixed(2);
+
+        card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  /* ===========================
      BOOTSTRAP ON DOM READY
   =========================== */
   function init() {
@@ -546,6 +639,9 @@
     initCopyButtons();
     initBackToTop();
     initParticles();
+    initScrollProgress();
+    initMagneticButtons();
+    initCardTiltAndShine();
     initScrollAnimations();
     loadPortfolioData();
   }

@@ -180,6 +180,21 @@ ul {
 /* ===========================
    TOP NAVIGATION BAR
 =========================== */
+/* ===========================
+   SCROLL PROGRESS INDICATOR
+=========================== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, var(--cobalt), var(--sky));
+  width: 0%;
+  z-index: 10000;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
 .nav-wrapper {
   position: fixed;
   top: 0;
@@ -269,7 +284,7 @@ ul {
   color: var(--cobalt);
 }
 
-.nav-link.active::after {
+.nav-link::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -278,6 +293,20 @@ ul {
   height: 2px;
   background: var(--cobalt);
   border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  opacity: 0;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(0.5);
+  opacity: 0.6;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 .nav-actions {
@@ -414,9 +443,32 @@ ul {
   100% { transform: translate(22px, -20px) scale(0.97); }
 }
 
+/* Subtle blueprint grid */
+.hero-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 25%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 25%, transparent 80%);
+  z-index: 0;
+}
+
+/* Mouse-responsive background spotlight */
+.hero-spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(29, 78, 216, 0.065), transparent 75%);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
 #particleCanvas {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 100%;
   opacity: 0.9;
@@ -442,6 +494,28 @@ ul {
   flex-direction: column;
 }
 
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroScaleIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .hero-status-pill {
   display: inline-flex;
   align-items: center;
@@ -457,6 +531,7 @@ ul {
   border-radius: var(--radius-pill);
   width: fit-content;
   margin-bottom: 1.5rem;
+  animation: heroFadeUp 0.65s var(--ease) 0.06s both;
 }
 
 .status-dot-pulse {
@@ -475,6 +550,7 @@ ul {
   letter-spacing: -0.03em;
   color: var(--text-primary);
   margin-bottom: 1.35rem;
+  animation: heroFadeUp 0.75s var(--ease) 0.14s both;
 }
 
 .hero-ticker {
@@ -487,6 +563,7 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.35rem;
+  animation: heroFadeUp 0.75s var(--ease) 0.22s both;
 }
 
 .ticker-label {
@@ -517,6 +594,7 @@ ul {
   max-width: 580px;
   line-height: 1.7;
   margin-bottom: 2rem;
+  animation: heroFadeUp 0.75s var(--ease) 0.30s both;
 }
 
 .hero-actions {
@@ -525,6 +603,7 @@ ul {
   gap: 0.85rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  animation: heroFadeUp 0.75s var(--ease) 0.38s both;
 }
 
 .hero-social-strip {
@@ -534,6 +613,7 @@ ul {
   font-size: 0.825rem;
   font-weight: 500;
   color: var(--text-secondary);
+  animation: heroFadeUp 0.75s var(--ease) 0.46s both;
 }
 
 .hero-social-link {
@@ -569,6 +649,7 @@ ul {
   padding: 1.25rem;
   max-width: 440px;
   margin-left: auto;
+  animation: heroScaleIn 0.85s var(--ease) 0.24s both;
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
               border-color var(--transition),
               box-shadow var(--transition);
@@ -594,6 +675,11 @@ ul {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-portrait-card:hover .hero-photo {
+  transform: scale(1.025);
 }
 
 .hero-card-meta {
@@ -1950,6 +2036,44 @@ ul {
 }
 
 /* ===========================
+   CARD DEPTH & CURSOR SHINE
+=========================== */
+.stat-card,
+.case-study,
+.system-card,
+.stack-card,
+.research-card,
+.timeline-body,
+.hero-portrait-card,
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(380px circle at var(--card-x, 50%) var(--card-y, 50%), rgba(29, 78, 216, 0.05), transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.stat-card:hover .card-shine,
+.case-study:hover .card-shine,
+.system-card:hover .card-shine,
+.stack-card:hover .card-shine,
+.research-card:hover .card-shine,
+.timeline-body:hover .card-shine,
+.hero-portrait-card:hover .card-shine,
+.contact-card:hover .card-shine {
+  opacity: 1;
+}
+
+/* ===========================
    SCROLL REVEAL MOTION
 =========================== */
 .reveal-card {
@@ -1993,6 +2117,9 @@ ul {
   }
 
   .hero-bg::before,
+  .hero-spotlight,
+  .card-shine,
+  .scroll-progress-bar,
   #particleCanvas {
     display: none !important;
   }
