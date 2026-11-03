@@ -1907,6 +1907,48 @@ ul {
   }
 }
 
+@media (max-width: 480px) {
+  .hero {
+    padding-top: calc(var(--nav-height) + 32px);
+    padding-bottom: 50px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .hero-portrait-card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .hero-card-creds span {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+  .case-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .case-actions .btn {
+    width: 100%;
+  }
+  .research-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .research-actions .btn {
+    width: 100%;
+  }
+  .contact-heading {
+    font-size: 1.75rem;
+  }
+  .channel-row {
+    padding: 0.85rem 1rem;
+  }
+}
+
 /* ===========================
    SCROLL REVEAL MOTION
 =========================== */
