@@ -295,9 +295,9 @@
     let particles = [];
     let rafId = null;
     let heroVisible = true;
-    const PARTICLE_COUNT = 38;
+    const PARTICLE_COUNT = 52;
 
-    const mouse = { x: -9999, y: -9999, radius: 135 };
+    const mouse = { x: -9999, y: -9999, radius: 145 };
     const heroEl = document.getElementById('hero');
     if (heroEl) {
       heroEl.addEventListener('mousemove', (e) => {
@@ -326,14 +326,15 @@
     class Particle {
       constructor() { this.reset(); }
       reset() {
-        const w = canvas.offsetWidth || window.innerWidth || 1;
-        const h = canvas.offsetHeight || window.innerHeight || 1;
+        const w = canvas.offsetWidth || window.innerWidth || 800;
+        const h = canvas.offsetHeight || window.innerHeight || 600;
         this.x = Math.random() * w;
         this.y = Math.random() * h;
-        this.size = Math.random() * 1.5 + 1.1;
-        this.speedX = (Math.random() - 0.5) * 0.45;
-        this.speedY = (Math.random() - 0.5) * 0.45;
-        this.opacity = Math.random() * 0.4 + 0.3;
+        this.size = Math.random() * 1.8 + 1.2;
+        this.speedX = (Math.random() - 0.5) * 0.55;
+        this.speedY = (Math.random() - 0.5) * 0.55;
+        this.opacity = Math.random() * 0.45 + 0.35;
+        this.color = Math.random() > 0.35 ? '29, 78, 216' : (Math.random() > 0.5 ? '16, 185, 129' : '59, 130, 246');
       }
       update() {
         const w = canvas.offsetWidth || 1;
@@ -346,7 +347,7 @@
           const dy = mouse.y - this.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < mouse.radius && dist > 5) {
-            const force = (1 - dist / mouse.radius) * 0.35;
+            const force = (1 - dist / mouse.radius) * 0.45;
             this.x += (dx / dist) * force;
             this.y += (dy / dist) * force;
           }
@@ -359,7 +360,7 @@
         if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(29, 78, 216, ${this.opacity * 0.5})`;
+        ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
         ctx.fill();
       }
     }
@@ -378,13 +379,13 @@
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
-            const alpha = (1 - dist / 120) * 0.22;
+          if (dist < 130) {
+            const alpha = (1 - dist / 130) * 0.32;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.strokeStyle = `rgba(29, 78, 216, ${alpha})`;
-            ctx.lineWidth = 0.65;
+            ctx.lineWidth = 0.75;
             ctx.stroke();
           }
         }
@@ -392,13 +393,13 @@
           const mdx = mouse.x - particles[i].x;
           const mdy = mouse.y - particles[i].y;
           const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
-          if (mDist < 135) {
-            const mAlpha = (1 - mDist / 135) * 0.35;
+          if (mDist < 145) {
+            const mAlpha = (1 - mDist / 145) * 0.45;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouse.x, mouse.y);
             ctx.strokeStyle = `rgba(29, 78, 216, ${mAlpha})`;
-            ctx.lineWidth = 0.75;
+            ctx.lineWidth = 0.85;
             ctx.stroke();
           }
         }
