@@ -1,122 +1,141 @@
 {
   "hero": {
     "name": "Sk. Roushan Khalid",
-    "badge": "Open to Opportunities",
-    "roleStatic": "AI/ML Engineer •",
+    "badge": "AI/ML & Product Engineer • Cloud Infrastructure",
+    "roleStatic": "Engineering Focus: ",
     "typingPhrases": [
-        "AI-First Software Engineer",
-        "Backend Engineer",
-        "Generative AI Developer",
-        "Production AI Builder"
-      ],
-    "philosophy": "\"Building intelligent systems that combine machine learning research with scalable software engineering.\"",
+      "Applied AI & GenAI Systems",
+      "Scalable Backend Architecture",
+      "Autonomous Multi-Agent Workflows",
+      "Cloud & Distributed Systems",
+      "Commercial Product Engineering"
+    ],
+    "philosophy": "Software engineer operating at the convergence of applied AI, resilient backend infrastructure, and commercial product strategy—turning complex technical capabilities into reliable, production-grade software.",
     "location": "Dhaka, Bangladesh"
   },
-
   "about": {
-    "lead": "I am an AI/ML Engineer building intelligent systems that combine machine learning research with scalable software engineering.",
+    "lead": "I am a software engineer and product builder operating at the intersection of applied AI/ML, backend engineering, cloud infrastructure, and commercial product strategy.",
     "paragraphs": [
-      "I enjoy building AI systems that solve real-world problems—from classical machine learning and deep learning to modern LLM-powered applications.",
-      "My work focuses on designing reliable AI pipelines, developing scalable backend services, and transforming research ideas into production-ready software.",
-      "I enjoy working across the complete AI lifecycle—from experimentation and model development to backend architecture, deployment, and production systems—while continuously learning by building."
+      "I believe great products require more than accurate models. They require resilient backend architectures, cloud-native scalability, intuitive user workflows, and a sharp understanding of the business problems they solve.",
+      "My work spans the complete product lifecycle: from discovering customer friction and modeling unit economics to architecting distributed FastAPI services, orchestrating multi-agent LLM pipelines, and deploying containerized cloud infrastructure on AWS.",
+      "Whether building enterprise customer intelligence platforms like CampaignFlow or deploying clinical diagnostic frameworks with ROC-AUC 0.987, I build software that bridges engineering depth with measurable commercial impact."
     ],
     "focusItems": [
-      "Machine Learning & Deep Learning",
-      "LLMs, AI Agents & RAG",
-      "Backend Systems & AI Infrastructure"
+      "Applied GenAI, RAG & Multi-Agent Systems",
+      "Scalable Backend APIs (FastAPI, Redis, Celery)",
+      "Cloud Infrastructure, Docker & AWS",
+      "Product Strategy, Unit Economics & GTM"
     ],
     "lookingFor": [
-      "Production AI Engineering",
-      "Scalable Distributed Systems",
-      "Strong Engineering Culture"
+      "AI-First Product Engineering",
+      "High-Scale Backend & Cloud Systems",
+      "Product-Driven Tech Companies"
     ]
   },
-
   "skills": [
     {
-      "title": "Artificial Intelligence",
-      "description": "Building machine learning, deep learning, computer vision, and generative AI systems—from experimentation and model training to deployment and production integration.",
+      "title": "Applied AI & Machine Learning",
+      "num": "01",
+      "tagline": "ML & Computer Vision",
+      "description": "Building classical machine learning, deep learning, computer vision, and experimental diagnostic models—from preprocessing and validation to production integration.",
       "tags": [
         "PyTorch",
         "TensorFlow",
         "Transformers",
         "Scikit-learn",
         "OpenCV",
-        "Pandas",
+        "PaddleOCR",
         "Hugging Face"
       ]
     },
     {
-      "title": "LLM & Generative AI",
-      "description": "Developing production-ready LLM applications including Retrieval-Augmented Generation (RAG), AI agents, orchestration workflows, and vector search systems.",
+      "title": "LLMs & Multi-Agent Systems",
+      "num": "02",
+      "tagline": "GenAI & Multi-Agent",
+      "description": "Developing production-grade LLM applications including Retrieval-Augmented Generation (RAG), autonomous multi-agent orchestration, and real-time inference pipelines.",
       "tags": [
         "LangChain",
         "LangGraph",
         "CrewAI",
         "FAISS",
+        "RAG Pipelines",
+        "Groq API",
         "OpenAI API"
       ]
     },
     {
-      "title": "Backend Engineering & Infrastructure",
-      "description": "Designing scalable backend services, REST APIs, cloud-native deployments, databases, and containerized applications for AI systems.",
+      "title": "Backend Engineering & Cloud",
+      "num": "03",
+      "tagline": "Distributed Systems",
+      "description": "Architecting high-concurrency microservices, REST APIs, asynchronous task workers, database schemas, and containerized cloud deployments on AWS.",
       "tags": [
         "FastAPI",
         "Flask",
         "PostgreSQL",
         "MySQL",
+        "Redis",
+        "Celery",
         "Docker",
-        "AWS",
-        "Git",
-        "MLflow"
+        "AWS"
+      ]
+    },
+    {
+      "title": "Business & Product Strategy",
+      "num": "04",
+      "tagline": "Product & Strategy",
+      "description": "Bridging technology with commercial viability: customer retention intelligence, churn risk prediction, usage telemetry metering, and go-to-market execution.",
+      "tags": [
+        "Product Strategy",
+        "Customer Intelligence",
+        "Churn Prediction",
+        "Technopreneurship",
+        "Technical Advisory"
       ]
     }
   ],
-
   "timeline": [
     {
-      "date": "Dec 2025 – Present",
-      "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
-      "description": "Building AI-powered applications and production backend systems for agritech. Designing FastAPI services, LLM-powered workflows, offline-first Flutter applications, React dashboards, PostgreSQL databases, and cloud-native deployments using Docker on AWS.",
+      "date": "12/2025 – Present • Dhaka, Bangladesh",
+      "title": "AI Engineer (R&D) • Kamal-Paterson Ltd | KPCloud",
+      "description": "Developing backend APIs and full-stack features across web and mobile applications for agritech and consumer AI. Conducting R&D on RAG pipelines, computer vision, and LLM-based features. Integrating weather, geospatial (GIS), and third-party APIs into production microservices with offline-first mobile sync.",
       "tags": [
-        "AI Engineering",
         "FastAPI",
-        "Flutter",
-        "React",
+        "RAG",
+        "Computer Vision",
         "PostgreSQL",
         "Docker",
-        "AWS",
-        "RAG",
-        "GIS"
+        "Geospatial APIs",
+        "Offline-First Sync"
       ],
       "active": true
     },
     {
-      "date": "Jun 2026 – Present",
-      "title": "Research Intern · Learnix Research Lab",
-      "description": "Conducting applied machine learning research focused on bridging academic methodologies with production-ready AI systems. Exploring practical ML foundations, scalable implementations, and engineering best practices.",
+      "date": "04/2025 – 12/2025 • Dhaka, Bangladesh",
+      "title": "Research Assistant (RA) • Data Science Lab, DIU",
+      "description": "Collaborated with senior researchers at the University of Porto on multilingual and multimodal AI/ML research. Developed and evaluated AI/ML models focusing on cross-lingual transfer between Bangla and Portuguese, conducting comparative statistical analyses and tokenization audits.",
       "tags": [
-        "Applied ML",
-        "Research",
-        "LLMs",
-        "Production AI"
+        "PyTorch",
+        "Multimodal AI",
+        "Transformers",
+        "Cross-Lingual NLP",
+        "Statistical Evaluation"
       ],
-      "active": true
+      "active": false
     },
     {
-      "date": "Jan 2022 – Apr 2026",
-      "title": "B.Sc. Software Engineering · Daffodil International University",
-      "description": "Graduated with a CGPA of 3.65/4.00 with a major in Data Science. Built strong foundations in software engineering, artificial intelligence, machine learning, algorithms, databases, and distributed systems while actively participating in technical communities and research initiatives.",
+      "date": "2022 – 2026 • Dhaka, Bangladesh",
+      "title": "B.Sc. in Software Engineering • Daffodil International University",
+      "description": "Major in Data Science with a CGPA of 3.65 / 4.00. Built foundations across distributed systems, algorithms, database internals, and applied machine learning.",
       "tags": [
         "Software Engineering",
-        "Data Science",
-        "Artificial Intelligence",
-        "CGPA 3.65"
+        "Data Science Major",
+        "CGPA 3.65",
+        "Algorithms",
+        "Distributed Systems"
       ],
       "active": false
     }
   ],
-
   "exploringBars": [
     {
       "label": "Machine Learning & AI",
@@ -132,98 +151,49 @@
     },
     {
       "label": "Distributed Systems",
-      "value": 60
+      "value": 65
     }
   ],
-
   "recognition": [
     {
-      "icon": "🚀",
-      "title": "Top 50 – NASA Space Apps Challenge 2024",
-      "sub": "Led ExoQuest — exoplanet discovery platform"
+      "icon": "🏆",
+      "title": "Finalist – Gigalogy AI Accelerator (Batch 2)",
+      "sub": "Selected as Finalist from 300+ applicant ventures with CampaignFlow",
+      "badge": "Batch 2 Finalist"
     },
     {
-      "icon": "🏆",
-      "title": "Finalist – Take-off Programming Contest",
-      "sub": "Competitive programming and algorithmic problem solving"
+      "icon": "🥈",
+      "title": "Runner-Up – National AI Project Competition 2026",
+      "sub": "Code4Campus among 145+ competing teams (Student Service Category)",
+      "badge": "145+ Teams"
+    },
+    {
+      "icon": "🚀",
+      "title": "Top 50 – NASA Space Apps Challenge 2024 (Bangladesh)",
+      "sub": "Led ExoQuest — exoplanet discovery platform, Top 50 from 500+ teams in BD Chapter",
+      "badge": "BD Chapter Top 50"
     },
     {
       "icon": "📄",
-      "title": "AI/ML Research Publication",
-      "sub": "ECG + LLM framework achieving ROC AUC ≈ 0.987"
-    }
-  ],
-
-  "approach": [
-    {
-      "number": "01",
-      "title": "Engineering Beyond Models",
-      "description": "Good AI products require more than accurate models. They require thoughtful engineering, reliable systems, and a deep understanding of the problems they're solving."
+      "title": "Cardiology AI Research Paper (SSRN / Elsevier)",
+      "sub": "3rd Author • Clinical ECG + LLM diagnostic framework achieving validation ROC-AUC ~0.987",
+      "badge": "3rd Author • ROC-AUC 0.987"
     },
     {
-      "number": "02",
-      "title": "Production-First Mindset",
-      "description": "I enjoy taking ideas from experimentation to production by building scalable backend services, maintainable APIs, and robust AI pipelines that can be deployed with confidence."
-    },
-    {
-      "number": "03",
-      "title": "Build, Learn & Iterate",
-      "description": "The fastest way to grow is by designing, shipping, and continuously improving real systems. Every project is an opportunity to deepen both engineering and AI expertise."
+      "icon": "💻",
+      "title": "Finalist – DIU Take-Off Programming Contest",
+      "sub": "Ranked in Top 400 from 2,600+ competitors in DIU-hosted collegiate competitive programming contest",
+      "badge": "Top 400 / 2,600+"
     }
   ],
-
-  "researchInterests": [
-    "Generative AI",
-    "Large Language Models",
-    "AI Agents",
-    "Retrieval-Augmented Generation",
-    "Natural Language Processing",
-    "Computer Vision",
-    "Healthcare AI",
-    "AI for Agriculture",
-    "Explainable AI",
-    "Scalable ML Systems"
-  ],
-
-  "technology": {
-    "languages": [
-      "Python",
-      "Go",
-      "C/C++",
-      "SQL"
-    ],
-    "ai": [
-      "PyTorch",
-      "TensorFlow",
-      "Transformers",
-      "Scikit-learn",
-      "Hugging Face"
-    ],
-    "llm": [
-      "LangChain",
-      "LangGraph",
-      "CrewAI",
-      "FAISS"
-    ],
-    "backend": [
-      "FastAPI",
-      "Flask",
-      "PostgreSQL",
-      "MySQL"
-    ],
-    "infrastructure": [
-      "Docker",
-      "AWS",
-      "Git",
-      "MLflow"
-    ]
-  },
-
   "contact": {
     "email": "skroushankhalid.17@gmail.com",
     "linkedin": "sk-roushan-khalid",
     "github": "RoushanKhalid",
-    "footerNote": "Building intelligent systems with AI and software engineering • Open to remote and onsite opportunities",
-    "footerCopy": "© 2026 Sk. Roushan Khalid"
+    "footerNote": "Building intelligent systems at the intersection of AI, backend & product engineering.",
+    "footerCopy": "© 2026 Sk. Roushan Khalid • Engineered with purpose.",
+    "phone": "+8801760535087",
+    "phoneDisplay": "+880 1760 535087",
+    "whatsapp": "8801760535087"
   }
 }

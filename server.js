@@ -63,6 +63,7 @@ const server = http.createServer((req, res) => {
   // ── GET static files ─────────────────────────────────────
   let urlPath = decodeURIComponent(req.url.split('?')[0]); // strip query string
   if (urlPath === '/' || urlPath === '') urlPath = '/index.html';
+  if (urlPath === '/admin') urlPath = '/admin.html';
 
   const filePath = path.join(ROOT, urlPath);
 
