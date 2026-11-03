@@ -88,7 +88,7 @@
         "Product Strategy",
         "Customer Intelligence",
         "Churn Prediction",
-        "Technopreneurship",
+        "GTM & Product Execution",
         "Technical Advisory"
       ]
     }
@@ -176,8 +176,8 @@
     {
       "icon": "📄",
       "title": "Cardiology AI Research Paper (SSRN / Elsevier)",
-      "sub": "3rd Author • Clinical ECG + LLM diagnostic framework achieving validation ROC-AUC ~0.987",
-      "badge": "3rd Author • ROC-AUC 0.987"
+      "sub": "Co-Author (3rd) • Clinical ECG + LLM diagnostic framework achieving validation ROC-AUC ~0.987",
+      "badge": "Co-Author • ROC-AUC 0.987"
     },
     {
       "icon": "💻",

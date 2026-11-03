@@ -38,11 +38,13 @@
 
   <!-- Continuous Fluid Ambient Background & Parallax Mesh -->
   <div class="global-ambient-bg" aria-hidden="true">
-    <div class="ambient-fluid-shape shape-1" id="ambientShape1"></div>
-    <div class="ambient-fluid-shape shape-2" id="ambientShape2"></div>
-    <div class="ambient-fluid-shape shape-3" id="ambientShape3"></div>
-    <div class="ambient-fluid-shape shape-4" id="ambientShape4"></div>
+    <div class="ambient-grid-overlay"></div>
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
   </div>
+
+  <!-- Global Cursor Spotlight Illumination (Linear / Vercel Aesthetic) -->
+  <div class="global-cursor-glow" id="globalCursorGlow" aria-hidden="true"></div>
 
   <!-- Skip to content for accessibility -->
   <a href="#hero" class="skip-link">Skip to main content</a>
@@ -93,8 +95,11 @@
       <div class="hero-bg" aria-hidden="true">
         <div class="hero-grid-pattern"></div>
         <div class="hero-spotlight"></div>
-        <div class="hero-floating-orb orb-1"></div>
-        <div class="hero-floating-orb orb-2"></div>
+        <!-- Architectural Typographic Watermark -->
+        <div class="hero-masthead-watermark" aria-hidden="true">
+          <span>AI &amp; SYSTEMS</span>
+          <span>ENGINEER</span>
+        </div>
         <canvas id="particleCanvas"></canvas>
       </div>
 
@@ -104,6 +109,7 @@
           <!-- Left: Software Engineer Value Proposition -->
           <div class="hero-content">
             <div class="hero-status-pill">
+              <span class="hero-folio-index">001 / INTRO</span>
               <span class="status-dot-pulse"></span>
               <span id="heroBadge">AI/ML &amp; Product Engineer &bull; Cloud Infrastructure</span>
             </div>
@@ -155,7 +161,13 @@
 
           <!-- Right: Architectural Portrait Card -->
           <div class="hero-portrait-card">
+            <div class="hero-card-status">
+              <span class="status-dot-pulse"></span>
+              <span>Available for High-Impact Roles</span>
+            </div>
+
             <div class="hero-photo-frame">
+              <div class="card-glass-sheen" aria-hidden="true"></div>
               <img src="pro.jpg" alt="Sk. Roushan Khalid" class="hero-photo" onerror="this.src='https://avatars.githubusercontent.com/u/108520770?v=4'" loading="eager" />
             </div>
             
@@ -163,19 +175,61 @@
               <div class="hero-card-name">Sk. Roushan Khalid</div>
               <div class="hero-card-title">AI/ML &amp; Product Engineer</div>
               <div class="hero-card-creds">
-                <span>Applied AI &amp; LLMs &bull; Scalable Backends &bull; Cloud Architecture</span>
+                <span>Applied AI &bull; Scalable Backends &bull; Cloud</span>
+              </div>
+              <div class="hero-card-pills">
+                <span class="hero-card-pill"><span class="chip-dot pulse-emerald"></span>FastAPI &bull; AWS</span>
+                <span class="hero-card-pill"><span class="chip-dot pulse-cobalt"></span>ROC-AUC 0.987</span>
+                <span class="hero-card-pill"><span class="chip-dot pulse-sky"></span>LangGraph &bull; RAG</span>
               </div>
             </div>
           </div>
 
         </div>
+
+        <!-- Flanking Career Positions Strip (Editorial Stature) -->
+        <div class="hero-flank-roles" aria-label="Current Positions">
+          <div class="hero-flank-item">
+            <span class="flank-index">01</span>
+            <div class="flank-copy">
+              <strong>AI ENGINEER (R&amp;D)</strong>
+              <small>KAMAL-PATERSON · KPCLOUD</small>
+            </div>
+          </div>
+          <div class="hero-flank-sep" aria-hidden="true">✳</div>
+          <div class="hero-flank-item">
+            <span class="flank-index">02</span>
+            <div class="flank-copy">
+              <strong>RESEARCH ASSISTANT</strong>
+              <small>DATA SCIENCE LAB · DIU</small>
+            </div>
+          </div>
+          <div class="hero-flank-sep" aria-hidden="true">✳</div>
+          <div class="hero-flank-item">
+            <span class="flank-index">03</span>
+            <div class="flank-copy">
+              <strong>B.SC. SOFTWARE ENGINEERING</strong>
+              <small>DATA SCIENCE MAJOR · CGPA 3.65</small>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <!-- Kinetic Engineering Marquee Strip -->
+    <div class="kinetic-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>APPLIED AI &amp; GENAI ✳ RESILIENT BACKEND APIS ✳ DISTRIBUTED SYSTEMS ✳ EXPLAINABLE CLINICAL AI ✳ CLOUD INFRASTRUCTURE ✳ FASTAPI &amp; AWS ✳ PRODUCTION-GRADE SYSTEMS ✳</span>
+        <span>APPLIED AI &amp; GENAI ✳ RESILIENT BACKEND APIS ✳ DISTRIBUTED SYSTEMS ✳ EXPLAINABLE CLINICAL AI ✳ CLOUD INFRASTRUCTURE ✳ FASTAPI &amp; AWS ✳ PRODUCTION-GRADE SYSTEMS ✳</span>
+      </div>
+    </div>
 
     <!-- 01. FLAGSHIP ENGINEERING SYSTEMS -->
     <section class="section section-alt" id="projects">
       <div class="container-content">
         <div class="section-header">
+          <div class="section-folio"><span>02 / SELECTED WORK</span><span class="folio-rule"></span><span>SYSTEMS IN PRODUCTION ✳ 2026</span></div>
           <span class="section-tag">01 / Engineering Work</span>
           <h2 class="section-headline">Flagship Deployments</h2>
           <p class="section-sub">Production systems, asynchronous pipelines, and applied computer vision engineered for performance, resilience, and business impact.</p>
@@ -185,6 +239,7 @@
         <div class="case-studies-stack" id="caseStudiesStack">
           <!-- Flagship 01: CampaignFlow -->
           <article class="case-study" id="caseStudy0">
+          <span class="case-study-watermark" aria-hidden="true">01</span>
           <div class="case-study-grid">
             <div class="case-info">
               <div class="case-badge-row">
@@ -253,6 +308,7 @@
 
         <!-- Flagship 02: Code4Campus -->
         <article class="case-study" id="caseStudy1">
+          <span class="case-study-watermark" aria-hidden="true">02</span>
           <div class="case-study-grid">
             <div class="case-info">
               <div class="case-badge-row">
@@ -445,6 +501,7 @@
     <section class="section" id="stack">
       <div class="container-content">
         <div class="section-header">
+          <div class="section-folio"><span>03 / CAPABILITIES</span><span class="folio-rule"></span><span>ENGINEERING STACK &amp; DOMAIN MASTERY</span></div>
           <span class="section-tag">02 / Core Capabilities</span>
           <h2 class="section-headline">Architectural Foundation</h2>
           <p class="section-sub">Tools, frameworks, and languages actively deployed across production systems and laboratory research.</p>
@@ -454,6 +511,7 @@
           
           <!-- Pillar 01 -->
           <div class="stack-card">
+            <span class="stack-card-watermark" aria-hidden="true">01</span>
             <div class="stack-card-num">01 / ML &amp; Computer Vision</div>
             <h3 class="stack-card-title">Applied AI &amp; Machine Learning</h3>
             <p class="stack-card-desc">Building classical machine learning, deep learning, computer vision, and experimental diagnostic models—from preprocessing and validation to production integration.</p>
@@ -470,6 +528,7 @@
 
           <!-- Pillar 02 -->
           <div class="stack-card">
+            <span class="stack-card-watermark" aria-hidden="true">02</span>
             <div class="stack-card-num">02 / GenAI &amp; Multi-Agent</div>
             <h3 class="stack-card-title">LLMs &amp; Multi-Agent Systems</h3>
             <p class="stack-card-desc">Developing production-grade LLM applications including Retrieval-Augmented Generation (RAG), autonomous multi-agent orchestration, and real-time inference pipelines.</p>
@@ -486,6 +545,7 @@
 
           <!-- Pillar 03 -->
           <div class="stack-card">
+            <span class="stack-card-watermark" aria-hidden="true">03</span>
             <div class="stack-card-num">03 / Distributed Systems</div>
             <h3 class="stack-card-title">Backend Engineering &amp; Cloud</h3>
             <p class="stack-card-desc">Architecting high-concurrency microservices, REST APIs, asynchronous task workers, database schemas, and containerized cloud deployments on AWS.</p>
@@ -503,6 +563,7 @@
 
           <!-- Pillar 04 -->
           <div class="stack-card">
+            <span class="stack-card-watermark" aria-hidden="true">04</span>
             <div class="stack-card-num">04 / Product &amp; Strategy</div>
             <h3 class="stack-card-title">Business &amp; Product Strategy</h3>
             <p class="stack-card-desc">Bridging technology with commercial viability: customer retention intelligence, churn risk prediction, usage telemetry metering, and go-to-market execution.</p>
@@ -510,7 +571,7 @@
               <span>Product Strategy</span>
               <span>Customer Intelligence</span>
               <span>Churn Prediction</span>
-              <span>Technopreneurship</span>
+              <span>GTM &amp; Product Strategy</span>
               <span>Technical Advisory</span>
             </div>
           </div>
@@ -523,6 +584,7 @@
     <section class="section section-alt" id="experience">
       <div class="container-content">
         <div class="section-header">
+          <div class="section-folio"><span>04 / THE JOURNEY</span><span class="folio-rule"></span><span>CAREER MILESTONES &amp; LABS</span></div>
           <span class="section-tag">03 / Experience</span>
           <h2 class="section-headline">Engineering Roles &amp; Labs</h2>
           <p class="section-sub">Where I deliver production software, architect resilient backend services, and conduct applied research.</p>
@@ -558,7 +620,7 @@
             <div class="timeline-body">
               <div class="timeline-meta">
                 <span class="timeline-date">04/2025 – 12/2025 &bull; Dhaka, Bangladesh</span>
-                <span class="badge">Research Completed</span>
+                <span class="badge">Academic Research</span>
               </div>
               <h3 class="timeline-title">Research Assistant (RA) &bull; Data Science Lab, DIU</h3>
               <p class="timeline-desc">Collaborated with senior researchers at the <strong>University of Porto</strong> on multilingual and multimodal AI/ML research. Developed and evaluated AI/ML models focusing on cross-lingual transfer between Bangla and Portuguese, conducting comparative statistical analyses and tokenization audits.</p>
@@ -600,6 +662,7 @@
     <section class="section" id="research">
       <div class="container-content">
         <div class="section-header">
+          <div class="section-folio"><span>05 / SCHOLARLY ARCHIVE</span><span class="folio-rule"></span><span>CLINICAL AI &amp; PUBLICATIONS</span></div>
           <span class="section-tag">04 / Scientific Research</span>
           <h2 class="section-headline">Clinical AI &amp; Diagnostics</h2>
           <p class="section-sub">Experimental methodologies validated on peer-reviewed diagnostic benchmarks.</p>
@@ -609,7 +672,7 @@
           <div class="research-card-top">
             <div class="research-venue">
               <span class="badge badge-accent">SSRN / Elsevier</span>
-              <span class="badge">3rd Author</span>
+              <span class="badge">Co-Author (3rd)</span>
               <span class="research-id">Abstract ID: 5875405</span>
             </div>
             <div class="research-stat">
@@ -658,6 +721,7 @@
     <section class="section section-alt" id="numbers">
       <div class="container-content">
         <div class="section-header">
+          <div class="section-folio"><span>06 / RECOGNITION</span><span class="folio-rule"></span><span>VERIFIED BENCHMARKS &amp; HONOURS</span></div>
           <span class="section-tag">05 / Impact &amp; Recognition</span>
           <h2 class="section-headline">Engineering Benchmarks &amp; Honors</h2>
           <p class="section-sub">Competitive contest honors, commercial accelerator selections, and verifiable engineering benchmarks.</p>
@@ -752,7 +816,7 @@
           </div>
 
           <div class="distinction-row">
-            <div class="distinction-col-role">3rd Author</div>
+            <div class="distinction-col-role">Co-Author (3rd)</div>
             <div class="distinction-col-event">
               <strong>Cardiology AI Research Paper (SSRN / Elsevier)</strong>
               <span>Clinical ECG + LLM diagnostic framework achieving validation ROC-AUC ~0.987</span>
@@ -786,8 +850,10 @@
             
             <!-- Left: Direct Proposition & Primary Email Action -->
             <div class="contact-lead">
+              <div class="section-folio"><span>07 / CLOSING CHAPTER</span><span class="folio-rule"></span><span>LET'S BUILD SOMETHING THAT MATTERS</span></div>
               <span class="section-tag">06 / Contact</span>
-              <h2 class="contact-heading">Initiate Collaboration.</h2>
+              <div class="contact-editorial-kicker">GOT A HIGH-IMPACT PROBLEM?</div>
+              <h2 class="contact-heading">Ideas Into Interfaces.<br><span class="contact-serif-accent">Systems Into Reality.</span></h2>
               <p class="contact-desc">
                 Open to full-stack AI engineering roles, high-concurrency backend systems architecture, and technical advisory partnerships.
               </p>
