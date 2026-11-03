@@ -773,16 +773,21 @@ ul {
   font-weight: 500;
 }
 
-/* Hero Portrait Card (Refined & Minimalist Light Card with Gentle Levitation) */
+/* Hero Portrait Card (Refined Minimalist Circle Frame) */
 .hero-portrait-card {
   position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-xl);
-  padding: 0.95rem;
-  max-width: 360px;
+  padding: 1.75rem 1.5rem 1.4rem;
+  max-width: 320px;
   width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   animation: heroScaleIn 0.85s var(--ease) 0.24s both,
              heroCardFloat 6s ease-in-out 1.1s infinite;
   will-change: transform;
@@ -806,49 +811,76 @@ ul {
 }
 
 .hero-photo-frame {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  max-height: 310px;
-  border-radius: var(--radius-lg);
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
   overflow: hidden;
   background: var(--bg-alt);
-  border: 1px solid var(--border);
+  border: 4px solid var(--surface);
+  box-shadow: 0 0 0 2px var(--cobalt-border), 0 16px 36px -8px rgba(29, 78, 216, 0.2);
+  margin: 0 auto 1.15rem;
+  flex-shrink: 0;
 }
 
 .hero-photo {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover;
   display: block;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-portrait-card:hover .hero-photo {
-  transform: scale(1.025);
+  transform: scale(1.05);
+}
+
+.hero-photo-status {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--surface);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
 }
 
 .hero-card-meta {
-  margin-top: 0.65rem;
-  padding: 0 0.25rem;
+  margin-top: 0.15rem;
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.35rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.25rem;
+  width: 100%;
 }
 
 .hero-card-name {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.015em;
   color: var(--text-primary);
-  margin-bottom: 0.2rem;
 }
 
 .hero-card-title {
-  font-size: 0.825rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cobalt);
+}
+
+.hero-card-location {
+  font-size: 0.775rem;
+  color: var(--text-tertiary);
+  margin-top: 0.15rem;
 }
 
 .hero-card-creds {
@@ -1608,37 +1640,99 @@ ul {
 }
 
 /* ===========================
-   SECTION: EXPERIENCE & LAB TIMELINE
+   SECTION: EXPERIENCE & LAB TIMELINE (ALTERNATING LEFT/RIGHT ON DESKTOP)
 =========================== */
 .timeline {
-  border-left: 1px solid var(--border);
-  padding-left: 2rem;
-  margin-left: 0.75rem;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2.25rem;
+  gap: 2.5rem;
+  margin-top: 1rem;
 }
 
-.timeline-item {
-  position: relative;
+@media (min-width: 769px) {
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: var(--border);
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  /* Odd items on the left side */
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 2.75rem;
+    padding-left: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(odd) .timeline-bullet {
+    left: auto;
+    right: -6px;
+    top: 1.75rem;
+  }
+  /* Even items on the right side */
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 2.75rem;
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(even) .timeline-bullet {
+    left: -6px;
+    right: auto;
+    top: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    border-left: 1px solid var(--border);
+    padding-left: 1.75rem;
+    margin-left: 0.5rem;
+  }
+  .timeline-item {
+    position: relative;
+    width: 100%;
+    left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .timeline-bullet {
+    position: absolute;
+    top: 0.35rem;
+    left: -2.1rem !important;
+    right: auto !important;
+  }
 }
 
 .timeline-bullet {
   position: absolute;
-  top: 0.35rem;
-  left: -2.35rem;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--surface);
   border: 2px solid var(--border-hover);
   transition: all var(--transition);
+  z-index: 2;
 }
 
 .timeline-item.active .timeline-bullet {
   background: var(--cobalt);
   border-color: var(--cobalt);
-  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
+  box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.16);
 }
 
 .timeline-body {
@@ -1646,7 +1740,7 @@ ul {
   border: 1px solid var(--border);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  padding: 1.85rem;
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
               border-color var(--transition),
               box-shadow var(--transition);
@@ -2312,27 +2406,47 @@ ul {
 }
 
 /* ===========================
-   SCROLL REVEAL MOTION
+   SCROLL REVEAL MOTION (ALTERNATING LEFT & RIGHT ENTRANCES)
 =========================== */
 .reveal-card {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+  transition: opacity 0.72s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.72s cubic-bezier(0.16, 1, 0.3, 1),
               border-color var(--transition),
               box-shadow var(--transition);
-  transition-delay: calc(var(--stagger, 0) * 75ms);
+  transition-delay: calc(var(--stagger, 0) * 80ms);
   will-change: opacity, transform;
 }
 
+.reveal-card.reveal-left {
+  opacity: 0;
+  transform: translateX(-48px);
+}
+
+.reveal-card.reveal-right {
+  opacity: 0;
+  transform: translateX(48px);
+}
+
+.reveal-card.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 .reveal-card.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
 }
 
 .reveal-card.is-revealed:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
   transition-delay: 0s;
+}
+
+/* Ensure no horizontal scrollbar occurs from sliding elements */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 
@@ -2342,8 +2456,8 @@ ul {
 
 /* Executive Snapshot Strip */
 .exec-snapshot-strip {
-  padding: 0 0 3.5rem;
-  margin-top: -1.5rem;
+  padding: 2.5rem 0 4.5rem;
+  margin-top: 0;
   position: relative;
   z-index: 2;
 }
@@ -2628,5 +2742,18 @@ ul {
     position: relative !important;
     top: auto !important;
     transform: none !important;
+  }
+}
+
+/* Alternating Flagship Systems Layout (Left/Right rhythm) */
+@media (min-width: 1025px) {
+  .case-study:nth-child(even) .case-study-grid {
+    grid-template-columns: 0.95fr 1.05fr;
+  }
+  .case-study:nth-child(even) .case-info {
+    order: 2;
+  }
+  .case-study:nth-child(even) .case-arch-panel {
+    order: 1;
   }
 }

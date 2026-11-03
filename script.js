@@ -499,28 +499,70 @@
   }
 
   /* ===========================
-     SCROLL REVEAL MOTION
+     SCROLL REVEAL MOTION (ALTERNATING LEFT & RIGHT)
   =========================== */
   function initScrollAnimations() {
     const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const cards = document.querySelectorAll(
-      '.stat-card, .case-study, .system-card, .stack-card, .research-card, .timeline-body, .distinction-row, .contact-card'
-    );
+    const revealSelectors = [
+      '.exec-card',
+      '.case-study',
+      '.system-card',
+      '.stack-card',
+      '.arch-visualizer-wrap',
+      '.timeline-item',
+      '.distinction-row',
+      '.research-card',
+      '.stat-card',
+      '.contact-card'
+    ];
+
+    const cards = document.querySelectorAll(revealSelectors.join(', '));
 
     if (REDUCED_MOTION) {
       cards.forEach(el => el.classList.add('is-revealed'));
       return;
     }
 
-    cards.forEach(el => {
+    let globalCounter = 0;
+
+    cards.forEach((el) => {
       el.classList.add('reveal-card');
-      if (el.parentElement) {
-        const siblings = Array.from(el.parentElement.children);
-        const index = siblings.indexOf(el);
-        if (index >= 0) {
-          el.style.setProperty('--stagger', Math.min(index, 6));
+
+      if (el.classList.contains('timeline-item')) {
+        const parent = el.parentElement;
+        const siblings = parent ? Array.from(parent.querySelectorAll('.timeline-item')) : [];
+        const idx = siblings.indexOf(el);
+        if (idx % 2 === 0) {
+          el.classList.add('reveal-left');
+        } else {
+          el.classList.add('reveal-right');
         }
+      } else if (el.parentElement) {
+        const siblings = Array.from(el.parentElement.children).filter(child => child.matches(revealSelectors.join(', ')));
+        const idx = siblings.indexOf(el);
+        if (idx >= 0) {
+          el.style.setProperty('--stagger', Math.min(idx, 4));
+          if (idx % 2 === 0) {
+            el.classList.add('reveal-left');
+          } else {
+            el.classList.add('reveal-right');
+          }
+        } else {
+          if (globalCounter % 2 === 0) {
+            el.classList.add('reveal-left');
+          } else {
+            el.classList.add('reveal-right');
+          }
+          globalCounter++;
+        }
+      } else {
+        if (globalCounter % 2 === 0) {
+          el.classList.add('reveal-left');
+        } else {
+          el.classList.add('reveal-right');
+        }
+        globalCounter++;
       }
     });
 
@@ -532,7 +574,7 @@
         }
       });
     }, {
-      threshold: 0.12,
+      threshold: 0.1,
       rootMargin: '0px 0px -40px 0px'
     });
 
