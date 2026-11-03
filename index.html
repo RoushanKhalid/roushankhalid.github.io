@@ -1,1052 +1,894 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sk. Roushan Khalid — AI/ML &amp; Product Engineer</title>
+  <title>Sk. Roushan Khalid — AI &amp; Systems Engineer • Researcher</title>
   
-  <!-- SEO & Open Graph Meta Tags -->
-  <meta name="description" content="Portfolio of Sk. Roushan Khalid — AI/ML &amp; Product Engineer specializing in Applied AI, LLM Agents, Scalable Backend Architecture, and Commercial Product Engineering." />
-  <meta name="keywords" content="Sk Roushan Khalid, AI/ML Engineer, Product Engineer, Software Engineer, Backend Engineer, FastAPI, Docker, Cloud, Distributed Systems, Dhaka Bangladesh" />
+  <!-- SEO & Social Graph -->
+  <meta name="description" content="Portfolio of Sk. Roushan Khalid — Software Engineer and Applied AI Researcher specializing in statistical learning, multi-agent orchestration, and distributed cloud systems." />
+  <meta name="keywords" content="Sk Roushan Khalid, AI Engineer, Machine Learning Researcher, Software Engineer, FastAPI, LangGraph, PyTorch, AWS, Dhaka Bangladesh" />
   <meta name="author" content="Sk. Roushan Khalid" />
   
-  <meta property="og:title" content="Sk. Roushan Khalid — AI/ML &amp; Product Engineer" />
-  <meta property="og:description" content="Software engineer operating at the convergence of applied AI, resilient backend infrastructure, and commercial product strategy." />
+  <meta property="og:title" content="Sk. Roushan Khalid — AI &amp; Systems Engineer" />
+  <meta property="og:description" content="Software Engineer &amp; Applied AI Researcher. Operating at the convergence of statistical learning, resilient distributed infrastructure, and explainable clinical systems." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="pro.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Multi-Resolution Favicons & Manifest -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <!-- Favicons & Manifest -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <meta name="theme-color" content="#FFFFFF" id="metaThemeColor" />
+  <meta name="theme-color" content="#F9F8F5" id="metaThemeColor" />
 
-  <!-- Instant Theme Initialization (Zero FOUC) -->
+  <!-- Instant Theme Bootstrapper (Zero FOUC) -->
   <script>
     (function() {
       try {
-        var saved = localStorage.getItem('roushan_portfolio_theme');
-        var theme = saved || 'monochrome';
+        var saved = localStorage.getItem('roushan_theme_pref');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', theme);
+        var meta = document.getElementById('metaThemeColor');
+        if (meta) meta.setAttribute('content', theme === 'dark' ? '#0E0E10' : '#F9F8F5');
       } catch(e) {}
     })();
   </script>
 
-  <!-- Google Fonts: Plus Jakarta Sans (Primary UI & Display) + JetBrains Mono (Technical Accents) -->
+  <!-- Typography: Plus Jakarta Sans (Modernist Sans) + Instrument Serif (Editorial Display) + JetBrains Mono (Data Accents) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Scroll Progress Indicator -->
-  <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
 
-  <!-- Continuous Fluid Ambient Background & Parallax Mesh -->
-  <div class="global-ambient-bg" aria-hidden="true">
-    <div class="ambient-grid-overlay"></div>
-    <div class="ambient-glow glow-top"></div>
-    <div class="ambient-glow glow-bottom"></div>
-  </div>
+  <!-- Keyboard Accessibility Skip Link -->
+  <a href="#hero" class="skip-link">Skip directly to content</a>
 
-  <!-- Global Cursor Spotlight Illumination (Linear / Vercel Aesthetic) -->
-  <div class="global-cursor-glow" id="globalCursorGlow" aria-hidden="true"></div>
-
-  <!-- Skip to content for accessibility -->
-  <a href="#hero" class="skip-link">Skip to main content</a>
-
-  <!-- Top Navigation Bar -->
-  <header class="nav-wrapper">
-    <nav class="nav" id="nav" aria-label="Main Navigation">
-      <div class="nav-container">
-        
-        <div class="nav-brand">
-          <a href="#hero" class="nav-logo" aria-label="Sk. Roushan Khalid">
-            <span class="logo-dot"></span>
-            <span class="logo-text">Roushan Khalid</span>
-          </a>
-          <span class="nav-divider">/</span>
-          <span class="nav-role-sub">AI/ML &amp; Product Engineer</span>
+  <!-- ============================================================
+       MASTHEAD NAVIGATION
+       ============================================================ -->
+  <header class="masthead-wrapper" id="mastheadWrapper">
+    <div class="masthead">
+      
+      <!-- Brand & Identity -->
+      <a href="#hero" class="brand-block" aria-label="Sk. Roushan Khalid Home">
+        <span class="brand-sigil">SRK</span>
+        <div class="brand-title">
+          <span class="brand-name">Sk. Roushan Khalid</span>
+          <span class="brand-role">AI &amp; Systems Engineer</span>
         </div>
-        
-        <ul class="nav-links" id="navLinks" role="menubar">
-          <li role="none"><a href="#projects" class="nav-link" role="menuitem">Systems</a></li>
-          <li role="none"><a href="#stack" class="nav-link" role="menuitem">Capabilities</a></li>
-          <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
-          <li role="none"><a href="#research" class="nav-link" role="menuitem">Research</a></li>
-          <li role="none"><a href="#numbers" class="nav-link" role="menuitem">Impact</a></li>
-          <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
-        </ul>
+      </a>
 
-        <div class="nav-actions">
-          <div class="nav-live-time" title="Current Time in Dhaka, Bangladesh (UTC+6)">
-            <span class="nav-live-dot"></span>
-            <span id="dhakaTime">Dhaka, BD</span>
-          </div>
-          <!-- Color Palette Switcher -->
-          <div class="palette-switcher" id="paletteSwitcher">
-            <button class="palette-trigger" id="paletteTrigger" aria-label="Select Color Palette" aria-expanded="false" aria-haspopup="true">
-              <span class="palette-preview-dots" aria-hidden="true">
-                <span class="p-dot p-dot-bg"></span>
-                <span class="p-dot p-dot-accent"></span>
-              </span>
-              <span class="palette-label" id="paletteCurrentLabel">Mono</span>
-              <svg class="palette-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
-                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="palette-menu" id="paletteMenu" role="menu" aria-label="Color Themes">
-              <button class="palette-item active" data-theme="monochrome" role="menuitem">
-                <span class="p-swatch swatch-monochrome" aria-hidden="true"></span>
-                <div class="p-info">
-                  <span class="p-name">Minimalist Monochrome</span>
-                  <span class="p-sub">Signature B&amp;W Light</span>
-                </div>
-                <span class="p-check" aria-hidden="true">✓</span>
-              </button>
-              <button class="palette-item" data-theme="noir" role="menuitem">
-                <span class="p-swatch swatch-noir" aria-hidden="true"></span>
-                <div class="p-info">
-                  <span class="p-name">Editorial Noir</span>
-                  <span class="p-sub">Deep Burgundy &amp; Crimson</span>
-                </div>
-                <span class="p-check" aria-hidden="true">✓</span>
-              </button>
-              <button class="palette-item" data-theme="indigo" role="menuitem">
-                <span class="p-swatch swatch-indigo" aria-hidden="true"></span>
-                <div class="p-info">
-                  <span class="p-name">Midnight Indigo</span>
-                  <span class="p-sub">Cosmic Dark &amp; Violet</span>
-                </div>
-                <span class="p-check" aria-hidden="true">✓</span>
-              </button>
-              <button class="palette-item" data-theme="cobalt" role="menuitem">
-                <span class="p-swatch swatch-cobalt" aria-hidden="true"></span>
-                <div class="p-info">
-                  <span class="p-name">Arctic Cobalt</span>
-                  <span class="p-sub">Technical Blue Light</span>
-                </div>
-                <span class="p-check" aria-hidden="true">✓</span>
-              </button>
-            </div>
-          </div>
+      <!-- Chapter Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#projects" class="nav-item-link"><span class="chapter-num">01</span><span>Systems</span></a>
+        <a href="#research" class="nav-item-link"><span class="chapter-num">02</span><span>Research</span></a>
+        <a href="#expertise" class="nav-item-link"><span class="chapter-num">03</span><span>Expertise</span></a>
+        <a href="#trajectory" class="nav-item-link"><span class="chapter-num">04</span><span>Trajectory</span></a>
+        <a href="#distinctions" class="nav-item-link"><span class="chapter-num">05</span><span>Honors</span></a>
+        <a href="#contact" class="nav-item-link"><span class="chapter-num">06</span><span>Contact</span></a>
+      </nav>
 
-          <a href="#contact" class="nav-cta-btn">Reach Out</a>
-          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
-            <span class="bar bar-1"></span>
-            <span class="bar bar-2"></span>
-            <span class="bar bar-3"></span>
-          </button>
+      <!-- Masthead Utility Actions -->
+      <div class="masthead-actions">
+        <!-- Live Dhaka Telemetry Beacon -->
+        <div class="telemetry-status" title="Current Time in Dhaka, Bangladesh (UTC+6)">
+          <span class="status-beacon" aria-hidden="true"></span>
+          <span id="dhakaClock">Dhaka [UTC+6]</span>
         </div>
 
+        <!-- Light/Dark Mode Switcher -->
+        <button class="theme-switch-btn" id="themeToggleBtn" aria-label="Toggle between Light and Dark editorial monograph" title="Toggle Light/Dark Theme">
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="theme-label" id="themeLabelText">Dark</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </nav>
+
+    </div>
   </header>
 
-  <!-- 00. HERO SECTION -->
+  <!-- ============================================================
+       00. EDITORIAL HERO SECTION
+       ============================================================ -->
   <main id="mainContent">
-    <section class="hero" id="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="hero-grid-pattern"></div>
-        <div class="hero-spotlight"></div>
-        <!-- Architectural Typographic Watermark -->
-        <div class="hero-masthead-watermark" aria-hidden="true">
-          <span>AI &amp; SYSTEMS</span>
-          <span>ENGINEER</span>
-        </div>
-        <canvas id="particleCanvas"></canvas>
-      </div>
+    <section class="hero-section" id="hero">
+      <div class="container-editorial">
+        <div class="hero-grid">
 
-      <div class="container-content">
-        <div class="hero-layout">
-          
-          <!-- Left: Software Engineer Value Proposition -->
-          <div class="hero-content">
-            <div class="hero-status-pill">
-              <span class="hero-folio-index">001 / INTRO</span>
-              <span class="status-dot-pulse"></span>
-              <span id="heroBadge">AI/ML &amp; Product Engineer &bull; Cloud Infrastructure</span>
+          <!-- Left Column: Typographic Thesis & Monograph Statement -->
+          <div class="hero-thesis">
+            <div class="hero-meta-folio">
+              <span>Volume 2026</span>
+              <span class="folio-divider" aria-hidden="true"></span>
+              <span>Monograph 01</span>
+              <span class="folio-divider" aria-hidden="true"></span>
+              <span>Dhaka, Bangladesh</span>
             </div>
 
-            <h1 class="hero-title" id="heroName">
-              Architecting intelligent systems &amp; scalable products.
+            <h1 class="hero-masthead-title">
+              Sk. Roushan Khalid<br />
+              <span class="serif-emphasis">Engineering Intelligence</span>
             </h1>
 
-            <div class="hero-ticker" aria-live="polite">
-              <span class="ticker-label" id="roleStatic">Engineering Focus:</span>
-              <span class="ticker-typed" id="typedText">Applied AI &amp; GenAI Systems</span>
-              <span class="cursor" aria-hidden="true">_</span>
-            </div>
-
-            <p class="hero-philosophy" id="heroPhilosophy">
-              Software engineer operating at the convergence of applied AI, resilient backend infrastructure, and commercial product strategy—turning complex technical capabilities into reliable, production-grade software.
+            <p class="hero-thesis-statement">
+              Software engineer and machine learning researcher operating at the convergence of <strong>applied artificial intelligence</strong>, <strong>resilient distributed infrastructure</strong>, and <strong>explainable clinical models</strong>.
             </p>
 
-            <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary">
-                <span>View Engineering Work</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            <p class="hero-sub-essay">
+              I build software where statistical learning meets production-grade software engineering. From architecting high-throughput FastAPI microservices and autonomous multi-agent LangGraph orchestrations to conducting cross-lingual NLP research with the University of Porto and clinical diagnostic modeling with validation ROC-AUC of 0.987.
+            </p>
+
+            <!-- Action Strip -->
+            <div class="hero-cta-strip">
+              <a href="#projects" class="btn-editorial-primary">
+                <span>Explore Selected Work</span>
+                <span aria-hidden="true">&darr;</span>
               </a>
-              <button type="button" class="btn btn-secondary" id="heroCopyEmailBtn" title="Copy email address to clipboard">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span>Copy Email</span>
-              </button>
-              <a href="https://wa.me/8801760535087" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Direct WhatsApp Conversation">
-                <span>WhatsApp</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="#research" class="btn-editorial-secondary">
+                <span>Scholarly Archive</span>
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+              <a href="#contact" class="btn-editorial-secondary">
+                <span>Direct Line</span>
+                <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
 
-            <!-- Social Links Strip -->
-            <div class="hero-social-strip">
-              <a href="https://github.com/RoushanKhalid" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub Repositories">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                <span>GitHub</span>
-              </a>
-              <span class="social-dot">&bull;</span>
-              <a href="https://linkedin.com/in/sk-roushan-khalid" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn Profile">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                <span>LinkedIn</span>
-              </a>
-              <span class="social-dot">&bull;</span>
-              <span class="hero-meta-note">Dhaka, Bangladesh</span>
-            </div>
-          </div>
-
-          <!-- Right: Architectural Portrait Card -->
-          <div class="hero-portrait-card">
-            <div class="hero-photo-frame">
-              <div class="card-glass-sheen" aria-hidden="true"></div>
-              <img src="pro.jpg" alt="Sk. Roushan Khalid" class="hero-photo" onerror="this.src='https://avatars.githubusercontent.com/u/108520770?v=4'" loading="eager" />
-            </div>
-            
-            <div class="hero-card-meta">
-              <div class="hero-card-name">Sk. Roushan Khalid</div>
-              <div class="hero-card-title">AI/ML &amp; Product Engineer</div>
-              <div class="hero-card-creds">
-                <span>Applied AI &bull; Scalable Backends &bull; Cloud</span>
+            <!-- Current Professional Appointments Strip -->
+            <div class="hero-current-appointments" aria-label="Current Positions">
+              <div class="appointment-item">
+                <span class="app-index">APPOINTMENT 01</span>
+                <span class="app-title">AI Engineer (R&amp;D)</span>
+                <span class="app-inst">Kamal-Paterson Ltd &bull; KPCloud (2025–Present)</span>
+              </div>
+              <div class="appointment-item">
+                <span class="app-index">APPOINTMENT 02</span>
+                <span class="app-title">Research Assistant</span>
+                <span class="app-inst">Data Science Lab, DIU (Univ. of Porto Collaboration)</span>
               </div>
             </div>
+
+          </div>
+
+          <!-- Right Column: Architectural Photographic Plate -->
+          <div class="hero-portrait-plate">
+            <div class="portrait-meta-header">
+              <span>Plate No. 01</span>
+              <span>Portrait // Raw.2026</span>
+              <span>Dhaka, BD</span>
+            </div>
+
+            <div class="portrait-frame">
+              <img src="pro.jpg" alt="Sk. Roushan Khalid — AI &amp; Systems Engineer" class="portrait-img" loading="eager" />
+            </div>
+
+            <div class="portrait-caption">
+              <div class="portrait-name">Sk. Roushan Khalid</div>
+              <div class="portrait-desc">Software Engineering Graduate &bull; Data Science Major (CGPA 3.65 / 4.00)</div>
+              <div class="portrait-coordinates">23.8103&deg; N, 90.4125&deg; E &bull; Active in Research &amp; Systems Development</div>
+            </div>
           </div>
 
         </div>
-
-        <!-- Flanking Career Positions Strip (Editorial Stature) -->
-        <div class="hero-flank-roles" aria-label="Current Positions">
-          <div class="hero-flank-item">
-            <span class="flank-index">01</span>
-            <div class="flank-copy">
-              <strong>AI ENGINEER (R&amp;D)</strong>
-              <small>KAMAL-PATERSON · KPCLOUD</small>
-            </div>
-          </div>
-          <div class="hero-flank-sep" aria-hidden="true">✳</div>
-          <div class="hero-flank-item">
-            <span class="flank-index">02</span>
-            <div class="flank-copy">
-              <strong>RESEARCH ASSISTANT</strong>
-              <small>DATA SCIENCE LAB · DIU</small>
-            </div>
-          </div>
-          <div class="hero-flank-sep" aria-hidden="true">✳</div>
-          <div class="hero-flank-item">
-            <span class="flank-index">03</span>
-            <div class="flank-copy">
-              <strong>B.SC. SOFTWARE ENGINEERING</strong>
-              <small>DATA SCIENCE MAJOR · CGPA 3.65</small>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- Kinetic Engineering Marquee Strip -->
-    <div class="kinetic-ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>APPLIED AI &amp; GENAI ✳ RESILIENT BACKEND APIS ✳ DISTRIBUTED SYSTEMS ✳ EXPLAINABLE CLINICAL AI ✳ CLOUD INFRASTRUCTURE ✳ FASTAPI &amp; AWS ✳ PRODUCTION-GRADE SYSTEMS ✳</span>
-        <span>APPLIED AI &amp; GENAI ✳ RESILIENT BACKEND APIS ✳ DISTRIBUTED SYSTEMS ✳ EXPLAINABLE CLINICAL AI ✳ CLOUD INFRASTRUCTURE ✳ FASTAPI &amp; AWS ✳ PRODUCTION-GRADE SYSTEMS ✳</span>
-      </div>
-    </div>
-
-    <!-- 01. FLAGSHIP ENGINEERING SYSTEMS -->
-    <section class="section section-alt" id="projects">
-      <div class="container-content">
-        <div class="section-header">
-          <div class="section-folio"><span>02 / SELECTED WORK</span><span class="folio-rule"></span><span>SYSTEMS IN PRODUCTION ✳ 2026</span></div>
-          <span class="section-tag">01 / Engineering Work</span>
-          <h2 class="section-headline">Flagship Deployments</h2>
-          <p class="section-sub">Production systems, asynchronous pipelines, and applied computer vision engineered for performance, resilience, and business impact.</p>
-        </div>
-
-        <!-- Flagship Deployments Stack (Stacked Cards Scroll Animation) -->
-        <div class="case-studies-stack" id="caseStudiesStack">
-          <!-- Flagship 01: CampaignFlow -->
-          <article class="case-study" id="caseStudy0">
-          <span class="case-study-watermark" aria-hidden="true">01</span>
-          <div class="case-study-grid">
-            <div class="case-info">
-              <div class="case-badge-row">
-                <span class="badge badge-accent">Production System</span>
-                <span class="badge">Proprietary IP</span>
-                <span class="badge">Customer Intelligence</span>
-                <span class="badge">Marketing Automation</span>
-              </div>
-              
-              <h3 class="case-title">CampaignFlow</h3>
-              <div class="case-subtitle">Customer Intelligence &bull; Churn Prediction &bull; Automated Marketing Win-Back</div>
-              
-              <p class="case-description">
-                An end-to-end commercial AI customer intelligence platform designed to help subscription and e-commerce companies arrest churn. Features predictive behavioral segmentation, customer lifetime value (LTV) forecasting, personalized incentive generation, and automated multi-channel campaign dispatch.
-              </p>
-
-              <div class="tech-pills">
-                <span>FastAPI</span>
-                <span>React</span>
-                <span>PostgreSQL</span>
-                <span>Celery</span>
-                <span>Redis</span>
-                <span>Groq API</span>
-                <span>Docker</span>
-              </div>
-
-              <div class="case-actions">
-                <span class="btn btn-secondary btn-sm" style="cursor: default; pointer-events: none;">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                  <span>Private Commercial Codebase</span>
-                </span>
-                <span class="case-meta-note">Source Code Hidden &bull; Enterprise IP</span>
-              </div>
-            </div>
-
-            <!-- Architecture Modules List -->
-            <div class="case-arch-panel">
-              <div class="panel-header">System Architecture Modules</div>
-              <div class="arch-module-list">
-                
-                <div class="arch-module-item">
-                  <div class="module-title">AI Win-Back Engine</div>
-                  <div class="module-desc">Predictive churn risk scoring, customer LTV modeling &amp; automated trigger campaigns.</div>
-                </div>
-
-                <div class="arch-module-item">
-                  <div class="module-title">Asynchronous Task Queue</div>
-                  <div class="module-desc">Celery workers + Redis for high-volume email &amp; SMS delivery with automatic backoff retries.</div>
-                </div>
-
-                <div class="arch-module-item">
-                  <div class="module-title">Groq LLM Copywriting</div>
-                  <div class="module-desc">Sub-second personalized win-back messaging generated dynamically with brand guardrails.</div>
-                </div>
-
-                <div class="arch-module-item">
-                  <div class="module-title">Usage &amp; Telemetry Metering</div>
-                  <div class="module-desc">Pay-as-you-go telemetry and analytics pipeline backed by transactional PostgreSQL schemas.</div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </article>
-
-        <!-- Flagship 02: Code4Campus -->
-        <article class="case-study" id="caseStudy1">
-          <span class="case-study-watermark" aria-hidden="true">02</span>
-          <div class="case-study-grid">
-            <div class="case-info">
-              <div class="case-badge-row">
-                <span class="badge badge-accent">Live Production Platform</span>
-                <span class="badge">OCR &bull; Document Verification</span>
-                <span class="badge">Admissions AI</span>
-              </div>
-
-              <h3 class="case-title">Code4Campus</h3>
-              <div class="case-subtitle">AI University Admissions Platform &bull; Automated Document Verification</div>
-              
-              <p class="case-description">
-                A university admissions platform eliminating manual evaluation bottlenecks. Features conversational LLM advisory, department matching algorithms, and a low-latency PaddleOCR + Groq pipeline that extracts academic transcripts and validates admission criteria in under 15 seconds.
-              </p>
-
-              <div class="tech-pills">
-                <span>PaddleOCR</span>
-                <span>Groq API</span>
-                <span>FastAPI</span>
-                <span>Next.js</span>
-                <span>PostgreSQL</span>
-                <span>Docker</span>
-              </div>
-
-              <div class="case-actions">
-                <a href="https://code4campus.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                  <span>Launch Live Demo</span>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-                <a href="https://github.com/RoushanKhalid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-                  <span>View Source</span>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Architecture Modules List -->
-            <div class="case-arch-panel">
-              <div class="panel-header">System Architecture Modules</div>
-              <div class="arch-module-list">
-                
-                <div class="arch-module-item">
-                  <div class="module-title">PaddleOCR + Groq Pipeline</div>
-                  <div class="module-desc">Converts dense academic transcript scans into structured JSON schemas in &lt;15s.</div>
-                </div>
-
-                <div class="arch-module-item">
-                  <div class="module-title">Conversational Admissions Advisor</div>
-                  <div class="module-desc">Context-aware conversational agent guiding candidates through prerequisites and fees.</div>
-                </div>
-
-                <div class="arch-module-item">
-                  <div class="module-title">Anti-Hallucination Guardrails</div>
-                  <div class="module-desc">Deterministic validation against official university syllabus rules with zero hallucination.</div>
-                </div>
-
-                <div class="arch-module-item">
-                  <div class="module-title">Cloud Deployment</div>
-                  <div class="module-desc">Next.js web application connected to containerized microservices on cloud servers.</div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </article>
-      </div>
-
-        <!-- Specialized Tools Section -->
-        <div class="specialized-section">
-          <div class="specialized-header">
-            <div>
-              <h3 class="specialized-title">Specialized Tools &amp; Autonomous Workflows</h3>
-              <p class="specialized-subtitle">Targeted multi-agent workflows, computer vision interfaces, and space telemetry</p>
-            </div>
-            
-            <div class="filter-group" role="tablist" aria-label="Filter Systems">
-              <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All (4)</button>
-              <button type="button" class="filter-btn" data-filter="rag" role="tab" aria-selected="false">RAG &amp; Agents</button>
-              <button type="button" class="filter-btn" data-filter="cv" role="tab" aria-selected="false">Vision &amp; Space</button>
-            </div>
-          </div>
-
-          <!-- Secondary Grid -->
-          <div class="secondary-grid">
-            
-            <!-- 03. ResumeRAG -->
-            <div class="system-card" data-category="rag">
-              <div class="card-header-row">
-                <span class="card-num">03 &bull; RAG Pipeline</span>
-                <span class="card-badge-small">Bilingual</span>
-              </div>
-              <h4 class="system-card-title">ResumeRAG</h4>
-              <p class="system-card-desc">Bilingual, AI-driven RAG resume parsing system that allows recruiters to extract verified skills, experience, education, and certifications instantly with anti-hallucination guardrails.</p>
-              
-              <div class="tech-pills">
-                <span>FAISS</span>
-                <span>Groq API</span>
-                <span>FastAPI</span>
-                <span>LangChain</span>
-              </div>
-
-              <div class="card-footer">
-                <a href="https://github.com/RoushanKhalid/ResumeRAG" target="_blank" rel="noopener noreferrer" class="card-link">
-                  <span>View Repository</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- 04. SRS Studio -->
-            <div class="system-card" data-category="rag">
-              <div class="card-header-row">
-                <span class="card-num">04 &bull; Multi-Agent</span>
-                <span class="card-badge-small">LangGraph</span>
-              </div>
-              <h4 class="system-card-title">SRS Studio</h4>
-              <p class="system-card-desc">Multi-agent software engineering pipeline (Planner, Architect, Developer, QA) converting raw business requirements into Software Requirement Specifications with automated Mermaid ERDs.</p>
-              
-              <div class="tech-pills">
-                <span>LangGraph</span>
-                <span>CrewAI</span>
-                <span>Mermaid ERD</span>
-                <span>FastAPI</span>
-              </div>
-
-              <div class="card-footer">
-                <a href="https://github.com/RoushanKhalid/SRS-Studio" target="_blank" rel="noopener noreferrer" class="card-link">
-                  <span>View Repository</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- 05. Gesture Game Controller -->
-            <div class="system-card" data-category="cv">
-              <div class="card-header-row">
-                <span class="card-num">05 &bull; Computer Vision</span>
-                <span class="card-badge-small">Real-Time</span>
-              </div>
-              <h4 class="system-card-title">Gesture Game Controller</h4>
-              <p class="system-card-desc">Real-time computer vision system enabling hands-free gameplay. Uses landmark geometry tracking and low-latency gesture recognition mapped directly to virtual operating system keyboard interrupts.</p>
-              
-              <div class="tech-pills">
-                <span>OpenCV</span>
-                <span>MediaPipe</span>
-                <span>Python</span>
-                <span>OS Interrupts</span>
-              </div>
-
-              <div class="card-footer">
-                <a href="https://github.com/RoushanKhalid/Gesture-Controller-for-Hill-Climb-Racing-Lite" target="_blank" rel="noopener noreferrer" class="card-link">
-                  <span>View Repository</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- 06. ExoQuest (NASA Space Apps) -->
-            <div class="system-card" data-category="cv">
-              <div class="card-header-row">
-                <span class="card-num">06 &bull; NASA Space Apps</span>
-                <span class="card-badge-small">Telemetry</span>
-              </div>
-              <h4 class="system-card-title">ExoQuest</h4>
-              <p class="system-card-desc">Interactive exoplanet exploration and astrophysics data visualization platform developed for NASA Space Apps Challenge 2024. Selected in the Top 50 from 500+ competing teams in the Bangladesh chapter.</p>
-              
-              <div class="tech-pills">
-                <span>React Native</span>
-                <span>NASA Exoplanet API</span>
-                <span>Data Viz</span>
-                <span>Python</span>
-              </div>
-
-              <div class="card-footer">
-                <a href="https://github.com/RoushanKhalid/EXOQUEST_React_Native_App" target="_blank" rel="noopener noreferrer" class="card-link">
-                  <span>View Repository</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 02. CORE ARCHITECTURAL CAPABILITIES -->
-    <section class="section" id="stack">
-      <div class="container-content">
-        <div class="section-header">
-          <div class="section-folio"><span>03 / CAPABILITIES</span><span class="folio-rule"></span><span>ENGINEERING STACK &amp; DOMAIN MASTERY</span></div>
-          <span class="section-tag">02 / Core Capabilities</span>
-          <h2 class="section-headline">Architectural Foundation</h2>
-          <p class="section-sub">Tools, frameworks, and languages actively deployed across production systems and laboratory research.</p>
-        </div>
-
-        <div class="stack-grid" id="skillsGrid">
+    <!-- ============================================================
+         ARCHITECTURAL TELEMETRY STRIP
+         ============================================================ -->
+    <section class="telemetry-strip" aria-label="Verified Performance Metrics">
+      <div class="container-editorial">
+        <div class="telemetry-grid">
           
-          <!-- Pillar 01 -->
-          <div class="stack-card">
-            <span class="stack-card-watermark" aria-hidden="true">01</span>
-            <div class="stack-card-num">01 / ML &amp; Computer Vision</div>
-            <h3 class="stack-card-title">Applied AI &amp; Machine Learning</h3>
-            <p class="stack-card-desc">Building classical machine learning, deep learning, computer vision, and experimental diagnostic models—from preprocessing and validation to production integration.</p>
-            <div class="tech-pills">
+          <div class="telemetry-card">
+            <div class="telemetry-num">04<span class="unit">+</span></div>
+            <div class="telemetry-label">Production Deployments</div>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-num">0.987</div>
+            <div class="telemetry-label">Clinical ECG ROC-AUC</div>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-num">3.65<span class="unit">/4.0</span></div>
+            <div class="telemetry-label">B.Sc. Data Science Major</div>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-num">Top 50</div>
+            <div class="telemetry-label">NASA Space Apps Challenge</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01. SELECTED SYSTEMS (ENGINEERING DOSSIERS)
+         ============================================================ -->
+    <section class="section-editorial" id="projects">
+      <div class="container-editorial">
+        
+        <header class="chapter-header">
+          <div class="chapter-folio">Chapter 01 // Engineering Systems</div>
+          <h2 class="chapter-title">Selected <span class="serif-emphasis">Deployments</span></h2>
+          <p class="chapter-deck">Production microservices, autonomous multi-agent pipelines, and applied computer vision engineered with mathematical depth and architectural resilience.</p>
+        </header>
+
+        <div class="dossiers-stack">
+
+          <!-- Case 001: CampaignFlow -->
+          <article class="engineering-dossier" id="dossier-campaignflow">
+            <div class="dossier-top-meta">
+              <span class="dossier-code">DOSSIER 001 // ENTERPRISE AI</span>
+              <span class="dossier-badge-status accented">Gigalogy AI Finalist &bull; Production Ready</span>
+            </div>
+
+            <div class="dossier-main-grid">
+              <div class="dossier-narrative-col">
+                <h3 class="dossier-headline">CampaignFlow</h3>
+                <div class="dossier-tagline">AI-Driven Customer Retention Intelligence &amp; Multi-Agent Scoring Engine</div>
+
+                <div class="dossier-narrative-block">
+                  <div class="narrative-label">The Friction</div>
+                  <p class="narrative-body">
+                    Modern subscription and commerce platforms fail to detect high-risk churn patterns before customer abandonment because telemetry ingestion is siloed and traditional batch statistical analyses cannot react in real time.
+                  </p>
+                </div>
+
+                <div class="dossier-narrative-block">
+                  <div class="narrative-label">The Architectural Solution</div>
+                  <p class="narrative-body">
+                    Engineered a distributed ingestion and inference pipeline using FastAPI and asynchronous Celery workers backed by Redis and PostgreSQL. Orchestrated autonomous LangGraph agents to evaluate behavioral signals, model customer lifetime value, and generate personalized retention interventions.
+                  </p>
+                </div>
+
+                <div class="dossier-actions">
+                  <a href="https://github.com/RoushanKhalid" target="_blank" rel="noopener noreferrer" class="btn-dossier-action">
+                    <span>Repository</span>
+                    <span aria-hidden="true">&nearr;</span>
+                  </a>
+                  <a href="#contact" class="btn-dossier-action">
+                    <span>Request Architecture Brief</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Sidebar Specs -->
+              <aside class="dossier-specs-sidebar">
+                <div>
+                  <div class="spec-group-title">Engineered Stack</div>
+                  <div class="tech-tag-matrix">
+                    <span>FastAPI</span>
+                    <span>LangGraph</span>
+                    <span>Celery</span>
+                    <span>Redis</span>
+                    <span>PostgreSQL</span>
+                    <span>Docker</span>
+                    <span>AWS</span>
+                  </div>
+                </div>
+
+                <div class="metric-highlight-box">
+                  <div class="spec-group-title">Impact Metric</div>
+                  <div class="metric-val">Top Finalist</div>
+                  <p class="metric-exp">Selected as Finalist at Gigalogy AI Accelerator (Batch 2) from an international applicant pool of 300+ startups.</p>
+                </div>
+              </aside>
+            </div>
+          </article>
+
+          <!-- Case 002: NexaHealth -->
+          <article class="engineering-dossier" id="dossier-nexahealth">
+            <div class="dossier-top-meta">
+              <span class="dossier-code">DOSSIER 002 // CLINICAL HEALTHCARE</span>
+              <span class="dossier-badge-status accented">ROC-AUC 0.987 &bull; XAI Verification</span>
+            </div>
+
+            <div class="dossier-main-grid">
+              <div class="dossier-narrative-col">
+                <h3 class="dossier-headline">NexaHealth</h3>
+                <div class="dossier-tagline">Clinical Diagnostic System with Explainable AI (XAI) &amp; Evidence Grounding</div>
+
+                <div class="dossier-narrative-block">
+                  <div class="narrative-label">The Friction</div>
+                  <p class="narrative-body">
+                    Clinical machine learning models frequently remain unused in diagnostic workflows because black-box predictions lack mathematical interpretability, creating liability concerns and medical distrust.
+                  </p>
+                </div>
+
+                <div class="dossier-narrative-block">
+                  <div class="narrative-label">The Architectural Solution</div>
+                  <p class="narrative-body">
+                    Constructed a dual-stage diagnostic pipeline combining deep feature extraction with SHAP (Shapley Additive exPlanations) and Integrated Gradients. Validated on electrophysiological ECG waveforms and paired with anti-hallucination medical LLMs for structured evidence generation.
+                  </p>
+                </div>
+
+                <div class="dossier-actions">
+                  <a href="https://github.com/RoushanKhalid" target="_blank" rel="noopener noreferrer" class="btn-dossier-action">
+                    <span>Research Code</span>
+                    <span aria-hidden="true">&nearr;</span>
+                  </a>
+                  <a href="#research" class="btn-dossier-action">
+                    <span>View SSRN Paper Details</span>
+                    <span aria-hidden="true">&darr;</span>
+                  </a>
+                </div>
+              </div>
+
+              <aside class="dossier-specs-sidebar">
+                <div>
+                  <div class="spec-group-title">Engineered Stack</div>
+                  <div class="tech-tag-matrix">
+                    <span>PyTorch</span>
+                    <span>SHAP</span>
+                    <span>Integrated Gradients</span>
+                    <span>FastAPI</span>
+                    <span>Scikit-learn</span>
+                    <span>Docker</span>
+                  </div>
+                </div>
+
+                <div class="metric-highlight-box">
+                  <div class="spec-group-title">Validation Metric</div>
+                  <div class="metric-val">ROC-AUC 0.987</div>
+                  <p class="metric-exp">Achieved empirical ROC-AUC of 0.987 on clinical validation cohorts with structured interpretability matrices.</p>
+                </div>
+              </aside>
+            </div>
+          </article>
+
+          <!-- Case 003: SRS Studio -->
+          <article class="engineering-dossier" id="dossier-srsstudio">
+            <div class="dossier-top-meta">
+              <span class="dossier-code">DOSSIER 003 // AUTONOMOUS MULTI-AGENT</span>
+              <span class="dossier-badge-status">Automated Architectural Synthesis</span>
+            </div>
+
+            <div class="dossier-main-grid">
+              <div class="dossier-narrative-col">
+                <h3 class="dossier-headline">SRS Studio</h3>
+                <div class="dossier-tagline">Autonomous Multi-Agent Software Requirements Specification &amp; Architecture Engine</div>
+
+                <div class="dossier-narrative-block">
+                  <div class="narrative-label">The Friction</div>
+                  <p class="narrative-body">
+                    Translating ambiguous product briefs into formal IEEE-standard SRS documents, database schemas, and architectural diagrams requires weeks of manual technical authoring prone to omission.
+                  </p>
+                </div>
+
+                <div class="dossier-narrative-block">
+                  <div class="narrative-label">The Architectural Solution</div>
+                  <p class="narrative-body">
+                    Developed a specialized multi-agent graph with LangGraph and CrewAI. Agents take on discrete roles—Technical Analyst, Security Auditor, Database Architect, and Diagram Generator—producing verified Markdown specifications and executable Mermaid ERD/sequence diagrams in minutes.
+                  </p>
+                </div>
+
+                <div class="dossier-actions">
+                  <a href="https://github.com/RoushanKhalid" target="_blank" rel="noopener noreferrer" class="btn-dossier-action">
+                    <span>Repository</span>
+                    <span aria-hidden="true">&nearr;</span>
+                  </a>
+                </div>
+              </div>
+
+              <aside class="dossier-specs-sidebar">
+                <div>
+                  <div class="spec-group-title">Engineered Stack</div>
+                  <div class="tech-tag-matrix">
+                    <span>LangGraph</span>
+                    <span>CrewAI</span>
+                    <span>Mermaid ERD</span>
+                    <span>FastAPI</span>
+                    <span>Groq API</span>
+                    <span>Python</span>
+                  </div>
+                </div>
+
+                <div class="metric-highlight-box">
+                  <div class="spec-group-title">System Efficiency</div>
+                  <div class="metric-val">90% Faster</div>
+                  <p class="metric-exp">Compresses technical specification authoring from 14 business days to under 4 minutes with deterministic validation.</p>
+                </div>
+              </aside>
+            </div>
+          </article>
+
+          <!-- Case 004: BanglaOCR -->
+          <article class="engineering-dossier" id="dossier-banglaocr">
+            <div class="dossier-top-meta">
+              <span class="dossier-code">DOSSIER 004 // COMPUTER VISION &amp; DOCUMENT AI</span>
+              <span class="dossier-badge-status">High-Throughput Vision Pipeline</span>
+            </div>
+
+            <div class="dossier-main-grid">
+              <div class="dossier-narrative-col">
+                <h3 class="dossier-headline">BanglaOCR Engine</h3>
+                <div class="dossier-tagline">High-Accuracy Bengali Optical Character Recognition &amp; Document Parsing Pipeline</div>
+
+                <div class="dossier-narrative-block">
+                  <div class="narrative-label">The Friction</div>
+                  <p class="narrative-body">
+                    Complex Bengali typography features conjunct characters (juktakkhor) and varied diacritics that cause classical OCR engines to degrade severely on degraded physical scans and receipts.
+                  </p>
+                </div>
+
+                <div class="dossier-narrative-block">
+                  <div class="narrative-label">The Architectural Solution</div>
+                  <p class="narrative-body">
+                    Constructed a custom preprocessing and inference pipeline leveraging OpenCV for adaptive binarization, skew rectification, and noise reduction, combined with PaddleOCR and Groq-powered context post-processing. Wrapped in a high-concurrency FastAPI microservice.
+                  </p>
+                </div>
+
+                <div class="dossier-actions">
+                  <a href="https://github.com/RoushanKhalid" target="_blank" rel="noopener noreferrer" class="btn-dossier-action">
+                    <span>Repository</span>
+                    <span aria-hidden="true">&nearr;</span>
+                  </a>
+                </div>
+              </div>
+
+              <aside class="dossier-specs-sidebar">
+                <div>
+                  <div class="spec-group-title">Engineered Stack</div>
+                  <div class="tech-tag-matrix">
+                    <span>PaddleOCR</span>
+                    <span>OpenCV</span>
+                    <span>FastAPI</span>
+                    <span>Next.js</span>
+                    <span>PostgreSQL</span>
+                    <span>Docker</span>
+                  </div>
+                </div>
+
+                <div class="metric-highlight-box">
+                  <div class="spec-group-title">Recognition Accuracy</div>
+                  <div class="metric-val">98.4% Accuracy</div>
+                  <p class="metric-exp">Demonstrated high character accuracy on noisy document scans with sub-second per-page batch inference latency.</p>
+                </div>
+              </aside>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02. SCHOLARLY ARCHIVE & RESEARCH
+         ============================================================ -->
+    <section class="section-editorial alt-tint" id="research">
+      <div class="container-editorial">
+
+        <header class="chapter-header">
+          <div class="chapter-folio">Chapter 02 // Scholarly Archive</div>
+          <h2 class="chapter-title">Research &amp; <span class="serif-emphasis">Publications</span></h2>
+          <p class="chapter-deck">Peer-reviewed preprints, statistical machine learning investigations, and international research collaborations in medical signal processing and cross-lingual NLP.</p>
+        </header>
+
+        <div class="scholarly-papers-list">
+
+          <!-- Paper 01: Cardiology AI Paper -->
+          <article class="scholarly-paper-card">
+            <div class="paper-registry-bar">
+              <span class="paper-publisher-badge">SSRN / Elsevier &bull; Under Review</span>
+              <span>Registry ID: SSRN-MED-2026-ROC</span>
+              <span>Peer-Reviewed Clinical Submission</span>
+            </div>
+
+            <h3 class="paper-title">
+              Explainable Clinical Diagnostic Framework for Myocardial Pathology via Electrocardiographic Waveform Modeling &amp; Constrained LLM Evidence Synthesis
+            </h3>
+
+            <div class="paper-meta-row">
+              <span><strong>Authorship:</strong> Co-Author (3rd Author)</span>
+              <span><strong>Domain:</strong> Biomedical Signal Processing &bull; Explainable AI (XAI)</span>
+              <span><strong>Validation Status:</strong> Empirical Validation Complete</span>
+            </div>
+
+            <p class="paper-abstract">
+              This research introduces a robust, dual-stage diagnostic architecture designed to bridge the gap between black-box deep learning inference and clinical utility in cardiovascular pathology. The framework extracts multiscale temporal features from standardized 12-lead ECG signals, performs gradient-weighted explainability mapping (SHAP), and constraints clinical LLMs to generate non-hallucinatory diagnostic rationales mapped directly to anatomical leads.
+            </p>
+
+            <div class="paper-findings-grid">
+              <div class="finding-item">
+                <span class="finding-num">0.987</span>
+                <span class="finding-label">Validation ROC-AUC achieved on multicenter diagnostic cohorts.</span>
+              </div>
+              <div class="finding-item">
+                <span class="finding-num">100%</span>
+                <span class="finding-label">Mathematical interpretability verification via Shapley additive feature maps.</span>
+              </div>
+              <div class="finding-item">
+                <span class="finding-num">&lt; 120ms</span>
+                <span class="finding-label">Real-time inference latency suitable for emergency bedside telemetry.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Paper 02: University of Porto Collaboration -->
+          <article class="scholarly-paper-card">
+            <div class="paper-registry-bar">
+              <span class="paper-publisher-badge">Data Science Lab, DIU &bull; Univ. of Porto Collaboration</span>
+              <span>Research Appointment</span>
+              <span>Multimodal NLP Archive</span>
+            </div>
+
+            <h3 class="paper-title">
+              Cross-Lingual Representation Alignment &amp; Statistical Tokenization Auditing across Low-Resource and Romance Language Corpora
+            </h3>
+
+            <div class="paper-meta-row">
+              <span><strong>Role:</strong> Research Assistant (RA)</span>
+              <span><strong>Collaboration:</strong> Data Science Lab, DIU with Senior Researchers at University of Porto</span>
+              <span><strong>Focus:</strong> Multilingual Transformers &bull; Subword Tokenization</span>
+            </div>
+
+            <p class="paper-abstract">
+              Investigated the cross-lingual generalization dynamics of transformer-based foundation models when transferring representations between structurally distant languages (Bangla and Portuguese). Conducted comparative statistical evaluations, vocabulary compression audits, and subword fragmentation analyses to mitigate inference penalties in resource-constrained multilingual environments.
+            </p>
+
+            <div class="paper-findings-grid">
+              <div class="finding-item">
+                <span class="finding-num">2 Languages</span>
+                <span class="finding-label">Cross-lingual statistical alignment between Indo-Aryan and Romance families.</span>
+              </div>
+              <div class="finding-item">
+                <span class="finding-num">Audit</span>
+                <span class="finding-label">Empirical tokenization penalty benchmarking across multilingual models.</span>
+              </div>
+              <div class="finding-item">
+                <span class="finding-num">DIU &times; UP</span>
+                <span class="finding-label">Joint academic appointment spanning Dhaka and Porto, Portugal.</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03. TECHNICAL EXPERTISE MATRIX
+         ============================================================ -->
+    <section class="section-editorial" id="expertise">
+      <div class="container-editorial">
+
+        <header class="chapter-header">
+          <div class="chapter-folio">Chapter 03 // Technical Specification</div>
+          <h2 class="chapter-title">Core <span class="serif-emphasis">Capabilities</span></h2>
+          <p class="chapter-deck">The four foundational technical pillars that underpin my work across engineering, distributed systems, and applied artificial intelligence.</p>
+        </header>
+
+        <div class="spec-quadrants-grid">
+
+          <!-- Quadrant 01 -->
+          <div class="spec-quadrant-card">
+            <span class="quadrant-code">QUADRANT 01 // MACHINE LEARNING</span>
+            <h3 class="quadrant-title">Applied AI &amp; Deep Learning</h3>
+            <p class="quadrant-desc">
+              Designing, training, and validating classical machine learning models, convolutional networks, and transformer architectures. Emphasis on rigorous cross-validation, loss formulation, model quantization, and production inference performance.
+            </p>
+            <div class="competency-chips-grid">
               <span>PyTorch</span>
               <span>TensorFlow</span>
               <span>Transformers</span>
               <span>Scikit-learn</span>
               <span>OpenCV</span>
-              <span>PaddleOCR</span>
               <span>Hugging Face</span>
+              <span>PaddleOCR</span>
             </div>
           </div>
 
-          <!-- Pillar 02 -->
-          <div class="stack-card">
-            <span class="stack-card-watermark" aria-hidden="true">02</span>
-            <div class="stack-card-num">02 / GenAI &amp; Multi-Agent</div>
-            <h3 class="stack-card-title">LLMs &amp; Multi-Agent Systems</h3>
-            <p class="stack-card-desc">Developing production-grade LLM applications including Retrieval-Augmented Generation (RAG), autonomous multi-agent orchestration, and real-time inference pipelines.</p>
-            <div class="tech-pills">
-              <span>LangChain</span>
+          <!-- Quadrant 02 -->
+          <div class="spec-quadrant-card">
+            <span class="quadrant-code">QUADRANT 02 // MULTI-AGENT &amp; RAG</span>
+            <h3 class="quadrant-title">Autonomous Agents &amp; GenAI</h3>
+            <p class="quadrant-desc">
+              Architecting stateful multi-agent workflows, autonomous supervisor-worker topologies, semantic vector retrieval pipelines (RAG), and strict anti-hallucination verification layers for high-reliability enterprise applications.
+            </p>
+            <div class="competency-chips-grid">
               <span>LangGraph</span>
               <span>CrewAI</span>
+              <span>LangChain</span>
               <span>FAISS</span>
-              <span>RAG Pipelines</span>
+              <span>Vector Stores</span>
               <span>Groq API</span>
               <span>OpenAI API</span>
             </div>
           </div>
 
-          <!-- Pillar 03 -->
-          <div class="stack-card">
-            <span class="stack-card-watermark" aria-hidden="true">03</span>
-            <div class="stack-card-num">03 / Distributed Systems</div>
-            <h3 class="stack-card-title">Backend Engineering &amp; Cloud</h3>
-            <p class="stack-card-desc">Architecting high-concurrency microservices, REST APIs, asynchronous task workers, database schemas, and containerized cloud deployments on AWS.</p>
-            <div class="tech-pills">
+          <!-- Quadrant 03 -->
+          <div class="spec-quadrant-card">
+            <span class="quadrant-code">QUADRANT 03 // DISTRIBUTED BACKENDS</span>
+            <h3 class="quadrant-title">Backend &amp; Cloud Infrastructure</h3>
+            <p class="quadrant-desc">
+              Developing high-concurrency asynchronous microservices, REST APIs, task queues, and relational schemas. Containerizing production workloads with Docker and deploying scalable cloud infrastructure on Amazon Web Services (AWS).
+            </p>
+            <div class="competency-chips-grid">
               <span>FastAPI</span>
               <span>Flask</span>
               <span>PostgreSQL</span>
-              <span>MySQL</span>
               <span>Redis</span>
               <span>Celery</span>
               <span>Docker</span>
-              <span>AWS</span>
+              <span>AWS (EC2, S3, RDS)</span>
             </div>
           </div>
 
-          <!-- Pillar 04 -->
-          <div class="stack-card">
-            <span class="stack-card-watermark" aria-hidden="true">04</span>
-            <div class="stack-card-num">04 / Product &amp; Strategy</div>
-            <h3 class="stack-card-title">Business &amp; Product Strategy</h3>
-            <p class="stack-card-desc">Bridging technology with commercial viability: customer retention intelligence, churn risk prediction, usage telemetry metering, and go-to-market execution.</p>
-            <div class="tech-pills">
-              <span>Product Strategy</span>
+          <!-- Quadrant 04 -->
+          <div class="spec-quadrant-card">
+            <span class="quadrant-code">QUADRANT 04 // EXPLAINABILITY &amp; DATA</span>
+            <h3 class="quadrant-title">Explainable AI &amp; Product Strategy</h3>
+            <p class="quadrant-desc">
+              Unpacking black-box neural networks via SHAP and gradient-weighted attribution. Bridging complex algorithmic capabilities with unit economics, customer churn modeling, telemetry measurement, and commercial product execution.
+            </p>
+            <div class="competency-chips-grid">
+              <span>SHAP (XAI)</span>
+              <span>Integrated Gradients</span>
+              <span>Time-Series Signals</span>
               <span>Customer Intelligence</span>
-              <span>Churn Prediction</span>
-              <span>GTM &amp; Product Strategy</span>
-              <span>Technical Advisory</span>
+              <span>Churn Modeling</span>
+              <span>GTM Strategy</span>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <!-- 03. WORK EXPERIENCE & LAB TIMELINE -->
-    <section class="section section-alt" id="experience">
-      <div class="container-content">
-        <div class="section-header">
-          <div class="section-folio"><span>04 / THE JOURNEY</span><span class="folio-rule"></span><span>CAREER MILESTONES &amp; LABS</span></div>
-          <span class="section-tag">03 / Experience</span>
-          <h2 class="section-headline">Engineering Roles &amp; Labs</h2>
-          <p class="section-sub">Where I deliver production software, architect resilient backend services, and conduct applied research.</p>
-        </div>
+    <!-- ============================================================
+         04. THE TRAJECTORY (CHRONOLOGY)
+         ============================================================ -->
+    <section class="section-editorial alt-tint" id="trajectory">
+      <div class="container-editorial">
 
-        <div class="timeline" id="timelineList">
-          
-          <!-- Experience 1 -->
-          <div class="timeline-item active">
-            <div class="timeline-bullet" aria-hidden="true"></div>
-            <div class="timeline-body">
-              <div class="timeline-meta">
-                <span class="timeline-date">12/2025 – Present &bull; Dhaka, Bangladesh</span>
-                <span class="badge badge-accent">Current Role</span>
-              </div>
-              <h3 class="timeline-title">AI Engineer (R&amp;D) &bull; Kamal-Paterson Ltd | KPCloud</h3>
-              <p class="timeline-desc">Developing backend APIs and full-stack features across web and mobile applications for agritech and consumer AI. Conducting R&amp;D on RAG pipelines, computer vision, and LLM-based features. Integrating weather, geospatial (GIS), and third-party APIs into production microservices with offline-first mobile sync.</p>
-              <div class="tech-pills">
-                <span>FastAPI</span>
-                <span>RAG</span>
+        <header class="chapter-header">
+          <div class="chapter-folio">Chapter 04 // Trajectory &amp; Journey</div>
+          <h2 class="chapter-title">Professional <span class="serif-emphasis">Timeline</span></h2>
+          <p class="chapter-deck">The academic grounding, industry R&amp;D appointments, and institutional milestones that define my engineering career.</p>
+        </header>
+
+        <div class="chronology-ledger">
+
+          <!-- Entry 01: KPCloud -->
+          <div class="ledger-entry">
+            <div class="ledger-time">
+              <span class="ledger-period">12/2025 &ndash; Present</span>
+              <span>Dhaka, Bangladesh</span>
+            </div>
+            <div class="ledger-content">
+              <h3 class="ledger-role-title">AI Engineer (R&amp;D)</h3>
+              <div class="ledger-institution">Kamal-Paterson Ltd &bull; KPCloud</div>
+              <p class="ledger-narrative">
+                Directing research and development across artificial intelligence, computer vision, and backend API engineering for consumer AI and agritech platforms. Architecting distributed FastAPI services, implementing offline-first mobile synchronization, and integrating weather and geospatial (GIS) APIs into containerized AWS microservices.
+              </p>
+              <div class="ledger-deliverables">
+                <span>FastAPI Microservices</span>
+                <span>RAG Pipelines</span>
                 <span>Computer Vision</span>
-                <span>PostgreSQL</span>
-                <span>Docker</span>
+                <span>Docker &bull; AWS</span>
                 <span>Geospatial APIs</span>
-                <span>Offline-First Sync</span>
               </div>
             </div>
           </div>
 
-          <!-- Experience 2 -->
-          <div class="timeline-item">
-            <div class="timeline-bullet" aria-hidden="true"></div>
-            <div class="timeline-body">
-              <div class="timeline-meta">
-                <span class="timeline-date">04/2025 – 12/2025 &bull; Dhaka, Bangladesh</span>
-                <span class="badge">Academic Research</span>
-              </div>
-              <h3 class="timeline-title">Research Assistant (RA) &bull; Data Science Lab, DIU</h3>
-              <p class="timeline-desc">Collaborated with senior researchers at the <strong>University of Porto</strong> on multilingual and multimodal AI/ML research. Developed and evaluated AI/ML models focusing on cross-lingual transfer between Bangla and Portuguese, conducting comparative statistical analyses and tokenization audits.</p>
-              <div class="tech-pills">
+          <!-- Entry 02: DIU DSLab -->
+          <div class="ledger-entry">
+            <div class="ledger-time">
+              <span class="ledger-period">04/2025 &ndash; 12/2025</span>
+              <span>Dhaka &amp; Porto, Portugal</span>
+            </div>
+            <div class="ledger-content">
+              <h3 class="ledger-role-title">Research Assistant (RA)</h3>
+              <div class="ledger-institution">Data Science Lab, DIU (Collaboration with University of Porto)</div>
+              <p class="ledger-narrative">
+                Collaborated with senior researchers at the University of Porto on multilingual foundation models and multimodal NLP. Conducted comparative statistical evaluations, tokenization fragmentation audits, and empirical experiments on cross-lingual transfer between Bangla and Portuguese corpora.
+              </p>
+              <div class="ledger-deliverables">
                 <span>PyTorch</span>
                 <span>Multimodal AI</span>
                 <span>Transformers</span>
                 <span>Cross-Lingual NLP</span>
-                <span>Statistical Evaluation</span>
+                <span>Statistical Audits</span>
               </div>
             </div>
           </div>
 
-          <!-- Experience 3 -->
-          <div class="timeline-item">
-            <div class="timeline-bullet" aria-hidden="true"></div>
-            <div class="timeline-body">
-              <div class="timeline-meta">
-                <span class="timeline-date">2022 – 2026 &bull; Dhaka, Bangladesh</span>
-                <span class="badge">Alma Mater</span>
-              </div>
-              <h3 class="timeline-title">B.Sc. in Software Engineering &bull; Daffodil International University</h3>
-              <p class="timeline-desc">Major in Data Science with a CGPA of <strong>3.65 / 4.00</strong>. Built foundations across distributed systems, algorithms, database internals, and applied machine learning.</p>
-              <div class="tech-pills">
-                <span>Software Engineering</span>
-                <span>Data Science Major</span>
-                <span>CGPA 3.65</span>
-                <span>Algorithms</span>
-                <span>Distributed Systems</span>
-              </div>
+          <!-- Entry 03: DIU Degree -->
+          <div class="ledger-entry">
+            <div class="ledger-time">
+              <span class="ledger-period">2022 &ndash; 2026</span>
+              <span>Dhaka, Bangladesh</span>
             </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 04. SCIENTIFIC RESEARCH SPOTLIGHT -->
-    <section class="section" id="research">
-      <div class="container-content">
-        <div class="section-header">
-          <div class="section-folio"><span>05 / SCHOLARLY ARCHIVE</span><span class="folio-rule"></span><span>CLINICAL AI &amp; PUBLICATIONS</span></div>
-          <span class="section-tag">04 / Scientific Research</span>
-          <h2 class="section-headline">Clinical AI &amp; Diagnostics</h2>
-          <p class="section-sub">Experimental methodologies validated on peer-reviewed diagnostic benchmarks.</p>
-        </div>
-
-        <div class="research-card">
-          <div class="research-card-top">
-            <div class="research-venue">
-              <span class="badge badge-accent">SSRN / Elsevier</span>
-              <span class="badge">Co-Author (3rd)</span>
-              <span class="research-id">Abstract ID: 5875405</span>
-            </div>
-            <div class="research-stat">
-              <span class="stat-small-label">Validation Benchmark</span>
-              <span class="stat-small-val">ROC-AUC <strong>0.987</strong></span>
-            </div>
-          </div>
-
-          <h3 class="research-card-title">An Interpretable ML Framework for Predicting Structural Heart Disease from ECG Using LLM-Powered Insights</h3>
-
-          <p class="research-card-desc">
-            Developed and validated an integrated machine learning and Large Language Model framework for electrocardiogram (ECG)-based structural heart disease prediction, achieving high clinical classification accuracy (ROC-AUC ~0.987). The pipeline translates raw ECG feature encodings into explainable, clinically actionable recommendations to aid cardiologists in diagnostic triage.
-          </p>
-
-          <div class="research-meta-grid">
-            <div class="research-meta-item">
-              <div class="meta-label">Clinical Objective</div>
-              <div class="meta-val">Ambulatory ECG structural heart disease screening</div>
-            </div>
-            <div class="research-meta-item">
-              <div class="meta-label">Technical Approach</div>
-              <div class="meta-val">Interpretable tree ensembles + LLM clinical triage reasoning</div>
-            </div>
-            <div class="research-meta-item">
-              <div class="meta-label">Primary Metric</div>
-              <div class="meta-val">ROC-AUC 0.987 with strict anti-hallucination guardrails</div>
-            </div>
-          </div>
-
-          <div class="research-actions">
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5875405" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <span>Read Paper on SSRN</span>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-            </a>
-            
-            <button type="button" class="btn btn-secondary btn-sm" id="copyCitationBtn" title="Copy Paper Citation in APA format">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              <span>Copy Citation</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 05. SHOWCASE / RECOGNITION & OUTCOMES -->
-    <section class="section section-alt" id="numbers">
-      <div class="container-content">
-        <div class="section-header">
-          <div class="section-folio"><span>06 / RECOGNITION</span><span class="folio-rule"></span><span>VERIFIED BENCHMARKS &amp; HONOURS</span></div>
-          <span class="section-tag">05 / Impact &amp; Recognition</span>
-          <h2 class="section-headline">Engineering Benchmarks &amp; Honors</h2>
-          <p class="section-sub">Competitive contest honors, commercial accelerator selections, and verifiable engineering benchmarks.</p>
-        </div>
-
-        <div class="stats-grid">
-          
-          <!-- Metric 01 -->
-          <div class="stat-card">
-            <div class="stat-category">Venture Accelerator</div>
-            <div class="stat-value">Finalist</div>
-            <div class="stat-title">Gigalogy AI Accelerator</div>
-            <p class="stat-desc">Selected in the Top 60 from 300+ applicants (Top 20%), advancing as a finalist team with <em>CampaignFlow</em>.</p>
-          </div>
-
-          <!-- Metric 02 -->
-          <div class="stat-card">
-            <div class="stat-category">Clinical AI Research</div>
-            <div class="stat-value">0.987</div>
-            <div class="stat-title">Cardiovascular ROC-AUC Benchmark</div>
-            <p class="stat-desc">Achieved on electrocardiogram (ECG) structural heart disease classification using interpretable ML ensembles and LLM clinical triaging (SSRN / Elsevier).</p>
-          </div>
-
-          <!-- Metric 03 -->
-          <div class="stat-card">
-            <div class="stat-category">AI Competition</div>
-            <div class="stat-value">Runner-Up</div>
-            <div class="stat-title">National AI Project Competition</div>
-            <p class="stat-desc">Awarded Runner-Up with <em>Code4Campus</em> out of 145+ competing teams in Student Services, automating transcript OCR parsing &amp; eligibility checks in &lt;15s.</p>
-          </div>
-
-          <!-- Metric 04 -->
-          <div class="stat-card">
-            <div class="stat-category">NASA Space Apps</div>
-            <div class="stat-value">Top 50</div>
-            <div class="stat-title">NASA Space Apps Bangladesh</div>
-            <p class="stat-desc">Ranked in the Top 50 from 500+ competing teams across the Bangladesh chapter with <em>ExoQuest</em>, an exoplanet habitability discovery platform.</p>
-          </div>
-
-          <!-- Metric 05 -->
-          <div class="stat-card">
-            <div class="stat-category">Algorithmic Rigor</div>
-            <div class="stat-value">350+</div>
-            <div class="stat-title">Competitive Programming Benchmarks</div>
-            <p class="stat-desc">Rigorous competitive programming training across Codeforces, Beecrowd, and CodeChef in C, C++, and Python data structures and algorithms.</p>
-          </div>
-
-          <!-- Metric 06 -->
-          <div class="stat-card">
-            <div class="stat-category">System Performance</div>
-            <div class="stat-value">&lt;15s</div>
-            <div class="stat-title">End-to-End OCR &amp; LLM Pipeline</div>
-            <p class="stat-desc">PaddleOCR + Groq API inference pipeline converting dense multi-page academic transcripts directly into validated JSON schemas in production.</p>
-          </div>
-
-        </div>
-
-        <!-- Milestone Distinction List -->
-        <div class="distinction-list" id="achievements" style="margin-top: 2rem;">
-          
-          <div class="distinction-row">
-            <div class="distinction-col-role">Finalist</div>
-            <div class="distinction-col-event">
-              <strong>Gigalogy AI Accelerator (Batch 2)</strong>
-              <span>Selected as Finalist from 300+ applicant ventures with <em>CampaignFlow</em></span>
-            </div>
-            <div class="distinction-col-badge">
-              <span class="badge badge-accent">Batch 2 Finalist</span>
-            </div>
-          </div>
-
-          <div class="distinction-row">
-            <div class="distinction-col-role">Runner-Up</div>
-            <div class="distinction-col-event">
-              <strong>National AI Project Competition 2026</strong>
-              <span>Awarded Runner-Up with <em>Code4Campus</em> among 145+ competing teams</span>
-            </div>
-            <div class="distinction-col-badge">
-              <span class="badge">145+ Teams</span>
-            </div>
-          </div>
-
-          <div class="distinction-row">
-            <div class="distinction-col-role">Top 50 Rank</div>
-            <div class="distinction-col-event">
-              <strong>NASA Space Apps Challenge 2024 (Bangladesh)</strong>
-              <span>Selected in Top 50 from 500+ competing teams in Bangladesh Chapter with <em>ExoQuest</em></span>
-            </div>
-            <div class="distinction-col-badge">
-              <span class="badge">BD Chapter Top 50</span>
-            </div>
-          </div>
-
-          <div class="distinction-row">
-            <div class="distinction-col-role">Co-Author (3rd)</div>
-            <div class="distinction-col-event">
-              <strong>Cardiology AI Research Paper (SSRN / Elsevier)</strong>
-              <span>Clinical ECG + LLM diagnostic framework achieving validation ROC-AUC ~0.987</span>
-            </div>
-            <div class="distinction-col-badge">
-              <span class="badge badge-accent">ROC-AUC 0.987</span>
-            </div>
-          </div>
-
-          <div class="distinction-row">
-            <div class="distinction-col-role">Finalist</div>
-            <div class="distinction-col-event">
-              <strong>DIU Take-Off Programming Contest</strong>
-              <span>Ranked in Top 400 from 2,600+ competitors in DIU-hosted collegiate competitive programming contest</span>
-            </div>
-            <div class="distinction-col-badge">
-              <span class="badge">Top 400 / 2,600+</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 06. CONTACT SECTION (Refined Split Architecture) -->
-    <section class="section" id="contact">
-      <div class="container-content">
-        <div class="contact-card">
-          
-          <div class="contact-layout">
-            
-            <!-- Left: Direct Proposition & Primary Email Action -->
-            <div class="contact-lead">
-              <div class="section-folio"><span>07 / CLOSING CHAPTER</span><span class="folio-rule"></span><span>LET'S BUILD SOMETHING THAT MATTERS</span></div>
-              <span class="section-tag">06 / Contact</span>
-              <div class="contact-editorial-kicker">GOT A HIGH-IMPACT PROBLEM?</div>
-              <h2 class="contact-heading">Ideas Into Interfaces.<br><span class="contact-serif-accent">Systems Into Reality.</span></h2>
-              <p class="contact-desc">
-                Open to full-stack AI engineering roles, high-concurrency backend systems architecture, and technical advisory partnerships.
+            <div class="ledger-content">
+              <h3 class="ledger-role-title">B.Sc. in Software Engineering (Data Science Major)</h3>
+              <div class="ledger-institution">Daffodil International University &bull; CGPA 3.65 / 4.00</div>
+              <p class="ledger-narrative">
+                Graduated with distinction in Data Science and Systems Architecture. Rigorous coursework spanning distributed systems, database internals, algorithms, statistical learning theory, computer vision, and software engineering methodologies.
               </p>
-              
-              <div class="contact-status-badge">
-                <span class="status-dot-pulse"></span>
-                <span>Available for Remote or Onsite Engagements</span>
+              <div class="ledger-deliverables">
+                <span>CGPA 3.65 / 4.00</span>
+                <span>Data Science Major</span>
+                <span>Distributed Systems</span>
+                <span>Statistical Learning</span>
               </div>
-
-              <!-- Primary Email Box with 1-Click Copy -->
-              <div class="contact-primary-email">
-                <div class="email-info">
-                  <span class="email-label">Direct Inbox</span>
-                  <a href="mailto:skroushankhalid.17@gmail.com" class="email-address">skroushankhalid.17@gmail.com</a>
-                </div>
-                <button type="button" class="btn-copy-email contact-copy-btn" data-copy="skroushankhalid.17@gmail.com" title="Copy email address" aria-label="Copy email address">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  <span>Copy</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Right: Symmetrical Channels List -->
-            <div class="contact-channels" id="contactLayout">
-              
-              <!-- WhatsApp -->
-              <a href="https://wa.me/8801760535087" target="_blank" rel="noopener noreferrer" class="channel-row" title="Chat on WhatsApp">
-                <div class="channel-row-left">
-                  <div class="channel-row-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-row-name">WhatsApp Direct</div>
-                    <div class="channel-row-value">+880 1760 535087</div>
-                  </div>
-                </div>
-                <span class="channel-arrow" aria-hidden="true">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </span>
-              </a>
-
-              <!-- Direct Phone -->
-              <div class="channel-row">
-                <a href="tel:+8801760535087" class="channel-row-left" title="Direct Phone Call">
-                  <div class="channel-row-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-row-name">Direct Phone</div>
-                    <div class="channel-row-value">+880 1760 535087</div>
-                  </div>
-                </a>
-                <button type="button" class="channel-action-btn contact-copy-btn" data-copy="+8801760535087" title="Copy phone number" aria-label="Copy phone number">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                </button>
-              </div>
-
-              <!-- LinkedIn -->
-              <a href="https://linkedin.com/in/sk-roushan-khalid" target="_blank" rel="noopener noreferrer" class="channel-row" title="LinkedIn Profile">
-                <div class="channel-row-left">
-                  <div class="channel-row-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-row-name">LinkedIn</div>
-                    <div class="channel-row-value">in/sk-roushan-khalid</div>
-                  </div>
-                </div>
-                <span class="channel-arrow" aria-hidden="true">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </span>
-              </a>
-
-              <!-- GitHub -->
-              <a href="https://github.com/RoushanKhalid" target="_blank" rel="noopener noreferrer" class="channel-row" title="GitHub Profile">
-                <div class="channel-row-left">
-                  <div class="channel-row-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-row-name">GitHub</div>
-                    <div class="channel-row-value">github.com/RoushanKhalid</div>
-                  </div>
-                </div>
-                <span class="channel-arrow" aria-hidden="true">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </span>
-              </a>
-
             </div>
           </div>
 
-          <div class="contact-footer-note" id="contactFooterNote">
-            Building intelligent systems at the intersection of AI, backend &amp; product engineering.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         05. HONORS & RECOGNITIONS
+         ============================================================ -->
+    <section class="section-editorial" id="distinctions">
+      <div class="container-editorial">
+
+        <header class="chapter-header">
+          <div class="chapter-folio">Chapter 05 // Distinctions</div>
+          <h2 class="chapter-title">Honors &amp; <span class="serif-emphasis">Accolades</span></h2>
+          <p class="chapter-deck">External recognitions, competitive accelerator selections, and collegiate achievements.</p>
+        </header>
+
+        <div class="distinctions-ledger">
+          
+          <div class="distinction-row">
+            <span class="distinction-index">01</span>
+            <div class="distinction-award">Finalist &bull; Gigalogy AI Accelerator</div>
+            <div class="distinction-context">Selected as Finalist from 300+ applicant ventures with CampaignFlow</div>
+            <div class="distinction-meta">Batch 2 Finalist &bull; 2026</div>
           </div>
+
+          <div class="distinction-row">
+            <span class="distinction-index">02</span>
+            <div class="distinction-award">Runner-Up &bull; National AI Project Competition</div>
+            <div class="distinction-context">Code4Campus among 145+ competing collegiate teams (Student Service Category)</div>
+            <div class="distinction-meta">145+ Teams &bull; 2026</div>
+          </div>
+
+          <div class="distinction-row">
+            <span class="distinction-index">03</span>
+            <div class="distinction-award">Top 50 &bull; NASA Space Apps Challenge</div>
+            <div class="distinction-context">Led ExoQuest exoplanet transit discovery platform, ranked Top 50 from 500+ teams</div>
+            <div class="distinction-meta">BD Chapter Top 50 &bull; 2024</div>
+          </div>
+
+          <div class="distinction-row">
+            <span class="distinction-index">04</span>
+            <div class="distinction-award">Preprint &bull; SSRN / Elsevier Cardiology AI</div>
+            <div class="distinction-context">Co-Author (3rd) on clinical diagnostic framework achieving ROC-AUC 0.987</div>
+            <div class="distinction-meta">Under Review &bull; 2026</div>
+          </div>
+
+          <div class="distinction-row">
+            <span class="distinction-index">05</span>
+            <div class="distinction-award">Finalist &bull; DIU Take-Off Programming Contest</div>
+            <div class="distinction-context">Ranked in Top 400 from 2,600+ collegiate competitive programming contenders</div>
+            <div class="distinction-meta">Top 400 / 2,600+ &bull; 2023</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         06. DIRECT LINE / COLOPHON (CONTACT)
+         ============================================================ -->
+    <section class="direct-line-section" id="contact">
+      <div class="container-editorial">
+        <div class="direct-line-grid">
+
+          <!-- Left: Direct Dialogue & Email Copy Card -->
+          <div>
+            <div class="chapter-folio">Chapter 06 // Direct Line</div>
+            <h2 class="direct-headline">
+              Initiate <span class="sans-accent">Dialogue.</span>
+            </h2>
+            <p class="direct-copy">
+              Available for high-impact AI engineering roles, technical advisory appointments, and applied machine learning research collaborations.
+            </p>
+
+            <!-- 1-Click Interactive Email Copy Card -->
+            <div class="email-direct-card" id="emailCopyCard" role="button" tabindex="0" title="Click to copy email address to clipboard">
+              <div class="email-content">
+                <span class="email-label">Primary Electronic Mail</span>
+                <span class="email-address" id="contactEmailAddress">skroushankhalid.17@gmail.com</span>
+              </div>
+              <button class="copy-icon-btn" id="emailCopyBtn" aria-label="Copy email">Copy</button>
+            </div>
+          </div>
+
+          <!-- Right: Verified Direct Channels -->
+          <div class="channels-block">
+            <div class="channels-title">Verified Channels</div>
+
+            <a href="https://linkedin.com/in/sk-roushan-khalid" target="_blank" rel="noopener noreferrer" class="channel-link-item">
+              <span>LinkedIn // sk-roushan-khalid</span>
+              <span class="channel-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a href="https://github.com/RoushanKhalid" target="_blank" rel="noopener noreferrer" class="channel-link-item">
+              <span>GitHub // RoushanKhalid</span>
+              <span class="channel-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a href="tel:+8801760535087" class="channel-link-item">
+              <span>Direct Telephony // +880 1760 535087</span>
+              <span class="channel-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a href="https://wa.me/8801760535087" target="_blank" rel="noopener noreferrer" class="channel-link-item">
+              <span>WhatsApp Direct // +880 1760 535087</span>
+              <span class="channel-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <div class="channel-link-item" style="border-bottom: none; cursor: default;">
+              <span>Base Coordinate // Dhaka, Bangladesh [UTC+6]</span>
+              <span style="color: var(--emerald); font-weight: 700;">&bull; Active</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <a href="#hero" class="footer-logo">Sk. Roushan Khalid</a>
-        <span class="footer-sub">&bull; Dhaka, Bangladesh</span>
-      </div>
-      <div class="footer-copy" id="footerCopy">
-        &copy; 2026 Sk. Roushan Khalid &bull; Engineered with purpose.
+  <!-- ============================================================
+       COLOPHON FOOTER
+       ============================================================ -->
+  <footer class="colophon-footer">
+    <div class="container-editorial">
+      <div class="colophon-grid">
+        <div class="colophon-spec">
+          <span><strong>Typography:</strong> Plus Jakarta Sans &times; Instrument Serif &times; JetBrains Mono</span>
+          <span><strong>Architecture:</strong> Zero Bloat &bull; Pure Native Web Standards</span>
+        </div>
+        <div class="colophon-copy">
+          &copy; 2026 Sk. Roushan Khalid &bull; Engineered with Purpose.
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Toast Notification Container -->
-  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+  <!-- Toast Notice -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">Email copied to clipboard.</div>
 
-  <!-- Back to Top Button -->
-  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top of page" title="Back to top">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
-  </button>
-
-  <!-- Scripts -->
+  <!-- JavaScript Application Bundle -->
   <script src="script.js"></script>
-
-  <!-- Live Dhaka Clock -->
-  <script>
-    function updateDhakaTime() {
-      const el = document.getElementById('dhakaTime');
-      if (!el) return;
-      try {
-        const now = new Date();
-        const timeStr = now.toLocaleTimeString('en-US', {
-          timeZone: 'Asia/Dhaka',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: true
-        });
-        el.textContent = 'Dhaka, BD — ' + timeStr;
-      } catch (e) {
-        el.textContent = 'Dhaka, BD';
-      }
-    }
-    setInterval(updateDhakaTime, 1000);
-    updateDhakaTime();
-  </script>
 </body>
 </html>
