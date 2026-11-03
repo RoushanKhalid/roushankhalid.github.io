@@ -1,278 +1,350 @@
 {
+  "personal": {
+    "name": "Sk. Roushan Khalid",
+    "headline": "AI/ML Engineer | AI-First Software Engineer",
+    "email": "skroushankhalid.17@gmail.com",
+    "phone": "+8801760535087",
+    "location": "Dhaka, Bangladesh",
+    "linkedin": "https://linkedin.com/in/sk-roushan-khalid",
+    "github": "https://github.com/RoushanKhalid",
+    "summary": "AI/ML Engineer bridging research and production through applied GenAI (LLMs, RAG, Multi-Agent), NLP, Vision, and scalable Python backend services. Dedicated to building robust, high-performing architectures that transform state-of-the-art models into scalable enterprise solutions."
+  },
   "hero": {
     "name": "Sk. Roushan Khalid",
     "badge": "Open to Opportunities",
     "roleStatic": "AI/ML Engineer •",
     "typingPhrases": [
       "AI-First Software Engineer",
-      "Backend Engineer",
-      "Generative AI Developer",
-      "Production AI Builder"
+      "GenAI & RAG Systems Builder",
+      "Python Backend Architect",
+      "Applied ML Researcher"
     ],
-    "philosophy": "\"Building intelligent systems that combine machine learning research with scalable software engineering.\"",
+    "philosophy": "\"Bridging research and production through applied GenAI, NLP, Vision, and scalable Python backend services.\"",
     "location": "Dhaka, Bangladesh"
   },
-  "about": {
-    "lead": "I am an AI/ML Engineer building intelligent systems that combine machine learning research with scalable software engineering.",
-    "paragraphs": [
-      "I enjoy building AI systems that solve real-world problems—from classical machine learning and deep learning to modern LLM-powered applications.",
-      "My work focuses on designing reliable AI pipelines, developing scalable backend services, and transforming research ideas into production-ready software.",
-      "I enjoy working across the complete AI lifecycle—from experimentation and model development to backend architecture, deployment, and production systems—while continuously learning by building."
-    ],
-    "highlights": [
-      {
-        "icon": "🎓",
-        "title": "B.Sc. Software Engineering",
-        "sub": "Major in Data Science · CGPA 3.65/4.00"
-      },
-      {
-        "icon": "💼",
-        "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
-        "sub": "Dec 2025 – Present"
-      },
-      {
-        "icon": "🔬",
-        "title": "Research Intern · Learnix Research Lab",
-        "sub": "Jun 2026 – Present"
-      }
-    ],
-    "focusItems": [
-      "Machine Learning & Deep Learning",
-      "LLMs, AI Agents & RAG",
-      "Backend Systems & AI Infrastructure",
-      "Applied Computer Vision Workflows",
-      "Scalable System Architecture"
-    ],
-    "lookingFor": [
-      "Production AI Engineering",
-      "Scalable Distributed Systems",
-      "Strong Engineering Culture & Mentorship"
-    ]
-  },
-  "skills": [
+  "experience": [
     {
-      "title": "Artificial Intelligence",
-      "num": "01",
-      "description": "Building machine learning, deep learning, computer vision, and generative AI systems—from experimentation and model training to deployment and production integration.",
-      "tags": [
-        "PyTorch",
-        "TensorFlow",
-        "Transformers",
-        "Scikit-learn",
-        "OpenCV",
-        "Pandas",
-        "Hugging Face"
-      ]
-    },
-    {
-      "title": "LLM & Generative AI",
-      "num": "02",
-      "description": "Developing production-ready LLM applications including Retrieval-Augmented Generation (RAG), AI agents, orchestration workflows, and vector search systems.",
-      "tags": [
-        "LangChain",
-        "LangGraph",
-        "CrewAI",
-        "FAISS",
-        "OpenAI API",
-        "RAG"
-      ]
-    },
-    {
-      "title": "Backend Engineering & Infrastructure",
-      "num": "03",
-      "description": "Designing scalable backend services, REST APIs, cloud-native deployments, databases, and containerized applications for AI systems.",
+      "role": "AI Engineer, R&D",
+      "company": "Kamal-Paterson Ltd | KPCloud",
+      "companyUrl": "https://www.kamal-paterson.com/",
+      "period": "12/2025 – Present",
+      "location": "Dhaka, Bangladesh",
+      "projects": [
+        "Krishok AI",
+        "TeaPest",
+        "PocketChef AI"
+      ],
+      "contributions": [
+        "Developed backend APIs and full-stack features across web and mobile applications.",
+        "Designed database schemas and implemented scalable system workflows.",
+        "Conducted R&D on AI/ML models, including RAG pipelines, computer vision, and LLM-based features.",
+        "Integrated AI services, weather, geospatial, and third-party APIs into production systems.",
+        "Built offline-first mobile functionality, dashboards, and data visualization modules.",
+        "Contributed to feature design, performance optimization, testing, and overall system improvements."
+      ],
       "tags": [
         "FastAPI",
-        "Flask",
-        "PostgreSQL",
-        "MySQL",
-        "Docker",
-        "AWS",
-        "Git",
-        "MLflow"
-      ]
-    }
-  ],
-  "timeline": [
-    {
-      "date": "Dec 2025 – Present",
-      "title": "AI Engineer · Kamal-Paterson Ltd / KPCloud",
-      "description": "Building AI-powered applications and production backend systems for agritech. Designing FastAPI services, LLM-powered workflows, offline-first Flutter applications, React dashboards, PostgreSQL databases, and cloud-native deployments using Docker on AWS.",
-      "tags": [
-        "AI Engineering",
-        "FastAPI",
+        "Python",
+        "RAG Pipelines",
+        "Computer Vision",
+        "LLMs",
         "Flutter",
         "React",
         "PostgreSQL",
         "Docker",
         "AWS",
-        "RAG",
         "GIS"
       ],
       "active": true
     },
     {
-      "date": "Jun 2026 – Present",
-      "title": "Research Intern · Learnix Research Lab",
-      "description": "Conducting applied machine learning research focused on bridging academic methodologies with production-ready AI systems. Exploring practical ML foundations, scalable implementations, and engineering best practices.",
-      "tags": [
-        "Applied ML",
-        "Research",
-        "LLMs",
-        "Production AI"
+      "role": "Research Assistant (RA)",
+      "company": "Data Science Lab, Daffodil International University",
+      "companyUrl": "https://dslab.daffodilvarsity.edu.bd/",
+      "period": "04/2025 – 12/2025",
+      "location": "Dhaka, Bangladesh",
+      "contributions": [
+        "Collaborated with researchers at the University of Porto on multilingual multimodal AI/ML research.",
+        "Developed and evaluated an AI/ML approach for Bangla and Portuguese.",
+        "Conducted cross-lingual analysis and performance evaluation across both languages."
       ],
-      "active": true
-    },
-    {
-      "date": "Jan 2022 – Apr 2026",
-      "title": "B.Sc. Software Engineering · Daffodil International University",
-      "description": "Graduated with a CGPA of 3.65/4.00 with a major in Data Science. Built strong foundations in software engineering, artificial intelligence, machine learning, algorithms, databases, and distributed systems while actively participating in technical communities and research initiatives.",
       "tags": [
-        "Software Engineering",
-        "Data Science",
-        "Artificial Intelligence",
-        "CGPA 3.65"
+        "Multilingual AI",
+        "Multimodal ML",
+        "Bangla NLP",
+        "Portuguese NLP",
+        "Cross-Lingual Evaluation",
+        "University of Porto Collaboration"
       ],
       "active": false
     }
   ],
-  "exploringBars": [
-    {
-      "label": "Machine Learning & AI",
-      "value": 90
-    },
-    {
-      "label": "LLMs & AI Agents",
-      "value": 85
-    },
-    {
-      "label": "Backend Engineering",
-      "value": 80
-    },
-    {
-      "label": "Distributed Systems",
-      "value": 60
-    }
-  ],
-  "recognition": [
-    {
-      "icon": "🚀",
-      "title": "Top 50 – NASA Space Apps Challenge 2024",
-      "sub": "Led ExoQuest — exoplanet discovery platform",
-      "badge": "Top 50 BD"
-    },
-    {
-      "icon": "🏆",
-      "title": "Finalist – Take-off Programming Contest",
-      "sub": "Competitive programming and algorithmic problem solving",
-      "badge": "Finalist"
-    },
-    {
-      "icon": "📄",
-      "title": "AI/ML Research Publication",
-      "sub": "ECG + LLM framework achieving ROC AUC ≈ 0.987",
-      "badge": "ROC-AUC 0.987"
-    }
-  ],
-  "approach": [
-    {
-      "number": "01",
-      "title": "Engineering Beyond Models",
-      "description": "Good AI products require more than accurate models. They require thoughtful engineering, reliable systems, and a deep understanding of the problems they're solving."
-    },
-    {
-      "number": "02",
-      "title": "Production-First Mindset",
-      "description": "I enjoy taking ideas from experimentation to production by building scalable backend services, maintainable APIs, and robust AI pipelines that can be deployed with confidence."
-    },
-    {
-      "number": "03",
-      "title": "Build, Learn & Iterate",
-      "description": "The fastest way to grow is by designing, shipping, and continuously improving real systems. Every project is an opportunity to deepen both engineering and AI expertise."
-    },
-    {
-      "number": "04",
-      "title": "Real-World Impact over Hype",
-      "description": "AI is only valuable when it solves real problems for real people. I'm not chasing trends — I'm interested in what actually works."
-    }
-  ],
-  "contributions": [
-    {
-      "number": "01",
-      "title": "Backend Systems for AI Products",
-      "description": "Designing and building the API and backend layer that AI features run on — from relational database schemas to FastAPI endpoints to containerized service setups on AWS."
-    },
-    {
-      "number": "02",
-      "title": "LLM Integration & RAG Pipelines",
-      "description": "Building RAG systems from scratch — document ingestion, vector retrieval with FAISS, prompt engineering, and connecting them to production APIs with real user-facing interfaces."
-    },
-    {
-      "number": "03",
-      "title": "Data Handling & Geospatial Workflows",
-      "description": "Structuring data flows, building intelligent automation pipelines, and integrating external data sources (weather APIs, geospatial GIS data, time-series) into AI systems."
-    },
-    {
-      "number": "04",
-      "title": "AI Feature Development & Prototyping",
-      "description": "Prototyping, evaluating models, iterating on system behavior, and translating research concepts into working, production-ready implementations."
-    }
-  ],
-  "researchInterests": [
-    "Generative AI",
-    "Large Language Models",
-    "AI Agents",
-    "Retrieval-Augmented Generation",
-    "Natural Language Processing",
-    "Computer Vision",
-    "Healthcare AI",
-    "AI for Agriculture",
-    "Explainable AI",
-    "Scalable ML Systems"
-  ],
-  "technology": {
-    "languages": [
-      "Python",
-      "Go",
-      "C/C++",
-      "SQL",
-      "Dart",
-      "JavaScript"
+  "technicalExpertise": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "context": "AI/ML, Backend"
+      },
+      {
+        "name": "C/C++",
+        "context": "Problem Solving"
+      },
+      {
+        "name": "Golang",
+        "context": "Exploring"
+      }
     ],
-    "ai": [
+    "areasOfExpertise": [
+      "GenAI (LLM/VLM, RAG, Agents)",
+      "Natural Language Processing (NLP)",
+      "Computer Vision",
+      "Python Backend"
+    ],
+    "aiMlTools": [
+      "Scikit-learn",
       "PyTorch",
       "TensorFlow",
       "Transformers",
-      "Scikit-learn",
-      "Hugging Face",
-      "OpenCV",
-      "Pandas"
-    ],
-    "llm": [
       "LangChain",
       "LangGraph",
       "CrewAI",
-      "FAISS",
-      "OpenAI API"
+      "HuggingFace"
     ],
-    "backend": [
+    "dataAnalysisTools": [
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "SciPy",
+      "Plotly",
+      "Statsmodels"
+    ],
+    "backendServerSide": [
       "FastAPI",
       "Flask",
       "PostgreSQL",
-      "MySQL"
-    ],
-    "infrastructure": [
+      "MySQL",
+      "Vector DB",
       "Docker",
-      "AWS",
-      "Git",
-      "MLflow"
+      "MLflow",
+      "Git/GitHub",
+      "REST APIs & Auth"
+    ],
+    "crossFunctional": [
+      "Technical Advisory",
+      "Growth Strategy",
+      "Business Development"
     ]
   },
-  "contact": {
-    "email": "skroushankhalid.17@gmail.com",
-    "linkedin": "sk-roushan-khalid",
-    "github": "RoushanKhalid",
-    "footerNote": "Building intelligent systems with AI and software engineering • Open to remote and onsite opportunities",
-    "footerCopy": "© 2026 Sk. Roushan Khalid"
-  }
+  "appliedProjects": [
+    {
+      "id": "campaignflow",
+      "title": "CampaignFlow",
+      "subtitle": "AI Marketing Automation Platform",
+      "technologies": [
+        "FastAPI",
+        "React",
+        "PostgreSQL",
+        "Celery",
+        "Redis",
+        "Groq API",
+        "Docker"
+      ],
+      "description": "Built an AI marketing automation platform for customer segmentation, churn prediction, personalized offers, and multi-channel campaign dispatch. Features an AI Win-Back Engine, Celery task queues, and pay-as-you-go usage metering.",
+      "liveUrl": null,
+      "githubUrl": null,
+      "badge": "Enterprise Automation"
+    },
+    {
+      "id": "resumerag",
+      "title": "ResumeRAG",
+      "subtitle": "Bilingual AI-Driven RAG Resume Analyzer",
+      "technologies": [
+        "Retrieval-Augmented Generation",
+        "FAISS",
+        "Groq-API",
+        "FastAPI"
+      ],
+      "description": "A bilingual, AI-driven RAG resume analyzer that lets recruiters and candidates extract skills, experience, education, projects, and certifications instantly; accurate, source-backed, and no hallucinations.",
+      "githubUrl": "https://github.com/RoushanKhalid/ResumeRAG",
+      "liveUrl": null,
+      "badge": "GenAI & RAG"
+    },
+    {
+      "id": "code4campus",
+      "title": "Code4Campus",
+      "subtitle": "AI Admissions Platform & OCR Document Extraction",
+      "technologies": [
+        "Python",
+        "PaddleOCR",
+        "Groq-API",
+        "GenAI Agents",
+        "REST API"
+      ],
+      "description": "Built an AI-powered admissions platform with LLM advisors, department matching, and a PaddleOCR/Groq document pipeline that automates transcript extraction and eligibility checks in <15 seconds.",
+      "liveUrl": "https://code4campus.vercel.app/",
+      "githubUrl": null,
+      "badge": "Runner-Up · AI Project Competition 2026"
+    },
+    {
+      "id": "srs-studio",
+      "title": "SRS Studio",
+      "subtitle": "Multi-Agent AI Pipeline for Software Requirements Specification",
+      "technologies": [
+        "Multi-Agent Systems",
+        "FastAPI",
+        "PostgreSQL",
+        "Mermaid",
+        "Docker"
+      ],
+      "description": "Built a multi-agent AI pipeline (planner, architect, developer, QA) that converts raw requirements into implementation-ready SRS. Features automated ERD generation, run tracking, and Markdown exports.",
+      "githubUrl": "https://github.com/RoushanKhalid/SRS-Studio",
+      "liveUrl": null,
+      "badge": "Autonomous Agents"
+    },
+    {
+      "id": "gesture-controller",
+      "title": "Gesture Controller for Hill Climb Racing",
+      "subtitle": "Touchless Real-Time Hand Gesture Gaming Controller",
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "MediaPipe",
+        "PyAutoGUI"
+      ],
+      "description": "Built a real-time hand gesture–controlled gaming system for touchless gameplay interaction using computer vision and gesture recognition. Implemented hand tracking and gesture-to-key mapping for responsive in-game control automation.",
+      "githubUrl": "https://github.com/RoushanKhalid/Gesture-Controller-for-Hill-Climb-Racing-Lite",
+      "liveUrl": null,
+      "badge": "Computer Vision"
+    },
+    {
+      "id": "exoquest",
+      "title": "ExoQuest",
+      "subtitle": "Exoplanet Discovery & Photometric Signal Processing Platform",
+      "technologies": [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Plotly",
+        "Time-Series"
+      ],
+      "description": "Astronomical photometric time-series preprocessing, Fourier feature extraction, and ML transit detection algorithms developed for the NASA Space Apps Challenge 2024.",
+      "githubUrl": "https://github.com/RoushanKhalid",
+      "liveUrl": null,
+      "badge": "Top 50 · NASA Space Apps Challenge 2024"
+    }
+  ],
+  "researchAndPublications": [
+    {
+      "title": "An Interpretable ML Framework for Predicting Structural Heart Disease from ECG Using LLM-Powered Insights",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5875405",
+      "publisher": "SSRN / Elsevier (Abstract ID: 5875405)",
+      "description": "Developed and validated an ML and LLM-integrated framework for ECG-based structural heart disease prediction, achieving high accuracy (ROC-AUC ~0.987) with explainable, clinically actionable recommendations.",
+      "metric": "ROC-AUC ~0.987",
+      "tags": [
+        "Healthcare AI",
+        "ECG Signal Processing",
+        "LLM Insights",
+        "Explainable AI (XAI)",
+        "Clinical Actionability"
+      ]
+    },
+    {
+      "title": "Multilingual Multimodal AI/ML Research (Bangla & Portuguese)",
+      "url": "https://dslab.daffodilvarsity.edu.bd/",
+      "publisher": "Data Science Lab, DIU in collaboration with University of Porto",
+      "description": "Collaborated with researchers at the University of Porto on multilingual multimodal AI/ML research. Developed and evaluated an AI/ML approach for Bangla and Portuguese, conducting cross-lingual analysis and performance evaluation.",
+      "metric": "Cross-Lingual Evaluation",
+      "tags": [
+        "Multimodal AI",
+        "Cross-Lingual NLP",
+        "Bangla",
+        "Portuguese",
+        "University of Porto"
+      ]
+    }
+  ],
+  "education": {
+    "degree": "B.Sc. in Software Engineering (Major: Data Science)",
+    "institution": "Daffodil International University",
+    "period": "01/2022 – 07/2026",
+    "location": "Dhaka, Bangladesh",
+    "cgpa": "3.65 / 4.00",
+    "activities": "Engaged in research and hackathons through the Data Science Club; served as Office Secretary of the Software Engineering Club and Executive Member of the BASIS Students' Forum, DIU Chapter.",
+    "competitiveProgramming": {
+      "summary": "Solved 350+ competitive programming problems across Beecrowd, Codeforces, and CodeChef to enhance logical thinking and problem-solving skills. Consistently practiced algorithmic challenges to build code proficiency.",
+      "solvedCount": "350+",
+      "profiles": [
+        {
+          "platform": "Beecrowd",
+          "handle": "660154",
+          "url": "https://judge.beecrowd.com/en/profile/660154"
+        },
+        {
+          "platform": "Codeforces",
+          "handle": "Khalid_17",
+          "url": "https://codeforces.com/profile/Khalid_17"
+        },
+        {
+          "platform": "CodeChef",
+          "handle": "roushan_khalid",
+          "url": "https://www.codechef.com/users/roushan_khalid"
+        }
+      ]
+    }
+  },
+  "hackathonsAndEvents": [
+    {
+      "award": "Runner-Up",
+      "event": "AI Project Competition 2026 (Student Service Category)",
+      "organization": "Daffodil International University",
+      "description": "Secured Runner-Up among 145+ participating teams by developing Code4Campus, an AI-powered university admissions platform that automates student inquiries, application tracking, and document processing.",
+      "badge": "Runner-Up · 145+ Teams",
+      "year": "2026"
+    },
+    {
+      "award": "Top 50",
+      "event": "NASA Space Apps Challenge 2024 (Bangladesh Chapter)",
+      "organization": "NASA Space Apps Challenge",
+      "description": "Ranked among the Top 50 teams from 500+ submissions for developing ExoQuest, an AI-powered exoplanet discovery and survival platform, earning an onsite participation opportunity.",
+      "badge": "Top 50 BD · 500+ Submissions",
+      "year": "2024"
+    },
+    {
+      "award": "Finalist",
+      "event": "Take-Off Programming Contest Fall 2022",
+      "organization": "Daffodil International University",
+      "description": "Qualified for the Final Round, ranking among the top 400 finalists selected from 2,600+ participants, demonstrating strong problem-solving and algorithmic programming skills.",
+      "badge": "Finalist · Top 400 of 2,600+",
+      "year": "2022"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Hands-On Introduction to Containers with Docker",
+      "provider": "Udemy",
+      "topics": "Docker, Containers, Images, CLI, Dockerfiles, Networking, Volumes, Docker Compose, containerized dev workflows"
+    },
+    {
+      "title": "AI Engineering Bootcamp",
+      "provider": "Ostad",
+      "topics": "Transformers, Deployment & Monitoring, Prompt Engineering, Multi-Agent Systems, Retrieval-Augmented Generation (RAG)"
+    },
+    {
+      "title": "Supervised Machine Learning: Regression & Classification",
+      "provider": "DeepLearning.AI",
+      "topics": "Hypothesis & cost function, Gradient descent, Overfitting prevention, Neural networks, Forward/backward propagation, Optimization"
+    },
+    {
+      "title": "Machine Learning Foundations",
+      "provider": "AWS Academy",
+      "topics": "Feature engineering, Data preprocessing, AWS ML services"
+    },
+    {
+      "title": "Data Science Certification Program",
+      "provider": "Ostad",
+      "topics": "Python, OOP, SQL, Machine Learning (ML), Deep Learning (DL), Natural Language Processing (NLP), Computer Vision"
+    }
+  ]
 }

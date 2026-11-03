@@ -1464,6 +1464,215 @@ img {
 }
 
 /* ============================================================
+   12B. RESUME EXTENSIONS: CERTIFICATIONS, CP & CONTACT
+   ============================================================ */
+/* Experience Contributions Bullet List */
+.ledger-contributions {
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ledger-contributions li {
+  font-size: 0.925rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.ledger-contributions li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.ledger-projects-tag {
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  background: var(--bg-subtle);
+  border-left: 2px solid var(--accent);
+  display: inline-block;
+}
+
+.ledger-projects-tag strong {
+  color: var(--text-primary);
+}
+
+/* Competitive Programming Profiles Grid */
+.cp-profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.cp-profile-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.cp-profile-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.cp-platform-name {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.cp-handle {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cp-link-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.certification-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.certification-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.cert-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.cert-provider {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-xs);
+  font-weight: 600;
+}
+
+.cert-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.cert-topics {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Direct Phone Link Card */
+.phone-direct-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.phone-direct-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.phone-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.phone-number {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.phone-icon-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  background: transparent;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-xs);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.phone-icon-btn:hover {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+/* ============================================================
    13. RESPONSIVE BREAKPOINTS (FLAWLESS VIEWPORTING)
    ============================================================ */
 @media (max-width: 1024px) {
@@ -1583,6 +1792,16 @@ img {
 
   .distinction-context {
     grid-column: 2;
+  }
+
+  .cp-profiles-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .colophon-grid {

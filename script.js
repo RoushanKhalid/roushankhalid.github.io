@@ -190,15 +190,18 @@
   }
 
   /* ============================================================
-     5. 1-CLICK CLIPBOARD EMAIL COPY & TOAST
+     5. 1-CLICK CLIPBOARD EMAIL & PHONE COPY & TOAST
      ============================================================ */
-  function initEmailCopy() {
+  function initContactCopy() {
     const copyCard = document.getElementById('emailCopyCard');
     const copyBtn = document.getElementById('emailCopyBtn');
     const emailEl = document.getElementById('contactEmailAddress');
-    const toast = document.getElementById('toastNotice');
 
-    if (!copyCard && !copyBtn) return;
+    const phoneCard = document.getElementById('phoneCopyCard');
+    const phoneBtn = document.getElementById('phoneCopyBtn');
+    const phoneEl = document.getElementById('contactPhoneNumber');
+
+    const toast = document.getElementById('toastNotice');
 
     let toastTimer = null;
 
@@ -212,20 +215,18 @@
       }, 2400);
     }
 
-    function doCopy(e) {
+    function doCopy(text, label, e) {
       if (e) e.preventDefault();
-      const email = emailEl ? emailEl.textContent.trim() : 'skroushankhalid.17@gmail.com';
-
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email)
-          .then(() => showToast(`Copied ${email} to clipboard`))
-          .catch(() => fallbackCopy(email));
+        navigator.clipboard.writeText(text)
+          .then(() => showToast(`Copied ${label} to clipboard: ${text}`))
+          .catch(() => fallbackCopy(text, label));
       } else {
-        fallbackCopy(email);
+        fallbackCopy(text, label);
       }
     }
 
-    function fallbackCopy(text) {
+    function fallbackCopy(text, label) {
       const ta = document.createElement('textarea');
       ta.value = text;
       ta.style.position = 'fixed';
@@ -234,28 +235,52 @@
       ta.select();
       try {
         document.execCommand('copy');
-        showToast(`Copied ${text} to clipboard`);
+        showToast(`Copied ${label} to clipboard: ${text}`);
       } catch (err) {
         showToast('Please copy: ' + text);
       }
       document.body.removeChild(ta);
     }
 
-    if (copyCard) copyCard.addEventListener('click', doCopy);
-    if (copyBtn) {
-      copyBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        doCopy(e);
+    if (copyCard) {
+      copyCard.addEventListener('click', (e) => {
+        const email = emailEl ? emailEl.textContent.trim() : 'skroushankhalid.17@gmail.com';
+        doCopy(email, 'email', e);
+      });
+      copyCard.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          const email = emailEl ? emailEl.textContent.trim() : 'skroushankhalid.17@gmail.com';
+          doCopy(email, 'email', e);
+        }
       });
     }
 
-    // Keyboard accessibility for card
-    if (copyCard) {
-      copyCard.addEventListener('keydown', (e) => {
+    if (copyBtn) {
+      copyBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const email = emailEl ? emailEl.textContent.trim() : 'skroushankhalid.17@gmail.com';
+        doCopy(email, 'email', e);
+      });
+    }
+
+    if (phoneCard) {
+      phoneCard.addEventListener('click', (e) => {
+        const phone = phoneEl ? phoneEl.textContent.trim() : '+8801760535087';
+        doCopy(phone, 'phone number', e);
+      });
+      phoneCard.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          doCopy(e);
+          const phone = phoneEl ? phoneEl.textContent.trim() : '+8801760535087';
+          doCopy(phone, 'phone number', e);
         }
+      });
+    }
+
+    if (phoneBtn) {
+      phoneBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const phone = phoneEl ? phoneEl.textContent.trim() : '+8801760535087';
+        doCopy(phone, 'phone number', e);
       });
     }
   }
@@ -269,10 +294,16 @@
       if (!response.ok) return;
       const data = await response.json();
 
-      // If custom contact email exists, keep in sync
-      if (data.contact && data.contact.email) {
+      const email = (data.personal && data.personal.email) || (data.contact && data.contact.email);
+      if (email) {
         const emailEl = document.getElementById('contactEmailAddress');
-        if (emailEl) emailEl.textContent = data.contact.email;
+        if (emailEl) emailEl.textContent = email;
+      }
+
+      const phone = (data.personal && data.personal.phone) || (data.contact && data.contact.phone);
+      if (phone) {
+        const phoneEl = document.getElementById('contactPhoneNumber');
+        if (phoneEl) phoneEl.textContent = phone;
       }
     } catch (err) {
       // Static pre-rendered HTML handles everything gracefully
@@ -287,7 +318,7 @@
     initDhakaClock();
     initScrollDynamics();
     initNavigation();
-    initEmailCopy();
+    initContactCopy();
     syncPortfolioData();
   }
 
