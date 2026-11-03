@@ -10,8 +10,9 @@
       "Document Intelligence & Agents",
       "Enterprise Decision Systems"
     ],
-    "philosophy": "AI Engineer and full-lifecycle builder — transforming complex domain challenges, research breakthroughs, and unstructured data into resilient, production-ready intelligent software.",
-    "location": "Dhaka, Bangladesh"
+    "philosophy": "AI engineer and systems builder. I design and ship production software across agriculture, healthcare diagnostics, document intelligence, and enterprise platforms.",
+    "location": "Dhaka, Bangladesh",
+    "title": "Sk. Roushan Khalid | AI Engineer & Systems Builder"
   },
   "about": {
     "lead": "I am an AI Engineer and end-to-end builder who takes intelligent software from concept to production.",
@@ -29,7 +30,8 @@
       "High-Impact AI Engineering",
       "Complex Systems Architecture",
       "Autonomous Intelligence Products"
-    ]
+    ],
+    "summary": "AI engineer and systems builder focused on turning models and complex data into reliable production software. Experience shipping systems in precision agriculture, clinical diagnostics, and enterprise automation."
   },
   "skills": [
     {
@@ -83,9 +85,9 @@
   ],
   "timeline": [
     {
-      "date": "12/2025 – Present • Dhaka, Bangladesh",
+      "date": "12/2025 to Present • Dhaka, Bangladesh",
       "title": "AI Engineer (R&D) • Kamal-Paterson Ltd | KPCloud",
-      "description": "Developing backend APIs and full-stack features across web and mobile applications for agritech and consumer AI. Conducting R&D on RAG pipelines, computer vision, and LLM-based features. Integrating weather, geospatial (GIS), and third-party APIs into production microservices with offline-first mobile sync.",
+      "description": "Building backend APIs, document processing tools, and computer vision services for agritech applications. Integrating weather feeds, geospatial maps, and third-party services with offline mobile synchronization.",
       "tags": [
         "Agritech AI Systems",
         "Geospatial GIS Telemetry",
@@ -95,9 +97,9 @@
       "active": true
     },
     {
-      "date": "04/2025 – 12/2025 • Dhaka, Bangladesh",
+      "date": "04/2025 to 12/2025 • Dhaka, Bangladesh",
       "title": "Research Assistant (RA) • Data Science Lab, DIU",
-      "description": "Collaborated with senior researchers at the University of Porto on multilingual and multimodal AI/ML research. Developed and evaluated AI/ML models focusing on cross-lingual transfer between Bangla and Portuguese, conducting comparative statistical analyses and tokenization audits.",
+      "description": "Collaborated with researchers at the University of Porto on multilingual machine learning. Trained and benchmarked cross-lingual models between Bangla and Portuguese with comparative statistical evaluations.",
       "tags": [
         "Multilingual AI Research",
         "Multimodal Signal Analysis",
@@ -107,9 +109,9 @@
       "active": false
     },
     {
-      "date": "2022 – 2026 • Dhaka, Bangladesh",
+      "date": "2022 to 2026 • Dhaka, Bangladesh",
       "title": "B.Sc. in Software Engineering • Daffodil International University",
-      "description": "Major in Data Science with a CGPA of 3.65 / 4.00. Built foundations across distributed systems, algorithms, database internals, and applied machine learning.",
+      "description": "Major in Data Science with a CGPA of 3.65 / 4.00. Core studies in distributed systems, algorithms, database internals, and machine learning.",
       "tags": [
         "Software Engineering",
         "Data Science Major",
@@ -139,34 +141,34 @@
   ],
   "recognition": [
     {
-      "icon": "🏆",
-      "title": "Finalist – Gigalogy AI Accelerator (Batch 2)",
-      "sub": "Selected as Finalist from 300+ applicant ventures with CampaignFlow",
+      "role": "Finalist",
+      "title": "Gigalogy AI Accelerator (Batch 2)",
+      "sub": "Selected as finalist from 300+ applicant teams for enterprise customer intelligence",
       "badge": "Batch 2 Finalist"
     },
     {
-      "icon": "🥈",
-      "title": "Runner-Up – National AI Project Competition 2026",
-      "sub": "Code4Campus among 145+ competing teams (Student Service Category)",
+      "role": "Runner Up",
+      "title": "National AI Project Competition 2026",
+      "sub": "Awarded second place among 145+ competing teams for automated document verification",
       "badge": "145+ Teams"
     },
     {
-      "icon": "🚀",
-      "title": "Top 50 – NASA Space Apps Challenge 2024 (Bangladesh)",
-      "sub": "Led ExoQuest — exoplanet discovery platform, Top 50 from 500+ teams in BD Chapter",
-      "badge": "BD Chapter Top 50"
+      "role": "Top 50 Rank",
+      "title": "NASA Space Apps Challenge 2024 (Bangladesh)",
+      "sub": "Selected in the top 50 national teams out of 500+ submissions for planetary transit telemetry analysis",
+      "badge": "Top 50"
     },
     {
-      "icon": "📄",
+      "role": "3rd Author",
       "title": "Cardiology AI Research Paper (SSRN / Elsevier)",
-      "sub": "3rd Author • Clinical ECG + LLM diagnostic framework achieving validation ROC-AUC ~0.987",
-      "badge": "3rd Author • ROC-AUC 0.987"
+      "sub": "Clinical ECG diagnostic framework achieving a verified validation ROC-AUC of 0.987",
+      "badge": "ROC-AUC 0.987"
     },
     {
-      "icon": "💻",
-      "title": "Finalist – DIU Take-Off Programming Contest",
-      "sub": "Ranked in Top 400 from 2,600+ competitors in DIU-hosted collegiate competitive programming contest",
-      "badge": "Top 400 / 2,600+"
+      "role": "Finalist",
+      "title": "DIU Take-Off Programming Contest",
+      "sub": "Ranked in the top 400 out of 2,600+ competitors in the collegiate competitive programming contest",
+      "badge": "Top 400"
     }
   ],
   "contact": {

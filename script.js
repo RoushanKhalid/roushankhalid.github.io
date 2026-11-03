@@ -1,5 +1,5 @@
 /* ============================================================
-   ROUSHAN KHALID — SYSTEM ARCHITECTURE SCRIPT & DYNAMICS
+   ROUSHAN KHALID | SYSTEM ARCHITECTURE SCRIPT & DYNAMICS
    ScrollSpy, Toast Notifications, Particle Canvas,
    Typewriter & Data Synchronization
    ============================================================ */
@@ -471,7 +471,7 @@
       // Update Hero Philosophy & Ticker Phrases
       if (data.hero) {
         if (data.hero.name) {
-          document.title = `${data.hero.name} — AI Engineer & Systems Builder`;
+          document.title = `${data.hero.name} | AI Engineer & Systems Builder`;
         }
         const philEl = document.getElementById('heroPhilosophy');
         if (philEl && data.hero.philosophy) philEl.textContent = data.hero.philosophy;
