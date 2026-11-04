@@ -1,183 +1,260 @@
 {
   "hero": {
     "name": "Sk. Roushan Khalid",
-    "badge": "Backend &bull; Cloud &bull; AI &bull; Product",
+    "badge": "AI/ML ENGINEER · SOFTWARE ENGINEER · RESEARCHER",
     "roleStatic": "Focus:",
     "typingPhrases": [
-      "Backend Systems Architecture",
-      "Cloud Infrastructure & Resilience",
-      "Applied AI Systems",
-      "End-to-End Product Engineering"
+      "Applied Artificial Intelligence",
+      "Software Systems Engineering",
+      "Applied Research & Exploration",
+      "Product & Innovation Thinking"
     ],
-    "philosophy": "AI engineer and systems builder. I design and ship production software.",
+    "philosophy": "Building intelligence. Engineering meaningful impact.",
     "location": "Dhaka, Bangladesh",
-    "title": "Sk. Roushan Khalid | AI Engineer & Systems Builder"
+    "title": "Sk. Roushan Khalid | AI/ML Engineer & AI-First Software Engineer"
   },
   "about": {
-    "lead": "I am an AI Engineer and end-to-end builder who takes intelligent software from concept to production.",
+    "lead": "I am interested in building technology that moves beyond experimentation and creates practical value.",
     "paragraphs": [
-      "I believe impactful AI requires end-to-end mastery: from foundational machine learning and agentic reasoning to robust backend microservices, asynchronous architectures, and cloud deployments.",
-      "Rather than treating modeling and engineering as separate disciplines, I build complete systems: designing custom intelligence workflows, structuring scalable data pipelines, and deploying production services that operate reliably in the real world."
+      "My journey spans applied AI, machine learning, software engineering, and research. I enjoy exploring difficult technical problems, understanding their underlying structure, and developing systems that connect intelligent capabilities with real-world needs.",
+      "For me, engineering is not simply about making something work. It is about understanding why it matters, how it should work, and how to make it reliable."
     ],
     "focusItems": [
-      "Autonomous Agentic Workflows & RAG",
-      "Production Backend Infrastructure",
-      "Multimodal Computer Vision & Signal Processing",
-      "End-to-End System Deployment"
+      "Research-driven thinking",
+      "Practical AI engineering",
+      "Systems-oriented development",
+      "Product-minded innovation"
     ],
     "lookingFor": [
-      "High-Impact AI Engineering",
+      "Applied AI/ML Engineering Roles",
       "Complex Systems Architecture",
-      "Autonomous Intelligence Products"
+      "Research & Technology Innovation"
     ],
-    "summary": "AI engineer and systems builder focused on turning models and complex data into reliable production software."
+    "summary": "Building intelligence. Engineering meaningful impact."
   },
+  "expertise": [
+    {
+      "num": "01",
+      "title": "Applied Intelligence",
+      "description": "Exploring and engineering intelligent systems that can understand, reason, retrieve information, and support practical workflows.",
+      "focus": [
+        "Generative AI",
+        "Large Language Models",
+        "Retrieval-Augmented Generation",
+        "AI Agents & Multi-Agent Systems",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Multimodal AI",
+        "Model Evaluation & Experimentation"
+      ]
+    },
+    {
+      "num": "02",
+      "title": "Software & Systems Engineering",
+      "description": "Building the engineering foundations that transform AI capabilities into reliable, maintainable, and usable applications.",
+      "focus": [
+        "Python Backend Engineering",
+        "FastAPI & Flask",
+        "API Architecture",
+        "Database Design",
+        "Scalable Application Workflows",
+        "System Integration",
+        "Docker & Deployment Workflows",
+        "Full-Stack & Mobile Development"
+      ]
+    },
+    {
+      "num": "03",
+      "title": "Research & Exploration",
+      "description": "Investigating emerging ideas through experimentation, analytical thinking, and evidence-driven evaluation.",
+      "focus": [
+        "Applied ML Research",
+        "Experimental Design",
+        "Data Analysis",
+        "Model Evaluation",
+        "Explainable AI",
+        "Multilingual & Multimodal Systems",
+        "Scientific Visualization",
+        "Research Collaboration"
+      ]
+    },
+    {
+      "num": "04",
+      "title": "Product & Innovation Thinking",
+      "description": "Connecting technical possibilities with practical problems, user needs, and opportunities for innovation.",
+      "focus": [
+        "Problem Discovery",
+        "Technical Advisory",
+        "Product Development",
+        "Business-Oriented Engineering",
+        "Technology Strategy",
+        "Solution Validation",
+        "Cross-Functional Collaboration"
+      ]
+    }
+  ],
+  "impactThemes": [
+    {
+      "title": "Bridging Research and Production",
+      "statement": "Turning research concepts and emerging AI techniques into practical engineering solutions.",
+      "detail": "Bridging the gap between empirical experimentation and production reality by designing evaluation pipelines, reliability guardrails, and deterministic validation mechanisms."
+    },
+    {
+      "title": "Engineering Beyond Models",
+      "statement": "Working across backend systems, APIs, databases, integrations, and application architecture.",
+      "detail": "Ensuring intelligent algorithms sit on top of resilient infrastructure: high-concurrency microservices, asynchronous message queues, clean schema design, and deployment automation."
+    },
+    {
+      "title": "Exploring Multilingual Intelligence",
+      "statement": "Contributing to research involving multilingual and cross-lingual AI, including Bangla and Portuguese language contexts.",
+      "detail": "Collaborating across international research lab boundaries with the University of Porto to evaluate cross-lingual semantic representations and comparative statistical benchmarks."
+    },
+    {
+      "title": "Connecting Technology With Real-World Needs",
+      "statement": "Approaching engineering challenges with an understanding of users, workflows, and practical constraints.",
+      "detail": "Designing offline-first mobile sync tools for rural agricultural field workers, automating high-throughput document verification, and reducing friction in real-world user operations."
+    },
+    {
+      "title": "Collaborative Innovation",
+      "statement": "Working across research, engineering, and product-oriented environments to explore and develop solutions.",
+      "detail": "Participating in venture acceleration programs, student leadership governance, and technical advisory to align engineering rigor with strategic value."
+    }
+  ],
   "skills": [
     {
-      "title": "Precision Agriculture & GIS",
       "num": "01",
-      "tagline": "Agritech & Earth Systems",
-      "description": "Developing crop intelligence models, satellite and sensor integrations, and offline-first mobile tools for agricultural operations.",
-      "tags": [
-        "Field Crop Diagnostics",
-        "Micro-Climate Telemetry",
-        "Spatial Mapping & GIS",
-        "Offline-First Sync"
-      ]
+      "title": "Applied Intelligence",
+      "tagline": "LLMs, Multi-Agent Systems & Vision",
+      "description": "Exploring and engineering intelligent systems that understand, reason, retrieve context, and support practical workflows.",
+      "tags": ["Generative AI", "LLMs & RAG", "Multi-Agent Systems", "Computer Vision"]
     },
     {
-      "title": "Clinical AI & Biosignal Analysis",
       "num": "02",
-      "tagline": "Healthcare Diagnostics",
-      "description": "Conducting peer-reviewed medical research and building interpretable diagnostic frameworks for cardiovascular disease prediction.",
-      "tags": [
-        "ECG Pathology Prediction",
-        "Interpretable Insights",
-        "Peer-Reviewed Research",
-        "High-Precision ROC-AUC"
-      ]
+      "title": "Software & Systems Engineering",
+      "tagline": "Backend Systems & Architecture",
+      "description": "Building resilient microservices, high-throughput APIs, asynchronous worker queues, and offline-first mobile synchronization.",
+      "tags": ["Python & FastAPI", "Microservices", "Docker Workflows", "Database Design"]
     },
     {
-      "title": "Advisory Platforms & Document AI",
       "num": "03",
-      "tagline": "Higher Education & Vision",
-      "description": "Building autonomous student advisory platforms that extract dense academic records and evaluate prerequisites with zero hallucinations.",
-      "tags": [
-        "Transcript Data Extraction",
-        "Conversational Guidance",
-        "Deterministic Rule Validation",
-        "Fast Eligibility Verification"
-      ]
+      "title": "Research & Exploration",
+      "tagline": "Empirical Rigor & Scientific Analysis",
+      "description": "Investigating emerging methodologies through rigorous experimentation, statistical evaluation, and Explainable AI (XAI).",
+      "tags": ["Model Evaluation", "Explainable AI", "Multilingual NLP", "Data Visualization"]
     },
     {
-      "title": "Customer Intelligence & Growth",
       "num": "04",
-      "tagline": "Enterprise & Retention",
-      "description": "Engineering predictive churn engines, lifetime value models, and automated engagement workflows that protect commercial revenue.",
-      "tags": [
-        "Predictive Churn Scoring",
-        "LTV Modeling",
-        "Automated Retention Loops",
-        "Scalable Event Processing"
-      ]
+      "title": "Product & Innovation Thinking",
+      "tagline": "User Empathy & Strategy",
+      "description": "Connecting technical depth with real-world problems, commercial viability, and cross-functional technology strategy.",
+      "tags": ["Technical Advisory", "Solution Validation", "Rapid Prototyping", "Product Strategy"]
     }
   ],
   "timeline": [
     {
-      "date": "12/2025 to Present • Dhaka, Bangladesh",
-      "title": "AI Engineer (R&D) • Kamal-Paterson Ltd | KPCloud",
-      "description": "Building backend APIs, document processing tools, and computer vision services for agritech applications. Integrating weather feeds, geospatial maps, and third-party services with offline mobile synchronization.",
+      "date": "December 2025 – Present • Dhaka, Bangladesh",
+      "title": "AI Engineer, R&D • Kamal-Paterson Ltd. | KPCloud",
+      "description": "Working across AI research and development, backend engineering, and application development to build intelligent software capabilities.",
       "tags": [
-        "Agritech AI Systems",
-        "Geospatial GIS Telemetry",
-        "Offline-First Mobility",
-        "Production Engineering"
+        "AI/ML Feature R&D",
+        "LLM & RAG Capabilities",
+        "Backend API Architecture",
+        "Offline-First Mobile Sync",
+        "Dashboard Visualization"
       ],
       "active": true
     },
     {
-      "date": "04/2025 to 12/2025 • Dhaka, Bangladesh",
-      "title": "Research Assistant (RA) • Data Science Lab, DIU",
-      "description": "Collaborated with researchers at the University of Porto on multilingual machine learning. Trained and benchmarked cross-lingual models between Bangla and Portuguese with comparative statistical evaluations.",
+      "date": "April 2025 – December 2025 • Dhaka, Bangladesh",
+      "title": "Research Assistant • Data Science Lab, Daffodil International University",
+      "description": "Contributed to collaborative AI/ML research involving multilingual and multimodal intelligence in partnership with researchers from the University of Porto.",
       "tags": [
-        "Multilingual AI Research",
-        "Multimodal Signal Analysis",
-        "Statistical Benchmarking",
-        "International Lab Collaboration"
+        "University of Porto Collaboration",
+        "Multilingual Intelligence",
+        "Cross-Lingual Learning",
+        "Bangla & Portuguese Contexts",
+        "Model Evaluation"
       ],
       "active": false
     },
     {
-      "date": "2022 to 2026 • Dhaka, Bangladesh",
-      "title": "B.Sc. in Software Engineering • Daffodil International University",
-      "description": "Major in Data Science with a CGPA of 3.65 / 4.00. Core studies in distributed systems, algorithms, database internals, and machine learning.",
+      "date": "January 2022 – July 2026 • Dhaka, Bangladesh",
+      "title": "BSc in Software Engineering • Daffodil International University",
+      "description": "Major in Data Science with a CGPA of 3.65 / 4.00. Developed a foundation in software engineering, algorithms, data science, and computational problem-solving while exploring applied artificial intelligence and research.",
       "tags": [
-        "Software Engineering",
         "Data Science Major",
-        "Algorithms & Internals",
-        "Systems Architecture"
+        "CGPA 3.65 / 4.00",
+        "Software Engineering",
+        "Algorithms & Internals"
       ],
       "active": false
-    }
-  ],
-  "exploringBars": [
-    {
-      "label": "Machine Learning & AI",
-      "value": 90
-    },
-    {
-      "label": "LLMs & AI Agents",
-      "value": 85
-    },
-    {
-      "label": "Backend Engineering",
-      "value": 80
-    },
-    {
-      "label": "Distributed Systems",
-      "value": 65
     }
   ],
   "recognition": [
     {
-      "role": "Finalist",
-      "title": "Gigalogy AI Accelerator (Batch 2)",
-      "sub": "Selected as finalist from 300+ applicant teams for enterprise customer intelligence",
-      "badge": "Batch 2 Finalist"
-    },
-    {
-      "role": "Runner Up",
-      "title": "National AI Project Competition 2026",
-      "sub": "Awarded second place among 145+ competing teams for automated document verification",
-      "badge": "145+ Teams"
+      "role": "Runner-up",
+      "title": "AI Project Competition 2026",
+      "sub": "Daffodil International University • Recognized among 145+ participating teams for intelligent document verification",
+      "badge": "145+ Teams",
+      "icon": "🏆"
     },
     {
       "role": "Top 50 Rank",
-      "title": "NASA Space Apps Challenge 2024 (Bangladesh)",
-      "sub": "Selected in the top 50 national teams out of 500+ submissions for planetary transit telemetry analysis",
-      "badge": "Top 50"
-    },
-    {
-      "role": "3rd Author",
-      "title": "Cardiology AI Research Paper (SSRN / Elsevier)",
-      "sub": "Clinical ECG diagnostic framework achieving a verified validation ROC-AUC of 0.987",
-      "badge": "ROC-AUC 0.987"
+      "title": "NASA Space Apps Challenge 2024",
+      "sub": "Bangladesh Chapter • Selected among 500+ national submissions for planetary transit telemetry analysis",
+      "badge": "500+ Submissions",
+      "icon": "🛰️"
     },
     {
       "role": "Finalist",
-      "title": "DIU Take-Off Programming Contest",
-      "sub": "Ranked in the top 400 out of 2,600+ competitors in the collegiate competitive programming contest",
-      "badge": "Top 400"
+      "title": "Gigalogy Technopreneurship, Batch 2",
+      "sub": "Recognized as a finalist through participation in the technopreneurship accelerator program",
+      "badge": "Batch 2 Finalist",
+      "icon": "🚀"
+    },
+    {
+      "role": "Finalist",
+      "title": "Take-Off Programming Contest (Fall 2022)",
+      "sub": "Selected among 400 finalists from more than 2,600 participants in collegiate algorithmic problem solving",
+      "badge": "Top 400 / 2,600+",
+      "icon": "⚡"
+    },
+    {
+      "role": "350+ Solved",
+      "title": "Competitive Programming",
+      "sub": "Solved 350+ programming problems across platforms including Beecrowd, Codeforces, and CodeChef in C++ and Python",
+      "badge": "350+ Problems Solved",
+      "icon": "💻"
+    },
+    {
+      "role": "Leadership",
+      "title": "Leadership & Technical Community",
+      "sub": "Office Secretary, Software Engineering Club • Executive Member, BASIS Students' Forum (DIU Chapter)",
+      "badge": "Community Leadership",
+      "icon": "🏛️"
     }
+  ],
+  "exploringBars": [
+    { "label": "Applied AI & Agentic Systems", "value": 90 },
+    { "label": "Software & Backend Architecture", "value": 85 },
+    { "label": "Research & Statistical Evaluation", "value": 85 },
+    { "label": "Product & Innovation Thinking", "value": 80 }
+  ],
+  "approach": [
+    { "number": "01", "title": "Applied Intelligence", "description": "Exploring and engineering intelligent systems that understand, reason, and support practical workflows." },
+    { "number": "02", "title": "Software & Systems", "description": "Building the engineering foundations that transform AI capabilities into reliable, production-ready software." },
+    { "number": "03", "title": "Research & Exploration", "description": "Investigating emerging ideas through experimentation, analytical thinking, and evidence-driven evaluation." },
+    { "number": "04", "title": "Product & Innovation", "description": "Connecting technical possibilities with practical problems, user needs, and opportunities for innovation." }
   ],
   "contact": {
     "email": "skroushankhalid.17@gmail.com",
     "linkedin": "sk-roushan-khalid",
     "github": "RoushanKhalid",
-    "footerNote": "Building end-to-end intelligent systems &bull; Open to high-impact engineering opportunities",
-    "footerCopy": "© 2026 Sk. Roushan Khalid • Built with purpose.",
     "phone": "+8801760535087",
     "phoneDisplay": "+880 1760 535087",
-    "whatsapp": "8801760535087"
+    "whatsapp": "8801760535087",
+    "location": "Dhaka, Bangladesh",
+    "footerNote": "Building intelligence. Engineering meaningful impact.",
+    "footerCopy": "© 2026 Sk. Roushan Khalid • AI/ML Engineer & AI-First Software Engineer"
   }
 }

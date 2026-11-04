@@ -109,7 +109,7 @@ function bindPasswordToggle() {
    DATA LOAD/SAVE
 =========================== */
 async function loadData() {
-  const res = await fetch('portfolio-data.json?v=' + Date.now());
+  const res = await fetch('/portfolio-data.json?v=' + Date.now());
   return res.json();
 }
 
@@ -739,3 +739,4 @@ function listInputRow(value, idx) {
     <button type="button" class="btn-remove">×</button>
   </div>`;
 }
+
