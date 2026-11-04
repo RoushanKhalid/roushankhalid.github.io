@@ -40,10 +40,10 @@
   --whatsapp-green:    #25D366; /* WhatsApp Brand Accent */
 
   /* Typographic Contrast Tokens */
-  --charcoal:          #292D2A; /* Charcoal Primary Text */
-  --text-secondary:    #657067; /* Refined Slate Secondary */
-  --text-tertiary:     #7F8A81; /* Subtle Technical Labels */
-  --text-muted:        #9CA69E; /* Dividers & Metadata */
+  --charcoal:          #1A1E1B; /* High-contrast crisp Charcoal */
+  --text-secondary:    #4D5750; /* Confident Slate Secondary */
+  --text-tertiary:     #6D776F; /* Clear Technical Labels */
+  --text-muted:        #8E9890; /* Dividers & Metadata */
 
   /* Hairline Borders */
   --border:            #DDE2DA;
@@ -89,12 +89,17 @@ body {
   font-family: var(--font-sans);
   background-color: var(--bg-warm);
   color: var(--charcoal);
-  line-height: 1.62;
-  font-weight: 400;
+  line-height: 1.65;
+  font-weight: 450;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
+}
+
+strong, b {
+  font-weight: 700;
+  color: var(--forest);
 }
 
 ::selection {
@@ -218,8 +223,8 @@ ul {
 
 .nav-logo {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.35rem;
+  font-weight: 700;
   color: var(--forest);
   letter-spacing: -0.01em;
 }
@@ -438,7 +443,7 @@ ul {
 .section-headline {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 3.4vw, 2.75rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.18;
   letter-spacing: -0.015em;
   color: var(--forest);
@@ -499,7 +504,7 @@ ul {
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(2.4rem, 4.4vw, 3.8rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--forest);
@@ -818,7 +823,7 @@ ul {
 .expertise-title {
   font-family: var(--font-serif);
   font-size: 1.45rem;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--forest);
   margin-bottom: 0.65rem;
   line-height: 1.25;
@@ -904,7 +909,7 @@ ul {
 .impact-row-title {
   font-family: var(--font-serif);
   font-size: 1.35rem;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--forest);
   line-height: 1.25;
 }
@@ -1022,7 +1027,7 @@ ul {
 .journey-role {
   font-family: var(--font-serif);
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--forest);
 }
 
@@ -1091,8 +1096,8 @@ ul {
 
 .milestone-name {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 400;
+  font-size: 1.18rem;
+  font-weight: 700;
   color: var(--forest);
   margin-bottom: 0.35rem;
   line-height: 1.25;
@@ -1134,7 +1139,7 @@ ul {
 .contact-headline {
   font-family: var(--font-serif);
   font-size: clamp(1.85rem, 3.2vw, 2.5rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.18;
   color: var(--forest);
   margin-bottom: 0.85rem;
