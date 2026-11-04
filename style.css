@@ -957,7 +957,7 @@ ul {
   padding: 1.5rem 1.65rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
 }
 
@@ -968,7 +968,7 @@ ul {
   text-transform: uppercase;
   color: var(--forest);
   letter-spacing: 0.08em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
   padding-bottom: 0.45rem;
   border-bottom: 1px solid var(--border);
 }
@@ -978,7 +978,7 @@ ul {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 1.15rem;
+  gap: 1.5rem;
 }
 
 .journey-timeline::before {
