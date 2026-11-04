@@ -1,5 +1,5 @@
 /* ============================================================
-   SK. ROUSHAN KHALID — EDITORIAL INTERACTION ENGINE
+   SK. ROUSHAN KHALID : EDITORIAL INTERACTION ENGINE
    Modern Editorial × Swiss Minimalism
    Navigation, Dhaka Live Time, Toast System, Clipboard Utility,
    and Restrained Scroll Progress

@@ -1,5 +1,5 @@
 /* ============================================================
-   SK. ROUSHAN KHALID — MODERN EDITORIAL & SWISS MINIMALISM
+   SK. ROUSHAN KHALID : MODERN EDITORIAL & SWISS MINIMALISM
    Visual Direction: Modern Editorial × Swiss Minimalism
    Palette: Warm White (#F7F8F5), Forest Green (#243C35),
             Sage Green (#B7C9B5), Charcoal (#1A1E1B), Soft Grey (#ECEFE9)
@@ -75,7 +75,7 @@
   --ease:              cubic-bezier(0.16, 1, 0.3, 1);
   --transition:        0.2s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Layout Constants — Adaptive & Content-Rich */
+  /* Layout Constants: Adaptive & Content-Rich */
   --container-max:     1220px;
   --nav-height:        64px;
 }
@@ -414,12 +414,6 @@ ul {
   margin-bottom: 0.45rem;
 }
 
-.section-tag::before {
-  content: '— ';
-  color: var(--forest-vivid);
-  font-weight: 800;
-}
-
 .section-headline {
   font-family: var(--font-serif);
   font-size: clamp(1.9rem, 3.2vw, 2.7rem);
@@ -597,7 +591,7 @@ ul {
   color: var(--text-tertiary);
 }
 
-/* Hero Portrait Stage — Solid, Integrated Presence */
+/* Hero Portrait Stage: Solid, Integrated Presence */
 .hero-stage {
   display: flex;
   flex-direction: column;

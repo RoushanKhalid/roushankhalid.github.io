@@ -1,5 +1,5 @@
 /* ============================================================
-   ADMIN PANEL — Login + Full portfolio editor
+   ADMIN PANEL : Login + Full portfolio editor
    Reads/writes portfolio-data.json
    Credentials validated via SHA-256 hash (admin-config.js)
    ============================================================ */
@@ -140,11 +140,11 @@ async function saveData() {
       const result = await res.json();
       if (result.ok) {
         saved = true;
-        status.textContent = '✓ Saved — portfolio updated';
+        status.textContent = '✓ Saved : portfolio updated';
         status.style.color = 'var(--green)';
       }
     } catch (_) {
-      // server not running — fall back to download
+      // server not running : fall back to download
     }
 
     if (!saved) {
@@ -156,7 +156,7 @@ async function saveData() {
       a.download = 'portfolio-data.json';
       a.click();
       URL.revokeObjectURL(url);
-      status.textContent = '⬇ Downloaded — replace portfolio-data.json';
+      status.textContent = '⬇ Downloaded : replace portfolio-data.json';
       status.style.color = '#f59e0b';
     }
   } catch (err) {
@@ -398,7 +398,7 @@ function renderTimelineForm(d) {
     <button class="btn-add" data-list="timeline_list" data-type="timeline">+ Add entry</button>
   </div>
   <div class="form-section">
-    <div class="form-section-title">Exploring — Progress Bars</div>
+    <div class="form-section-title">Exploring : Progress Bars</div>
     <div class="card-group" id="bars_list">
       ${d.exploringBars.map((b,i) => `
         <div class="editor-card" data-idx="${i}">
