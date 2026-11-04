@@ -213,47 +213,38 @@
 
   /* ===========================
      FLOATING WHATSAPP CTA
-     Revealed when scrolling past Hero
+     Revealed past Hero, neatly hidden in Contact section
   =========================== */
   function initFloatingWhatsApp() {
     const wa = document.querySelector('.floating-whatsapp');
+    const contact = document.getElementById('contact');
     if (!wa) return;
 
-    window.addEventListener('scroll', () => {
-      wa.classList.toggle('visible', window.scrollY > 400);
-    }, { passive: true });
+    function handleScroll() {
+      const scrollY = window.scrollY;
+      const pastHero = scrollY > 380;
+      let inContact = false;
+      if (contact) {
+        const contactTop = contact.offsetTop - 300;
+        inContact = scrollY >= contactTop;
+      }
+      wa.classList.toggle('visible', pastHero && !inContact);
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
   }
 
   /* ===========================
      RESTRAINED SCROLL REVEALS
+     (Safe: Never hides content if observer is delayed)
   =========================== */
   function initScrollAnimations() {
-    const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+    // All content remains visible by default
     const cards = document.querySelectorAll(
       '.expertise-card, .impact-card-block, .journey-item, .milestone-box, .about-narrative-card, .about-pillars-card'
     );
-
-    if (REDUCED_MOTION) {
-      cards.forEach(el => el.classList.add('is-revealed'));
-      return;
-    }
-
-    cards.forEach(el => el.classList.add('reveal-init'));
-
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-revealed');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -30px 0px'
-    });
-
-    cards.forEach(el => observer.observe(el));
+    cards.forEach(el => el.classList.add('is-revealed'));
   }
 
   /* ===========================
