@@ -1580,7 +1580,7 @@ ul {
 }
 
 /* ===========================
-   FLOATING WHATSAPP BUTTON
+   FLOATING WHATSAPP BUTTON (Revealed on Scroll, Hidden on Hero)
 =========================== */
 .floating-whatsapp {
   position: fixed;
@@ -1599,8 +1599,19 @@ ul {
   font-size: 0.78rem;
   font-weight: 700;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(16px);
+}
+
+.floating-whatsapp.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .floating-whatsapp:hover {

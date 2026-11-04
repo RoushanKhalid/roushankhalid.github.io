@@ -212,6 +212,19 @@
   }
 
   /* ===========================
+     FLOATING WHATSAPP CTA
+     Revealed when scrolling past Hero
+  =========================== */
+  function initFloatingWhatsApp() {
+    const wa = document.querySelector('.floating-whatsapp');
+    if (!wa) return;
+
+    window.addEventListener('scroll', () => {
+      wa.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+  }
+
+  /* ===========================
      RESTRAINED SCROLL REVEALS
   =========================== */
   function initScrollAnimations() {
@@ -252,6 +265,7 @@
     initCopyButtons();
     initScrollProgress();
     initBackToTop();
+    initFloatingWhatsApp();
     initScrollAnimations();
   }
 
