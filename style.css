@@ -442,11 +442,9 @@ ul {
    01. HERO SECTION (VIEWPORT OPTIMIZED)
 =========================== */
 .hero {
-  min-height: calc(100vh - var(--nav-height));
-  min-height: calc(100dvh - var(--nav-height));
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3.25rem 0 2.75rem;
   border-bottom: 1px solid var(--border);
   position: relative;
   width: 100%;
@@ -691,6 +689,44 @@ ul {
   color: var(--text-secondary);
 }
 
+.hero-profile-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.45rem;
+  width: 100%;
+  border-top: 1px solid var(--border);
+  padding-top: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.hero-highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-warm);
+  border: 1px solid var(--border-subtle);
+  padding: 0.45rem 0.35rem;
+  border-radius: var(--radius-xs);
+}
+
+.hero-highlight-num {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--forest);
+  line-height: 1.2;
+}
+
+.hero-highlight-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
 /* ===========================
    02. PERSPECTIVE & PHILOSOPHY
 =========================== */
@@ -698,21 +734,19 @@ ul {
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
   gap: 1.25rem;
-  align-items: start;
+  align-items: stretch;
   width: 100%;
 }
 
 .about-narrative-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: 1.35rem 1.5rem;
+  padding: 1.45rem 1.6rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 1rem;
-  height: auto;
-  position: sticky;
-  top: calc(var(--nav-height) + 1.25rem);
+  justify-content: space-between;
+  gap: 1.15rem;
+  height: 100%;
   box-shadow: var(--shadow-card);
 }
 
@@ -728,8 +762,8 @@ ul {
 
 .about-tenets-bar {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.45rem;
   border-top: 1px solid var(--border);
   padding-top: 0.85rem;
 }
@@ -746,6 +780,7 @@ ul {
   border: 1px solid rgba(23, 66, 51, 0.14);
   padding: 0.35rem 0.65rem;
   border-radius: var(--radius-xs);
+  white-space: nowrap;
 }
 
 .about-tenet-item::before {
@@ -756,12 +791,12 @@ ul {
 .about-pillars-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: 1.35rem 1.5rem;
+  padding: 1.45rem 1.6rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 0.65rem;
-  height: auto;
+  height: 100%;
   box-shadow: var(--shadow-card);
 }
 
@@ -1008,25 +1043,19 @@ ul {
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
   gap: 1.25rem;
-  align-items: start;
+  align-items: stretch;
   width: 100%;
 }
 
 .trajectory-col-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: 1.35rem 1.5rem;
+  padding: 1.45rem 1.6rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: auto;
+  justify-content: space-between;
+  height: 100%;
   box-shadow: var(--shadow-card);
-}
-
-/* Shorter left column (Professional Trajectory) holds sticky on scroll */
-.trajectory-col-card:first-child {
-  position: sticky;
-  top: calc(var(--nav-height) + 1.25rem);
 }
 
 .col-section-label {
@@ -1129,34 +1158,64 @@ ul {
   font-weight: 480;
 }
 
-/* Recognition Milestones Stack: Holds sleek scrollbar when content exceeds, matching left column height */
+/* Left Card Footer: Toolchain Matrix to Match Height & Fill Space */
+.trajectory-stack-footer {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.trajectory-stack-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trajectory-stack-title {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--forest-vivid);
+  letter-spacing: 0.06em;
+}
+
+.trajectory-stack-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #047857;
+  background: rgba(5, 150, 105, 0.12);
+  border: 1px solid rgba(5, 150, 105, 0.28);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-xs);
+}
+
+.trajectory-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.trajectory-chips span {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--forest);
+  background: rgba(23, 66, 51, 0.06);
+  border: 1px solid rgba(23, 66, 51, 0.14);
+  padding: 0.22rem 0.55rem;
+  border-radius: var(--radius-xs);
+}
+
+/* Recognition Milestones Stack: Natural Clean Display of all 5 Milestones */
 .milestones-stack {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  max-height: 430px;
-  overflow-y: auto;
-  padding-right: 0.45rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--forest) var(--border-subtle);
-}
-
-.milestones-stack::-webkit-scrollbar {
-  width: 5px;
-}
-
-.milestones-stack::-webkit-scrollbar-track {
-  background: var(--border-subtle);
-  border-radius: 4px;
-}
-
-.milestones-stack::-webkit-scrollbar-thumb {
-  background: var(--forest);
-  border-radius: 4px;
-}
-
-.milestones-stack::-webkit-scrollbar-thumb:hover {
-  background: var(--forest-hover);
 }
 
 .milestone-box {
@@ -1222,13 +1281,20 @@ ul {
 .contact-card-frame {
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: 1.6rem 1.85rem;
+  padding: 1.65rem 1.85rem;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 1.75rem;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   box-shadow: var(--shadow-card);
+}
+
+.contact-cta-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .contact-headline {
@@ -1254,7 +1320,7 @@ ul {
   font-style: italic;
   font-weight: 700;
   color: var(--forest);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.15rem;
   padding-left: 0.75rem;
   border-left: 3px solid var(--forest);
 }
@@ -1263,6 +1329,22 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.contact-response-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-xs);
+  margin-top: 1.15rem;
+  width: fit-content;
 }
 
 .contact-channels-matrix {
@@ -1655,7 +1737,7 @@ ul {
   }
 
   .about-tenets-bar {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.45rem;
   }
 
