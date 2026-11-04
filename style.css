@@ -388,9 +388,16 @@ ul {
 }
 
 .section {
-  padding: 2.15rem 0;
+  padding: 3.5rem 0;
   position: relative;
   width: 100%;
+}
+
+/* Viewport Navigation Alignment: Prevent Nav Bar from Obscuring Anchors */
+.section,
+.hero,
+.contact-section {
+  scroll-margin-top: calc(var(--nav-height) + 1.25rem);
 }
 
 .section-alt {
@@ -400,7 +407,7 @@ ul {
 }
 
 .section-header {
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.35rem;
 }
 
 .section-tag {
@@ -436,9 +443,12 @@ ul {
    01. HERO SECTION (VIEWPORT OPTIMIZED)
 =========================== */
 .hero {
+  min-height: calc(100vh - var(--nav-height));
+  min-height: calc(100dvh - var(--nav-height));
   display: flex;
   align-items: center;
-  padding: 3.25rem 0 2.75rem;
+  justify-content: center;
+  padding: 3rem 0;
   border-bottom: 1px solid var(--border);
   position: relative;
   width: 100%;
@@ -591,6 +601,42 @@ ul {
   color: var(--text-tertiary);
 }
 
+/* Active Focus Strip: Fulfills Left Hero Viewport */
+.hero-focus-strip {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-focus-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--forest-vivid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.hero-focus-tag {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--forest);
+  background: rgba(23, 66, 51, 0.06);
+  border: 1px solid rgba(23, 66, 51, 0.15);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-xs);
+}
+
 /* Hero Portrait Stage: Solid, Integrated Presence */
 .hero-stage {
   display: flex;
@@ -721,6 +767,44 @@ ul {
   margin-top: 2px;
 }
 
+/* Core Architecture Stack in Profile Stage */
+.hero-profile-stack {
+  width: 100%;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-stack-label {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  letter-spacing: 0.06em;
+}
+
+.hero-stack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.hero-stack-chips span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--charcoal-deep);
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
 /* ===========================
    02. PERSPECTIVE & PHILOSOPHY
 =========================== */
@@ -848,6 +932,24 @@ ul {
   line-height: 1.48;
 }
 
+.pillar-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.pillar-tech-chips span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--forest);
+  background: rgba(23, 66, 51, 0.05);
+  border: 1px solid rgba(23, 66, 51, 0.12);
+  padding: 0.12rem 0.45rem;
+  border-radius: var(--radius-xs);
+}
+
 /* ===========================
    03. CORE EXPERTISE
 =========================== */
@@ -936,6 +1038,32 @@ ul {
   border-radius: var(--radius-xs);
 }
 
+.expertise-deliverable {
+  margin-top: 0.95rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.deliverable-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  color: var(--forest-vivid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.deliverable-text {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #1F2723;
+  font-weight: 480;
+  margin: 0;
+}
+
 /* ===========================
    04. IMPACT & CONTRIBUTIONS
    Perfect Order: 5 Full-Width Sequential Editorial Rows
@@ -994,6 +1122,29 @@ ul {
   color: #16201B;
   font-weight: 480;
   margin: 0;
+}
+
+.impact-deliverable-strip {
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
+  border-top: 1px dashed var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--forest);
+}
+
+.deliverable-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--forest-vivid);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .impact-col-pills {
@@ -1342,6 +1493,47 @@ ul {
   border-radius: var(--radius-xs);
   margin-top: 1.15rem;
   width: fit-content;
+}
+
+/* Direct Collaboration Scope to Fulfill Free Space */
+.contact-scope-card {
+  margin-top: 1.15rem;
+  padding: 1rem 1.15rem;
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.contact-scope-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--forest-vivid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-scope-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.contact-scope-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #1F2723;
+}
+
+.scope-bullet {
+  color: var(--forest-vivid);
+  font-weight: bold;
 }
 
 .contact-channels-matrix {
