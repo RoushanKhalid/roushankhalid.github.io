@@ -218,7 +218,7 @@
     const REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const cards = document.querySelectorAll(
-      '.expertise-block, .impact-row, .journey-entry, .milestone-item, .research-diagram-card, .beyond-themes-card'
+      '.expertise-card, .impact-card-block, .journey-item, .milestone-box, .about-narrative-card, .about-pillars-card'
     );
 
     if (REDUCED_MOTION) {
