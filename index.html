@@ -24,7 +24,7 @@
   <!-- Google Fonts: DM Serif Display + Inter + IBM Plex Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -123,19 +123,22 @@
             </div>
           </div>
 
-          <!-- Right Column: Editorial Portrait Stage (Circular) -->
+          <!-- Right Column: Integrated Hero Profile Stage (Zero Void) -->
           <div class="hero-stage">
-            <div class="hero-stage-frame">
-              <div class="hero-stage-img-wrap">
-                <img src="pro.jpg" alt="Sk. Roushan Khalid portrait" class="hero-stage-img" onerror="this.src='https://avatars.githubusercontent.com/u/108520770?v=4'" loading="eager" />
+            <div class="hero-profile-card">
+              <div class="hero-stage-frame">
+                <div class="hero-stage-img-wrap">
+                  <img src="pro.jpg" alt="Sk. Roushan Khalid portrait" class="hero-stage-img" onerror="this.src='https://avatars.githubusercontent.com/u/108520770?v=4'" loading="eager" />
+                </div>
               </div>
-            </div>
-            <div class="hero-stage-footer">
-              <span class="hero-stage-city">Dhaka, BD &bull; UTC+6</span>
-              <span class="sep">/</span>
-              <span class="hero-stage-status">
-                <span class="nav-live-dot"></span> Available for Roles
-              </span>
+              <div class="hero-meta-summary">
+                <div class="hero-stage-status">
+                  <span class="nav-live-dot"></span> Available for Roles &amp; R&amp;D
+                </div>
+                <div class="hero-stage-city">
+                  Dhaka, Bangladesh &bull; UTC+6 &bull; Kamal-Paterson (KPCloud)
+                </div>
+              </div>
             </div>
           </div>
 
@@ -156,20 +159,28 @@
 
         <div class="about-editorial-grid">
           
-          <!-- Narrative Column -->
-          <div class="about-narrative">
-            <p>
-              I am interested in building technology that moves beyond experimentation and creates <strong>practical value</strong>. For me, engineering is not simply about making something work — it is about understanding why it matters, <strong>how it should be architected</strong>, and how to make it <strong>reliable under real-world constraints</strong>.
-            </p>
-            <p>
-              My work spans <strong>applied artificial intelligence</strong>, <strong>machine learning</strong>, <strong>scalable software systems</strong>, and <strong>empirical research</strong>. I enjoy exploring complex technical problems, understanding their underlying structure, and engineering systems that bridge intelligent capabilities with user workflows.
-            </p>
-            <p>
-              Rather than treating AI as an isolated black box, I view it as an integral layer of modern software systems: one that requires <strong>deterministic validation</strong>, <strong>resilient APIs</strong>, and careful consideration of <strong>user experience</strong>.
-            </p>
+          <!-- Narrative Card with Built-in Tenets Bar -->
+          <div class="about-narrative-card">
+            <div class="about-narrative-body">
+              <p>
+                I am interested in building technology that moves beyond experimentation and creates <strong>practical value</strong>. For me, engineering is not simply about making something work — it is about understanding why it matters, <strong>how it should be architected</strong>, and how to make it <strong>reliable under real-world constraints</strong>.
+              </p>
+              <p>
+                My work spans <strong>applied artificial intelligence</strong>, <strong>machine learning</strong>, <strong>scalable software systems</strong>, and <strong>empirical research</strong>. I enjoy exploring complex technical problems, understanding their underlying structure, and engineering systems that bridge intelligent capabilities with user workflows.
+              </p>
+              <p>
+                Rather than treating AI as an isolated black box, I view it as an integral layer of modern software systems: one that requires <strong>deterministic validation</strong>, <strong>resilient APIs</strong>, and careful consideration of <strong>user experience</strong>.
+              </p>
+            </div>
+            
+            <div class="about-tenets-bar">
+              <div class="about-tenet-item">Empirical Rigor</div>
+              <div class="about-tenet-item">Deterministic Bounds</div>
+              <div class="about-tenet-item">Production Scale</div>
+            </div>
           </div>
 
-          <!-- Identity Matrix Column -->
+          <!-- Identity Matrix Column (Matching Height) -->
           <div class="about-pillars-card">
             <div class="pillars-card-header">
               <span>Core Dimensions</span>
@@ -332,6 +343,7 @@
 
     <!-- ===========================
          04. IMPACT & CONTRIBUTIONS
+         HIGH-DENSITY EDITORIAL GRID
     ============================ -->
     <section class="section" id="impact">
       <div class="container-content">
@@ -341,95 +353,85 @@
           <p class="section-sub">Substantive technical contributions delivered across production infrastructure, laboratory experiments, and user workflows.</p>
         </div>
 
-        <div class="impact-table-stack">
+        <div class="impact-editorial-grid">
           
           <!-- Theme 1 -->
-          <div class="impact-row-item">
-            <div class="impact-row-meta">
+          <div class="impact-card-block">
+            <div>
               <span class="impact-tag">01 / PRODUCTION AI</span>
               <h3 class="impact-row-title">Bridging Research &amp; Production</h3>
-            </div>
-            <div class="impact-row-body">
               <p>
                 Turning research concepts and emerging AI techniques into practical engineering solutions. I structure intelligent workflows, define <strong>rigorous evaluation benchmarks</strong>, and implement anti-hallucination guardrails to transition probabilistic models into <strong>reliable, deterministic software</strong>.
               </p>
-              <div class="impact-row-pills">
-                <span>RAG Pipelines</span>
-                <span>Deterministic Validation</span>
-                <span>Evaluation Benchmarks</span>
-              </div>
+            </div>
+            <div class="impact-row-pills">
+              <span>RAG Pipelines</span>
+              <span>Deterministic Validation</span>
+              <span>Evaluation Benchmarks</span>
             </div>
           </div>
 
           <!-- Theme 2 -->
-          <div class="impact-row-item">
-            <div class="impact-row-meta">
+          <div class="impact-card-block">
+            <div>
               <span class="impact-tag">02 / ARCHITECTURE</span>
               <h3 class="impact-row-title">Engineering Beyond Models</h3>
-            </div>
-            <div class="impact-row-body">
               <p>
                 Models cannot deliver value in isolation. I design <strong>high-concurrency microservices</strong>, <strong>asynchronous task queues</strong>, caching mechanisms, and <strong>relational database schemas</strong> that enable intelligent features to scale reliably without bottlenecks.
               </p>
-              <div class="impact-row-pills">
-                <span>FastAPI Microservices</span>
-                <span>Asynchronous Task Queues</span>
-                <span>Relational Schemas</span>
-              </div>
+            </div>
+            <div class="impact-row-pills">
+              <span>FastAPI Microservices</span>
+              <span>Asynchronous Task Queues</span>
+              <span>Relational Schemas</span>
             </div>
           </div>
 
           <!-- Theme 3 -->
-          <div class="impact-row-item">
-            <div class="impact-row-meta">
+          <div class="impact-card-block">
+            <div>
               <span class="impact-tag">03 / MULTILINGUAL</span>
               <h3 class="impact-row-title">Multilingual Intelligence</h3>
-            </div>
-            <div class="impact-row-body">
               <p>
                 Contributing to collaborative AI/ML research involving <strong>multilingual and cross-lingual systems</strong> in <strong>Bangla and Portuguese</strong> language contexts. Collaborating with researchers from the <strong>University of Porto</strong> to explore cross-lingual transfer, semantic alignment, and comparative model evaluation.
               </p>
-              <div class="impact-row-pills">
-                <span>Cross-Lingual Benchmarking</span>
-                <span>Bangla &amp; Portuguese Contexts</span>
-                <span>Univ of Porto Collaboration</span>
-              </div>
+            </div>
+            <div class="impact-row-pills">
+              <span>Cross-Lingual Benchmarking</span>
+              <span>Bangla &amp; Portuguese Contexts</span>
+              <span>Univ of Porto Collaboration</span>
             </div>
           </div>
 
           <!-- Theme 4 -->
-          <div class="impact-row-item">
-            <div class="impact-row-meta">
+          <div class="impact-card-block">
+            <div>
               <span class="impact-tag">04 / FIELD SYSTEMS</span>
               <h3 class="impact-row-title">Connecting Technology to Real Needs</h3>
-            </div>
-            <div class="impact-row-body">
               <p>
                 Approaching engineering challenges with an understanding of users, environments, and physical constraints. From <strong>offline-first local synchronization layers</strong> for rural field operations to <strong>automated document verification systems</strong>, I build software that withstands messy real-world conditions.
               </p>
-              <div class="impact-row-pills">
-                <span>Offline-First Sync</span>
-                <span>Agritech Telemetry</span>
-                <span>Automated Document Vision</span>
-              </div>
+            </div>
+            <div class="impact-row-pills">
+              <span>Offline-First Sync</span>
+              <span>Agritech Telemetry</span>
+              <span>Automated Document Vision</span>
             </div>
           </div>
 
           <!-- Theme 5 -->
-          <div class="impact-row-item">
-            <div class="impact-row-meta">
+          <div class="impact-card-block">
+            <div>
               <span class="impact-tag">05 / LEADERSHIP</span>
               <h3 class="impact-row-title">Collaborative Leadership &amp; Innovation</h3>
-            </div>
-            <div class="impact-row-body">
               <p>
                 Operating across research, engineering, and entrepreneurial settings. Participating in <strong>venture acceleration programs</strong>, leading collegiate technical organizations, and <strong>mentoring peers</strong> to create environments where technical rigor translates to shared community value.
               </p>
-              <div class="impact-row-pills">
-                <span>Venture Acceleration</span>
-                <span>Collegiate Technical Governance</span>
-                <span>Peer Mentorship</span>
-              </div>
+            </div>
+            <div class="impact-row-pills">
+              <span>Venture Acceleration</span>
+              <span>Collegiate Technical Governance</span>
+              <span>Peer Mentorship</span>
             </div>
           </div>
 
@@ -439,6 +441,7 @@
 
     <!-- ===========================
          05. TRAJECTORY & HONORS
+         EQUAL-HEIGHT MATCHING COLUMNS
     ============================ -->
     <section class="section section-alt" id="trajectory">
       <div class="container-content">
@@ -450,102 +453,118 @@
 
         <div class="trajectory-split-layout">
           
-          <!-- Left: Professional Journey Timeline -->
-          <div class="trajectory-col">
-            <div class="col-section-label">Professional Trajectory</div>
-            
-            <div class="journey-timeline">
+          <!-- Left: Professional Journey Timeline Card -->
+          <div class="trajectory-col-card">
+            <div>
+              <div class="col-section-label">Professional Trajectory</div>
               
-              <!-- Role 1 -->
-              <div class="journey-item current">
-                <div class="journey-item-header">
-                  <h3 class="journey-role">AI Engineer, R&amp;D</h3>
-                  <span class="journey-badge">Current</span>
+              <div class="journey-timeline">
+                
+                <!-- Role 1 -->
+                <div class="journey-item current">
+                  <div class="journey-item-header">
+                    <h3 class="journey-role">AI Engineer, R&amp;D</h3>
+                    <span class="journey-badge">Current</span>
+                  </div>
+                  <div class="journey-org">Kamal-Paterson Ltd. | KPCloud &bull; Dec 2025 – Present</div>
+                  <p class="journey-desc">
+                    Working across AI research, backend architecture, and intelligent application features. Architecting <strong>LLM and RAG workflows</strong>, designing <strong>database schemas</strong>, engineering <strong>FastAPI services</strong>, and implementing <strong>offline-first sync mechanisms</strong>.
+                  </p>
                 </div>
-                <div class="journey-org">Kamal-Paterson Ltd. | KPCloud &bull; Dec 2025 – Present</div>
-                <p class="journey-desc">
-                  Working across AI research, backend architecture, and intelligent application features. Architecting <strong>LLM and RAG workflows</strong>, designing <strong>database schemas</strong>, engineering <strong>FastAPI services</strong>, and implementing <strong>offline-first sync mechanisms</strong>.
-                </p>
-              </div>
 
-              <!-- Role 2 -->
-              <div class="journey-item">
-                <div class="journey-item-header">
-                  <h3 class="journey-role">Research Assistant</h3>
-                  <span class="journey-badge">Completed</span>
+                <!-- Role 2 -->
+                <div class="journey-item">
+                  <div class="journey-item-header">
+                    <h3 class="journey-role">Research Assistant</h3>
+                    <span class="journey-badge">Completed</span>
+                  </div>
+                  <div class="journey-org">Data Science Lab, Daffodil Int. University &bull; Apr 2025 – Dec 2025</div>
+                  <p class="journey-desc">
+                    Contributed to cross-lingual AI/ML research in collaboration with <strong>University of Porto</strong> researchers. Conducted <strong>experimental design</strong>, semantic data processing, and empirical evaluation across <strong>Bangla and Portuguese datasets</strong>.
+                  </p>
                 </div>
-                <div class="journey-org">Data Science Lab, Daffodil Int. University &bull; Apr 2025 – Dec 2025</div>
-                <p class="journey-desc">
-                  Contributed to cross-lingual AI/ML research in collaboration with <strong>University of Porto</strong> researchers. Conducted <strong>experimental design</strong>, semantic data processing, and empirical evaluation across <strong>Bangla and Portuguese datasets</strong>.
-                </p>
-              </div>
 
-              <!-- Education -->
-              <div class="journey-item">
-                <div class="journey-item-header">
-                  <h3 class="journey-role">BSc in Software Engineering</h3>
-                  <span class="journey-badge">Graduation: 2026</span>
+                <!-- Education -->
+                <div class="journey-item">
+                  <div class="journey-item-header">
+                    <h3 class="journey-role">BSc in Software Engineering</h3>
+                    <span class="journey-badge">Graduation: 2026</span>
+                  </div>
+                  <div class="journey-org">Daffodil International University &bull; Major: <strong>Data Science</strong> &bull; CGPA: <strong>3.65 / 4.00</strong></div>
+                  <p class="journey-desc">
+                    Core foundations in <strong>distributed computing</strong>, <strong>algorithms</strong>, <strong>database internals</strong>, and <strong>statistical machine learning</strong>, coupled with student technical leadership.
+                  </p>
                 </div>
-                <div class="journey-org">Daffodil International University &bull; Major: <strong>Data Science</strong> &bull; CGPA: <strong>3.65 / 4.00</strong></div>
-                <p class="journey-desc">
-                  Core foundations in <strong>distributed computing</strong>, <strong>algorithms</strong>, <strong>database internals</strong>, and <strong>statistical machine learning</strong>, coupled with student technical leadership.
-                </p>
-              </div>
 
+                <!-- Foundational Rigor -->
+                <div class="journey-item">
+                  <div class="journey-item-header">
+                    <h3 class="journey-role">Algorithmic Problem Solving &amp; Leadership</h3>
+                    <span class="journey-badge">Ongoing</span>
+                  </div>
+                  <div class="journey-org">Competitive Programming &bull; Community Technical Governance</div>
+                  <p class="journey-desc">
+                    Solved <strong>350+ algorithmic problems</strong> across Beecrowd, Codeforces, and CodeChef. Directed club initiatives and workshops as <strong>Office Secretary</strong> at DIU SE Club.
+                  </p>
+                </div>
+
+              </div>
             </div>
           </div>
 
-          <!-- Right: Selected Recognition & Milestones -->
-          <div class="trajectory-col">
-            <div class="col-section-label">Selected Recognition &amp; Milestones</div>
+          <!-- Right: Selected Recognition & Milestones Card -->
+          <div class="trajectory-col-card">
+            <div>
+              <div class="col-section-label">Selected Recognition &amp; Milestones</div>
 
-            <div class="milestones-stack">
-              
-              <div class="milestone-box">
-                <div class="milestone-top">
-                  <span class="milestone-cat">National Project Competition</span>
-                  <span class="milestone-year">2026</span>
+              <div class="milestones-stack">
+                
+                <div class="milestone-box">
+                  <div class="milestone-top">
+                    <span class="milestone-cat">National Project Competition</span>
+                    <span class="milestone-year">2026</span>
+                  </div>
+                  <div class="milestone-name">Runner-up — AI Project Competition 2026</div>
+                  <p class="milestone-info">Recognized among <strong>145+ participating teams</strong> for intelligent automated document verification.</p>
                 </div>
-                <div class="milestone-name">Runner-up — AI Project Competition 2026</div>
-                <p class="milestone-info">Recognized among <strong>145+ participating teams</strong> for intelligent automated document verification.</p>
-              </div>
 
-              <div class="milestone-box">
-                <div class="milestone-top">
-                  <span class="milestone-cat">Space Telemetry Analysis</span>
-                  <span class="milestone-year">2024</span>
+                <div class="milestone-box">
+                  <div class="milestone-top">
+                    <span class="milestone-cat">Space Telemetry Analysis</span>
+                    <span class="milestone-year">2024</span>
+                  </div>
+                  <div class="milestone-name">Top 50 — NASA Space Apps Challenge</div>
+                  <p class="milestone-info">Selected among <strong>500+ submissions</strong> for planetary transit telemetry analysis and signal processing.</p>
                 </div>
-                <div class="milestone-name">Top 50 — NASA Space Apps Challenge</div>
-                <p class="milestone-info">Selected among <strong>500+ submissions</strong> for planetary transit telemetry analysis and signal processing.</p>
-              </div>
 
-              <div class="milestone-box">
-                <div class="milestone-top">
-                  <span class="milestone-cat">Venture Acceleration</span>
-                  <span class="milestone-year">Batch 2</span>
+                <div class="milestone-box">
+                  <div class="milestone-top">
+                    <span class="milestone-cat">Venture Acceleration</span>
+                    <span class="milestone-year">Batch 2</span>
+                  </div>
+                  <div class="milestone-name">Finalist — Gigalogy Technopreneurship</div>
+                  <p class="milestone-info">Recognized as a finalist through participation in the intensive <strong>startup acceleration program</strong>.</p>
                 </div>
-                <div class="milestone-name">Finalist — Gigalogy Technopreneurship</div>
-                <p class="milestone-info">Recognized as a finalist through participation in the intensive <strong>startup acceleration program</strong>.</p>
-              </div>
 
-              <div class="milestone-box">
-                <div class="milestone-top">
-                  <span class="milestone-cat">Algorithmic Problem Solving</span>
-                  <span class="milestone-year">350+ Solved</span>
+                <div class="milestone-box">
+                  <div class="milestone-top">
+                    <span class="milestone-cat">Algorithmic Problem Solving</span>
+                    <span class="milestone-year">350+ Solved</span>
+                  </div>
+                  <div class="milestone-name">Take-Off Finalist &amp; Competitive Programming</div>
+                  <p class="milestone-info">Finalist among <strong>2,600+ collegiate competitors</strong>. Solved <strong>350+ problems</strong> across Beecrowd, Codeforces, and CodeChef.</p>
                 </div>
-                <div class="milestone-name">Take-Off Finalist &amp; Competitive Programming</div>
-                <p class="milestone-info">Finalist among <strong>2,600+ collegiate competitors</strong>. Solved <strong>350+ problems</strong> across Beecrowd, Codeforces, and CodeChef.</p>
-              </div>
 
-              <div class="milestone-box">
-                <div class="milestone-top">
-                  <span class="milestone-cat">Community Governance</span>
-                  <span class="milestone-year">Leadership</span>
+                <div class="milestone-box">
+                  <div class="milestone-top">
+                    <span class="milestone-cat">Community Governance</span>
+                    <span class="milestone-year">Leadership</span>
+                  </div>
+                  <div class="milestone-name">Club Office Secretary &amp; BASIS Executive</div>
+                  <p class="milestone-info"><strong>Office Secretary</strong> at DIU Software Engineering Club and <strong>Executive Member</strong> at BASIS Students' Forum.</p>
                 </div>
-                <div class="milestone-name">Club Office Secretary &amp; BASIS Executive</div>
-                <p class="milestone-info"><strong>Office Secretary</strong> at DIU Software Engineering Club and <strong>Executive Member</strong> at BASIS Students' Forum.</p>
-              </div>
 
+              </div>
             </div>
           </div>
 
